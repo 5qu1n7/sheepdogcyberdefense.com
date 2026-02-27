@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="About Us | Sheepdog Cyber Defense" description="Learn about Sheepdog Cyber Defense, a veteran-owned penetration testing company serving Bulverde, Spring Branch, and San Antonio.">
+  <section>
+    <h1>About Sheepdog Cyber Defense</h1>
+    <p class="lead">We're a veteran-owned penetration testing company based in the Texas Hill Country, serving businesses throughout Bulverde, Spring Branch, San Antonio, and the surrounding areas.</p>
+  </section>
+
+  <section>
+    <h2>Our Story</h2>
+    <p>Founded in 2022, Sheepdog Cyber Defense was built on a simple idea: businesses deserve clear, honest security testing without the jargon and upselling. We started to provide the kind of testing we'd want for our own organizations.</p>
+    <p>As veterans, we bring discipline, thoroughness, and a get-the-job-done attitude to every engagement.</p>
+  </section>
+
+  <section>
+    <h2>Our Approach</h2>
+    <p>We test systems the way attackers think—not just running automated tools and calling it a day. Every finding is verified. Every report is written to be understood by both technical and non-technical stakeholders.</p>
+    <p>We'd rather tell you things are secure when they are than sell you problems you don't have.</p>
+  </section>
+
+  <section>
+    <h2>Certifications</h2>
+    <ul class="certs">
+      <li>PWPP</li>
+      <li>CRTO</li>
+      <li>PNPT</li>
+      <li>GWAPT</li>
+      <li>eCPPTv2</li>
+      <li>PWPA</li>
+      <li>CEH</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Service Area</h2>
+    <p>We proudly serve businesses throughout the Texas Hill Country and Greater San Antonio region, including:</p>
+    <ul>
+      <li>Bulverde</li>
+      <li>Spring Branch</li>
+      <li>San Antonio</li>
+      <li>New Braunfels</li>
+      <li>Canyon Lake</li>
+      <li>Boerne</li>
+    </ul>
+    <p>We're happy to discuss engagements outside these areas as well.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Let's Talk</h2>
+    <p>Whether you know exactly what you need or just want to chat about security, we're here.</p>
+    <a href="/contact" class="btn">Get in Touch</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.25rem; max-width: 700px; }
+  section { margin-bottom: 3rem; }
+  ul { padding-left: 1.5rem; }
+  li { color: var(--text-muted); margin-bottom: 0.5rem; }
+  
+  .certs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .certs li {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+  }
+  
+  .cta {
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+</style>

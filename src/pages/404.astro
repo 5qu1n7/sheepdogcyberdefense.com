@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page Not Found | Sheepdog Cyber Defense" description="Page not found.">
+  <section class="not-found">
+    <h1>404</h1>
+    <p class="lead">Page not found.</p>
+    <p><a href="/">&larr; Back to Home</a></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .not-found {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .not-found h1 {
+    font-size: 6rem;
+    color: var(--accent);
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+</style>

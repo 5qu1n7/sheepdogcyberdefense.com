@@ -1,0 +1,182 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Sheepdog Cyber Defense | Penetration Testing Services" description="Veteran-owned penetration testing services in Bulverde, Spring Branch, and San Antonio. External PT, Internal PT, Web App PT, and Red Teaming.">
+  <section class="hero">
+    <h1>Security Testing Done Right</h1>
+    <p class="lead">We help Texas businesses find weaknesses before the bad guys do. Plainspoken advice. Thorough testing. No jargon.</p>
+    <div class="cta-group">
+      <a href="/contact" class="btn">Get in Touch</a>
+      <a href="/services" class="btn-secondary">Our Services</a>
+    </div>
+  </section>
+
+  <section class="trust-signals">
+    <div class="signal">
+      <span class="label">Veteran Owned</span>
+      <span class="detail">Founded by military veterans</span>
+    </div>
+    <div class="signal">
+      <span class="label">Since 2022</span>
+      <span class="detail">Serving Texas businesses</span>
+    </div>
+    <div class="signal">
+      <span class="label">Certifications</span>
+      <span class="detail">CRTO, PNPT, GWAPT, eCPPTv2, PWPA, CEH</span>
+    </div>
+  </section>
+
+  <section class="service-areas">
+    <h2>Serving Bulverde, Spring Branch, San Antonio & Surrounding Areas</h2>
+    <p>We work with businesses throughout the Texas Hill Country and Greater San Antonio region.</p>
+  </section>
+
+  <section class="services-preview">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+      <a href="/services/external-penetration-testing" class="service-card">
+        <h3>External Penetration Testing</h3>
+        <p>Test your external-facing systems from an attacker's perspective.</p>
+      </a>
+      <a href="/services/internal-penetration-testing" class="service-card">
+        <h3>Internal Penetration Testing</h3>
+        <p>Assess what happens after an attacker gains network access.</p>
+      </a>
+      <a href="/services/web-application-penetration-testing" class="service-card">
+        <h3>Web Application Testing</h3>
+        <p>Find vulnerabilities in your web applications and APIs.</p>
+      </a>
+      <a href="/services/red-teaming" class="service-card">
+        <h3>Red Teaming</h3>
+        <p>Realistic attack scenarios to test your team's detection and response.</p>
+      </a>
+    </div>
+    <p><a href="/services">View all services &rarr;</a></p>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Test Your Security?</h2>
+    <p>Drop us a line and we'll get back to you within 1-2 business days.</p>
+    <a href="/contact" class="btn">Contact Us</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .cta-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--accent);
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    border: 2px solid var(--accent);
+    transition: all 0.2s;
+  }
+  
+  .btn-secondary:hover {
+    background: var(--accent);
+    color: white;
+  }
+  
+  .trust-signals {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin: 2rem 0;
+    flex-wrap: wrap;
+  }
+  
+  .signal {
+    text-align: center;
+  }
+  
+  .signal .label {
+    display: block;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.25rem;
+  }
+  
+  .signal .detail {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+  
+  .service-areas {
+    text-align: center;
+    padding: 2rem 0;
+  }
+  
+  .service-areas h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .services-preview {
+    padding: 2rem 0;
+  }
+  
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .service-card {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: block;
+    transition: border-color 0.2s;
+  }
+  
+  .service-card:hover {
+    border-color: var(--accent);
+  }
+  
+  .service-card h3 {
+    color: var(--text);
+    margin-bottom: 0.5rem;
+  }
+  
+  .service-card p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+  
+  .cta {
+    text-align: center;
+    padding: 4rem 0 2rem;
+  }
+  
+  .cta p {
+    margin-bottom: 1.5rem;
+  }
+</style>

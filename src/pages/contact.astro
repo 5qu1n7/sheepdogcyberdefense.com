@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Contact Us | Sheepdog Cyber Defense" description="Contact Sheepdog Cyber Defense for penetration testing services. We serve Bulverde, Spring Branch, San Antonio, and surrounding Texas areas.">
+  <section>
+    <h1>Contact Us</h1>
+    <p class="lead">Ready to improve your security? Drop us a line.</p>
+  </section>
+
+  <section>
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:sheepdogcyberdefense@protonmail.com">sheepdogcyberdefense@protonmail.com</a></p>
+    <p>We typically reply within 1-2 business days.</p>
+  </section>
+
+  <section>
+    <h2>Or Use This Form</h2>
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="hidden">
+        <label>Don't fill this out: <input name="bot-field"></label>
+      </p>
+      
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input type="text" id="company" name="company">
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="city">City / Area</label>
+        <input type="text" id="city" name="city" placeholder="e.g., Bulverde, San Antonio">
+      </div>
+      
+      <div class="form-group">
+        <label for="service">Service Interest</label>
+        <select id="service" name="service">
+          <option value="">Select a service</option>
+          <option value="external">External Penetration Testing</option>
+          <option value="internal">Internal Penetration Testing</option>
+          <option value="webapp">Web Application Testing</option>
+          <option value="redteam">Red Teaming</option>
+          <option value="unsure">Not sure / Other</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.25rem; max-width: 700px; margin-bottom: 2rem; }
+  section { margin-bottom: 3rem; }
+  
+  .hidden { display: none; }
+  
+  form {
+    max-width: 600px;
+    background: var(--bg-alt);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text);
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    color: var(--text);
+    font-family: var(--font);
+    font-size: 1rem;
+  }
+  
+  input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+  }
+</style>

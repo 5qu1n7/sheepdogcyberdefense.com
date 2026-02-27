@@ -1,0 +1,115 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Penetration Testing Services | Sheepdog Cyber Defense" description="Comprehensive penetration testing services for Texas businesses. External, Internal, Web App, and Red Teaming.">
+  <section>
+    <h1>Our Services</h1>
+    <p class="lead">We offer focused penetration testing services to help Texas businesses understand and improve their security posture.</p>
+  </section>
+
+  <section class="services-list">
+    <article class="service-item">
+      <h2><a href="/services/external-penetration-testing">External Penetration Testing</a></h2>
+      <p>Simulates an attack from the outside internet. We test your publicly-facing systems—websites, email servers, VPNs, and remote access—to find what an attacker would see.</p>
+      <ul>
+        <li>Internet-facing systems testing</li>
+        <li>DNS and infrastructure review</li>
+        <li>Credential spraying detection</li>
+        <li>Detailed findings report</li>
+      </ul>
+    </article>
+
+    <article class="service-item">
+      <h2><a href="/services/internal-penetration-testing">Internal Penetration Testing</a></h2>
+      <p>Assumes an attacker has gained access to your internal network. We test from that perspective to show you what damage could be done.</p>
+      <ul>
+        <li>Internal network assessment</li>
+        <li>Privilege escalation testing</li>
+        <li>Lateral movement analysis</li>
+        <li>Active Directory security review</li>
+      </ul>
+    </article>
+
+    <article class="service-item">
+      <h2><a href="/services/web-application-penetration-testing">Web Application Testing</a></h2>
+      <p>Deep assessment of your web applications, APIs, and interactive interfaces. We find the bugs before hackers do.</p>
+      <ul>
+        <li>OWASP Top 10 testing</li>
+        <li>API security assessment</li>
+        <li>Authentication and authorization review</li>
+        <li>Business logic testing</li>
+      </ul>
+    </article>
+
+    <article class="service-item">
+      <h2><a href="/services/red-teaming">Red Teaming</a></h2>
+      <p>Realistic, full-scope attack simulations that test your organization's detection and response capabilities.</p>
+      <ul>
+        <li>Multi-vector attack scenarios</li>
+        <li>Social engineering component</li>
+        <li>Blue team evaluation</li>
+        <li>Executive debrief and recommendations</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="cta">
+    <h2>Not Sure What You Need?</h2>
+    <p>We're happy to talk through your requirements and recommend the right scope.</p>
+    <a href="/contact" class="btn">Get in Touch</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin-bottom: 3rem;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .service-item {
+    background: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+
+  .service-item h2 {
+    margin-top: 0;
+  }
+
+  .service-item h2 a {
+    color: var(--text);
+  }
+
+  .service-item h2 a:hover {
+    color: var(--accent);
+  }
+
+  .service-item ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .service-item li {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta {
+    text-align: center;
+    padding: 4rem 0 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+
+  .cta p {
+    margin-bottom: 1.5rem;
+  }
+</style>
