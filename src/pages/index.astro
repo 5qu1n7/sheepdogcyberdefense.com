@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Sheepdog Cyber Defense | Penetration Testing Services" description="Veteran-owned penetration testing services in Bulverde, Spring Branch, and San Antonio. External PT, Internal PT, Web App PT, and Red Teaming.">
   <section class="hero">
+    <img src="/images/logo.svg" alt="Sheepdog Cyber Defense" class="hero-logo">
     <h1>Security Testing Done Right</h1>
     <p class="lead">We help Texas businesses find weaknesses before the bad guys do. Plainspoken advice. Thorough testing. No jargon.</p>
     <div class="cta-group">
@@ -65,6 +66,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .hero {
     text-align: center;
     padding: 4rem 0;
+  }
+  
+  .hero-logo {
+    height: 80px;
+    width: auto;
+    margin-bottom: 1.5rem;
   }
   
   .hero h1 {

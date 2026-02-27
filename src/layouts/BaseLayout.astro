@@ -37,7 +37,9 @@ const { title, description } = Astro.props;
 <body>
   <header>
     <nav>
-      <a href="/" class="logo">SHEEPDOG CYBER DEFENSE</a>
+      <a href="/" class="logo">
+        <img src="/images/logo.svg" alt="Sheepdog Cyber Defense">
+      </a>
       <ul>
         <li><a href="/services">Services</a></li>
         <li><a href="/about">About</a></li>
@@ -109,10 +111,13 @@ const { title, description } = Astro.props;
   }
   
   .logo {
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: 0.05em;
-    color: var(--text);
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    width: auto;
   }
   
   .logo:hover {
