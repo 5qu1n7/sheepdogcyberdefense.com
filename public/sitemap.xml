@@ -31,6 +31,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://sheepdogcyberdefense.com/services/physical-site-review/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://sheepdogcyberdefense.com/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
