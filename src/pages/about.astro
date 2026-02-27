@@ -26,43 +26,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <img src="https://images.contentstack.io/v3/assets/blt36c2e63521272fdc/bltc338fb0d9bc00d53/63c71c175291cc643f1f1704/GWAPT.png" alt="GWAPT" class="cert-logo">
         <span class="cert-abbr">GWAPT</span>
         <span class="cert-full">GIAC Web Application Penetration Tester</span>
-        <span class="cert-provider">SANS Institute</span>
+        <span class="cert-provider"><a href="https://www.sans.org" target="_blank" rel="noopener">SANS Institute</a></span>
       </div>
       <div class="cert">
         <img src="https://certifications.tcm-sec.com/wp-content/uploads/2024/08/PNPT.webp" alt="PNPT" class="cert-logo">
         <span class="cert-abbr">PNPT</span>
         <span class="cert-full">Practical Network Penetration Tester</span>
-        <span class="cert-provider">TCM Security</span>
+        <span class="cert-provider"><a href="https://www.tcm-sec.com" target="_blank" rel="noopener">TCM Security</a></span>
       </div>
       <div class="cert">
         <img src="https://certifications.tcm-sec.com/wp-content/uploads/2024/11/PWPP.webp" alt="PWPP" class="cert-logo">
         <span class="cert-abbr">PWPP</span>
         <span class="cert-full">Practical Web Pentest Professional</span>
-        <span class="cert-provider">TCM Security</span>
+        <span class="cert-provider"><a href="https://www.tcm-sec.com" target="_blank" rel="noopener">TCM Security</a></span>
       </div>
       <div class="cert">
         <img src="https://certifications.tcm-sec.com/wp-content/uploads/2024/11/PWPA.webp" alt="PWPA" class="cert-logo">
         <span class="cert-abbr">PWPA</span>
         <span class="cert-full">Practical Web Pentest Associate</span>
-        <span class="cert-provider">TCM Security</span>
+        <span class="cert-provider"><a href="https://www.tcm-sec.com" target="_blank" rel="noopener">TCM Security</a></span>
       </div>
       <div class="cert">
         <img src="https://www.pngitem.com/pimgs/m/0-2605_certified-ethical-hacker-logo-hd-png-download.png" alt="CEH" class="cert-logo">
         <span class="cert-abbr">CEH</span>
         <span class="cert-full">Certified Ethical Hacker</span>
-        <span class="cert-provider">EC-Council</span>
+        <span class="cert-provider"><a href="https://www.eccouncil.org" target="_blank" rel="noopener">EC-Council</a></span>
       </div>
       <div class="cert">
         <img src="https://wtroy.house/CRTO.png" alt="CRTO" class="cert-logo">
         <span class="cert-abbr">CRTO</span>
         <span class="cert-full">Certified Red Team Operator</span>
-        <span class="cert-provider">ZeroPoint Security</span>
+        <span class="cert-provider"><a href="https://www.zeropointsecurity.co.uk" target="_blank" rel="noopener">ZeroPoint Security</a></span>
       </div>
       <div class="cert">
         <img src="https://media.licdn.com/dms/image/D4E12AQHbZPRoMiVS6A/article-cover_image-shrink_600_2000/0/1712471898476-e=2147483647-v=beta-t=qcOT_G_rH861IOhOmm8ZKi1fQqq2lI-faoMq4NZps64" alt="eCPPTv2" class="cert-logo">
         <span class="cert-abbr">eCPPTv2</span>
         <span class="cert-full">Certified Professional Penetration Tester</span>
-        <span class="cert-provider">eLearnSecurity</span>
+        <span class="cert-provider"><a href="https://www.elearnsecurity.com" target="_blank" rel="noopener">eLearnSecurity</a></span>
       </div>
     </div>
   </section>
@@ -146,6 +146,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     text-transform: uppercase;
     letter-spacing: 0.05em;
     text-align: center;
+  }
+  
+  .cert-provider a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  
+  .cert-provider a:hover {
+    text-decoration: underline;
   }
   
   .cta {
