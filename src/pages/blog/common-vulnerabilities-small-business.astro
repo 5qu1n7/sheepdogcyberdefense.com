@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Common Vulnerabilities in Small Business Networks | Sheepdog Cyber Defense" description="Discover the most common network vulnerabilities we find in Texas small businesses and how to protect your company." showMatrix={true}>
+  <section>
+    <h1>Common Vulnerabilities in Small Business Networks</h1>
+    <p class="lead">After testing hundreds of Texas businesses, these are the vulnerabilities we see most often—and how to fix them.</p>
+  </section>
+
+  <section>
+    <h2>1. Weak Passwords</h2>
+    <p>This remains the #1 issue we find. Common problems include:</p>
+    <ul>
+      <li>Default credentials on routers and devices</li>
+      <li>Simple passwords like "Company123!"</li>
+      <li>Same password used across multiple systems</li>
+      <li>No multi-factor authentication (MFA)</li>
+    </ul>
+    <p><strong>Fix:</strong> Implement MFA everywhere, use a password manager, enforce strong password policies.</p>
+  </section>
+
+  <section>
+    <h2>2. Outdated Software and Systems</h2>
+    <p>Unpatched software is an open door for attackers:</p>
+    <ul>
+      <li>Old Windows servers no longer supported</li>
+      <li>Routers with known vulnerabilities</li>
+      <li>Unpatched firewalls and security devices</li>
+      <li>Legacy applications that can't be updated</li>
+    </ul>
+    <p><strong>Fix:</strong> Establish a patch management program. Replace end-of-life systems.</p>
+  </section>
+
+  <section>
+    <h2>3. Misconfigured Firewalls</h2>
+    <p>Firewalls are supposed to protect you—but misconfigurations can make them useless:</p>
+    <ul>
+      <li>Rules allowing unnecessary inbound traffic</li>
+      <li>Open ports that shouldn't be exposed</li>
+      <li>Default configurations never changed</li>
+      <li>No outbound filtering</li>
+    </ul>
+    <p><strong>Fix:</strong> Audit firewall rules quarterly. Follow the principle of least privilege.</p>
+  </section>
+
+  <section>
+    <h2>4. Phishing Susceptibility</h2>
+    <p>Your employees are often your weakest link:</p>
+    <ul>
+      <li>No security awareness training</li>
+      <li>No phishing simulations to test readiness</li>
+      <li>Employees clicking malicious links</li>
+      <li>Willingness to share credentials</li>
+    </ul>
+    <p><strong>Fix:</strong> Implement regular security training and phishing simulations.</p>
+  </section>
+
+  <section>
+    <h2>5. Unsecured Remote Access</h2>
+    <p>Remote work created new attack vectors:</p>
+    <ul>
+      <li>Old VPN solutions with vulnerabilities</li>
+      <li>No MFA on remote access</li>
+      <li>Remote Desktop Protocol (RDP) exposed to internet</li>
+      <li>Personal devices accessing company data</li>
+    </ul>
+    <p><strong>Fix:</strong> Use modern VPN with MFA, disable RDP exposure, implement remote work policies.</p>
+  </section>
+
+  <section>
+    <h2>6. Weak Wireless Security</h2>
+    <p>Wireless networks can be an easy entry point:</p>
+    <ul>
+      <li>WEP or WPA2 (not WPA3)</li>
+      <li>Default wireless passwords</li>
+      <li>Guest networks not properly segmented</li>
+      <li>No wireless intrusion detection</li>
+    </ul>
+    <p><strong>Fix:</strong> Upgrade to WPA3, use strong unique passwords, segment guest networks.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Find Out What's Vulnerable in Your Network</h2>
+    <p>A penetration test can identify these issues before attackers do.</p>
+    <a href="/contact" class="btn">Get in Touch</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.25rem; max-width: 700px; margin-bottom: 2rem; }
+  section { margin-bottom: 3rem; }
+  h2 { color: var(--text); }
+  ul { padding-left: 1.5rem; }
+  li { color: var(--text-muted); margin-bottom: 0.5rem; }
+  strong { color: var(--accent); }
+  .cta { padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; }
+  .cta p { margin-bottom: 1.5rem; }
+</style>

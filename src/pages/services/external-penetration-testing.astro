@@ -2,6 +2,25 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="External Penetration Testing | Sheepdog Cyber Defense" description="External penetration testing for Texas businesses. Test your internet-facing systems from an attacker's perspective." showMatrix={true}>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "External Penetration Testing",
+    "description": "Testing of internet-facing systems including websites, email servers, VPNs, DNS, and cloud services.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Sheepdog Cyber Defense",
+      "url": "https://sheepdogcyberdefense.com"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "serviceType": "Penetration Testing",
+    "url": "https://sheepdogcyberdefense.com/services/external-penetration-testing"
+  }
+  </script>
   <section>
     <h1>External Penetration Testing</h1>
     <p class="lead">We test your internet-facing systems the way an attacker would see them—from the outside.</p>

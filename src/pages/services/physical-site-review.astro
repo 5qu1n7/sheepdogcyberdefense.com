@@ -2,6 +2,25 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Physical Site Review | Sheepdog Cyber Defense" description="Physical security assessment for Texas businesses. Evaluate physical security controls, access controls, and facility vulnerabilities." showMatrix={true}>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Physical Site Review",
+    "description": "Assessment of physical security including building access controls, perimeter security, video surveillance, and visitor management.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Sheepdog Cyber Defense",
+      "url": "https://sheepdogcyberdefense.com"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "serviceType": "Physical Security Assessment",
+    "url": "https://sheepdogcyberdefense.com/services/physical-site-review"
+  }
+  </script>
   <section>
     <h1>Physical Site Review</h1>
     <p class="lead">We assess the physical security of your facilities to identify vulnerabilities that could allow unauthorized access.</p>

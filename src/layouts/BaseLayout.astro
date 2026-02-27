@@ -17,19 +17,61 @@ const { title, description, showMatrix = false } = Astro.props;
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "Sheepdog Cyber Defense",
     "legalName": "Sheepdog Cyber Defense LLC",
     "url": "https://sheepdogcyberdefense.com",
+    "description": "Veteran-owned penetration testing and cybersecurity services for businesses in Bulverde, Spring Branch, San Antonio, and South Central Texas.",
+    "telephone": "+1-830-123-4567",
+    "email": "sheepdogcyberdefense@protonmail.com",
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-18:00",
     "areaServed": {
       "@type": "State",
       "name": "Texas"
     },
-    "serviceArea": ["Bulverde", "Spring Branch", "San Antonio"],
+    "serviceArea": {
+      "@type": "Place",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bulverde",
+        "addressRegion": "TX",
+        "addressCountry": "US"
+      }
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bulverde",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "29.8821",
+      "longitude": "-98.4186"
+    },
+    "image": "https://sheepdogcyberdefense.com/images/logo.svg",
+    "logo": "https://sheepdogcyberdefense.com/images/logo.svg",
     "contactPoint": {
       "@type": "ContactPoint",
       "email": "sheepdogcyberdefense@protonmail.com",
-      "contactType": "sales"
+      "contactType": "sales",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/company/sheepdogcyberdefense"
+    ],
+    "keywords": "penetration testing, cybersecurity, pentest, ethical hacking, security assessment, San Antonio, Bulverde, Spring Branch, Texas",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Security Services",
+      "itemListElement": [
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "External Penetration Testing", "description": "Testing of internet-facing systems and infrastructure"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Internal Penetration Testing", "description": "Assessment of internal network security and post-breach scenarios"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Application Penetration Testing", "description": "Security testing for websites and web applications"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Red Teaming", "description": "Full-scope realistic attack simulations"}},
+        {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Physical Site Review", "description": "Assessment of physical security controls"}}
+      ]
     }
   }
   </script>

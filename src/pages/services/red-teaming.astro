@@ -2,6 +2,25 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Red Teaming | Sheepdog Cyber Defense" description="Red teaming services for Texas businesses. Realistic attack simulations to test your detection and response capabilities." showMatrix={true}>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Red Teaming",
+    "description": "Full-scope realistic attack simulations testing detection and response capabilities across technical, social, and physical vectors.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Sheepdog Cyber Defense",
+      "url": "https://sheepdogcyberdefense.com"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "Texas"
+    },
+    "serviceType": "Security Testing",
+    "url": "https://sheepdogcyberdefense.com/services/red-teaming"
+  }
+  </script>
   <section>
     <h1>Red Teaming</h1>
     <p class="lead">We go beyond technical testing to simulate real adversaries. How well does your organization detect and respond to an attack?</p>
