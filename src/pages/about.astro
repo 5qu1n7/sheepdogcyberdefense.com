@@ -23,38 +23,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <h2>Certifications</h2>
     <div class="certs-grid">
       <div class="cert">
-        <img src="https://images.seeklogo.com/logo-png/302192/1/sans-institute-logo.png?v=1959120000" alt="SANS Institute" class="cert-logo" onerror="this.style.display='none'">
+        <div class="cert-logo-text" style="background: #1a1a1a; color: #00ff88; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">SANS</div>
         <span class="cert-abbr">GWAPT</span>
         <span class="cert-full">GIAC Web Application Penetration Tester</span>
         <span class="cert-provider">SANS Institute</span>
       </div>
       <div class="cert">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/EC-Council_Logo.png/200px-EC-Council_Logo.png" alt="EC-Council" class="cert-logo" onerror="this.style.display='none'">
+        <div class="cert-logo-text" style="background: #e63946; color: white; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">EC-COUNCIL</div>
         <span class="cert-abbr">CEH</span>
         <span class="cert-full">Certified Ethical Hacker</span>
         <span class="cert-provider">EC-Council</span>
       </div>
       <div class="cert">
+        <div class="cert-logo-text" style="background: #2d3436; color: #ff6b6b; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">zeropoint</div>
         <span class="cert-abbr">CRTO</span>
         <span class="cert-full">Certified Red Team Operator</span>
         <span class="cert-provider">ZeroPoint Security</span>
       </div>
       <div class="cert">
+        <div class="cert-logo-text" style="background: #4a90d9; color: white; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">elearn</div>
         <span class="cert-abbr">eCPPTv2</span>
         <span class="cert-full">Certified Professional Penetration Tester</span>
         <span class="cert-provider">eLearnSecurity</span>
       </div>
       <div class="cert">
+        <div class="cert-logo-text" style="background: #1a1a2e; color: #00d4ff; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">TCM</div>
         <span class="cert-abbr">PWPP</span>
         <span class="cert-full">Practical Web Pentest Professional</span>
         <span class="cert-provider">TCM Security</span>
       </div>
       <div class="cert">
+        <div class="cert-logo-text" style="background: #1a1a2e; color: #00d4ff; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">TCM</div>
         <span class="cert-abbr">PNPT</span>
         <span class="cert-full">Practical Network Penetration Tester</span>
         <span class="cert-provider">TCM Security</span>
       </div>
       <div class="cert">
+        <div class="cert-logo-text" style="background: #1a1a2e; color: #00d4ff; padding: 8px 12px; font-weight: bold; font-size: 12px; border-radius: 4px;">TCM</div>
         <span class="cert-abbr">PWPA</span>
         <span class="cert-full">Practical Web Pentest Associate</span>
         <span class="cert-provider">TCM Security</span>
@@ -110,6 +115,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     width: auto;
     object-fit: contain;
     margin-bottom: 0.5rem;
+  }
+  
+  .cert-logo-text {
+    height: 36px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
   }
   
   .cert-abbr {
