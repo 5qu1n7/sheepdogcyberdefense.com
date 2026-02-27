@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 <BaseLayout title="Sheepdog Cyber Defense | Penetration Testing Services" description="Veteran-owned penetration testing services in Bulverde, Spring Branch, and San Antonio. External PT, Internal PT, Web App PT, and Red Teaming.">
   <section class="hero">
-    <img src="/images/logo.svg" alt="Sheepdog Cyber Defense" class="hero-logo">
+    <div class="hero-logo-container">
+      <img src="/images/logo.svg" alt="Sheepdog Cyber Defense" class="hero-logo">
+    </div>
     <h1>Security Testing Done Right</h1>
     <p class="lead">We help Texas businesses find weaknesses before the bad guys do. Plainspoken advice. Thorough testing. No jargon.</p>
     <div class="cta-group">
@@ -68,10 +70,63 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     padding: 4rem 0;
   }
   
+  .hero-logo-container {
+    perspective: 1000px;
+    margin-bottom: 2rem;
+    position: relative;
+  }
+  
+  .hero-logo-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--accent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: impactRing 0.6s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+  
+  @keyframes impactRing {
+    0% {
+      width: 10px;
+      height: 10px;
+      opacity: 0.8;
+    }
+    100% {
+      width: 400px;
+      height: 400px;
+      opacity: 0;
+    }
+  }
+  
   .hero-logo {
-    height: 80px;
+    height: 180px;
     width: auto;
-    margin-bottom: 1.5rem;
+    animation: logoSlam 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    opacity: 0;
+    transform: scale(3) translateY(-100px) rotateX(-20deg);
+  }
+  
+  @keyframes logoSlam {
+    0% {
+      opacity: 0;
+      transform: scale(3) translateY(-100px) rotateX(-30deg);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(0.9) translateY(10px) rotateX(5deg);
+    }
+    70% {
+      transform: scale(1.1) translateY(-5px) rotateX(-2deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0) rotateX(0);
+    }
   }
   
   .hero h1 {
