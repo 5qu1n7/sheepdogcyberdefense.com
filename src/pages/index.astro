@@ -4,6 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 <BaseLayout title="Sheepdog Cyber Defense | Penetration Testing Services" description="Veteran-owned penetration testing services in Bulverde, Spring Branch, and San Antonio. External PT, Internal PT, Web App PT, and Red Teaming." showMatrix={true}>
   <section class="hero">
     <div class="hero-logo-container">
+      <img src="https://as1.ftcdn.net/v2/jpg/05/68/02/76/1000_F_568027622_DgZfYnf1Xv2ncLvPSuYqZ7CfEuE7pBVL.jpg" alt="Hacker" class="hacker-bg">
       <img src="/images/logo.svg" alt="Sheepdog Cyber Defense" class="hero-logo">
     </div>
     <h1>Security Testing Done Right</h1>
@@ -79,7 +80,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     margin-bottom: 1rem;
     position: relative;
     animation: screenShake 0.5s ease-out 0.6s;
+    z-index: 1;
+  }
+  
+  .hacker-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: auto;
+    opacity: 0.6;
     z-index: -1;
+    border-radius: 10px;
+    animation: fadeOut 0.3s ease-out 0.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+    }
   }
   
   @keyframes screenShake {
@@ -132,7 +152,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     opacity: 0;
     transform: scale(0.01) rotate(-30deg);
     filter: brightness(2) blur(10px);
-    z-index: -1;
+    z-index: 2;
     position: relative;
   }
   
