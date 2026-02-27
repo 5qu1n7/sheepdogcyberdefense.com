@@ -52,6 +52,7 @@ const { title, description, showMatrix = false } = Astro.props;
     <slot />
   </main>
   <footer>
+    <img src="https://tvc.texas.gov/wp-content/uploads/2025/04/VOB-Logo-wwatermark-2-300x300.jpg" alt="Veteran Owned Business" class="vob-logo">
     <p>&copy; 2022 - 2026 Sheepdog Cyber Defense LLC. All rights reserved.</p>
     <ul>
       <li><a href="/privacy">Privacy Policy</a></li>
@@ -153,6 +154,13 @@ const { title, description, showMatrix = false } = Astro.props;
     border-top: 1px solid var(--border);
     padding: 2rem;
     text-align: center;
+  }
+  
+  .vob-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 1rem;
+    border-radius: 4px;
   }
   
   footer p {
