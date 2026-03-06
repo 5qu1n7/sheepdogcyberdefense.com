@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Government Contractors: CMMC Requirements | Sheepdog Cyber Defense" description="CMMC compliance for government contractors. Learn what CMMC levels require, assessment process, and penetration testing requirements." showMatrix={true}>
+  <section>
+    <h1>Government Contractors: CMMC Requirements & Assessments</h1>
+    <p class="lead">CMMC is now mandatory for most Department of Defense (DOD) contractors. Non-compliance means losing contracts. Here's what you need to know about CMMC levels and penetration testing requirements.</p>
+  </section>
+
+  <section>
+    <h2>What is CMMC?</h2>
+    <p>CMMC stands for Cybersecurity Maturity Model Certification. It's a mandatory compliance framework for DOD contractors and subcontractors handling classified information or Controlled Unclassified Information (CUI).</p>
+    
+    <p><strong>Key facts:</strong></p>
+    <ul>
+      <li>Established by DOD in 2020, became mandatory in 2022</li>
+      <li>No CMMC certification = No DOD contracts</li>
+      <li>Currently being phased in (companies have transition periods based on contract awards)</li>
+      <li>Level requirements vary by contract and data sensitivity</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>CMMC Levels and Requirements</h2>
+    <p>CMMC has 3 levels. Your required level depends on the data you handle:</p>
+    
+    <h3>Level 1: Foundational (NIST SP 800-171 Basic)</h3>
+    <p><strong>Requirement:</strong> Self-assessment, no third-party certification needed</p>
+    <p><strong>What it means:</strong> You complete the CMMC Level 1 model (17 practices from NIST SP 800-171) and self-attest you're compliant. No auditor verification required.</p>
+    <p><strong>Who needs it:</strong> Basic contracts that don't require CUI protection, or organizations starting their CMMC journey</p>
+    <p><strong>Cost:</strong> Low (self-assessment only)</p>
+    <p><strong>Penetration Testing:</strong> Not explicitly required, but recommended to validate controls</p>
+    
+    <h3>Level 2: Advanced (NIST SP 800-171 with processes)</h3>
+    <p><strong>Requirement:</strong> C3PAO (Certified CMMC Professional Organization) assessment every 3 years</p>
+    <p><strong>What it means:</strong> You implement 110 practices across 5 domains. A C3PAO auditor evaluates your implementation and validates compliance every 3 years.</p>
+    <p><strong>Who needs it:</strong> Most DOD contractors handling CUI. Most new contracts require Level 2 minimum.</p>
+    <p><strong>Cost:</strong> $15,000-$50,000 for initial assessment depending on organization size</p>
+    <p><strong>Penetration Testing:</strong> Required as part of C3PAO assessment. Assessors conduct limited penetration testing to validate security controls.</p>
+
+    <h3>Level 3: Expert (NIST SP 800-171B with advanced processes)</h3>
+    <p><strong>Requirement:</strong> C3PAO assessment annually</p>
+    <p><strong>What it means:</strong> You implement 171 practices plus advanced controls for threat intelligence, incident response, and advanced monitoring. Annual third-party assessment required.</p>
+    <p><strong>Who needs it:</strong> Only organizations handling classified information or in critical roles (defense contractors with classified access)</p>
+    <p><strong>Cost:</strong> $30,000-$100,000+ annually for assessment</p>
+    <p><strong>Penetration Testing:</strong> Comprehensive penetration testing required annually, including advanced attack scenarios and red team exercises</p>
+  </section>
+
+  <section>
+    <h2>CMMC Domains and Control Categories</h2>
+    <p>CMMC controls are organized into 5 domains:</p>
+    
+    <h3>1. Access Control</h3>
+    <p>Who can access what, and when</p>
+    <ul>
+      <li>User access provisioning and de-provisioning</li>
+      <li>Multi-factor authentication</li>
+      <li>Privilege management</li>
+      <li>Information flow control</li>
+      <li>Separation of duties</li>
+    </ul>
+
+    <h3>2. Asset Management</h3>
+    <p>Inventory and protection of hardware and software assets</p>
+    <ul>
+      <li>Hardware inventory</li>
+      <li>Software inventory</li>
+      <li>Asset tagging and tracking</li>
+      <li>Removable media control</li>
+      <li>System hardening</li>
+    </ul>
+
+    <h3>3. Data Protection</h3>
+    <p>Protecting information, especially CUI</p>
+    <ul>
+      <li>Data classification</li>
+      <li>Data encryption in transit and at rest</li>
+      <li>Secure disposal of data</li>
+      <li>Removable media security</li>
+    </ul>
+
+    <h3>4. Defense and Recovery</h3>
+    <p>Detecting and responding to incidents, maintaining backups and recovery capability</p>
+    <ul>
+      <li>Malware protection</li>
+      <li>Intrusion detection and prevention</li>
+      <li>Incident response procedures</li>
+      <li>Backups and recovery</li>
+      <li>System monitoring and logging</li>
+    </ul>
+
+    <h3>5. Identification and Authentication</h3>
+    <p>Verifying who users are and what systems they access</p>
+    <ul>
+      <li>User authentication</li>
+      <li>Device identification</li>
+      <li>Service authentication</li>
+      <li>Cryptographic controls</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>CMMC Assessment Process</h2>
+    <p>The assessment process differs by level:</p>
+    
+    <h3>Level 1: Self-Assessment (No C3PAO Required)</h3>
+    <p><strong>Timeline:</strong> 2-4 weeks</p>
+    <ul>
+      <li>Your organization completes the CMMC Level 1 self-assessment tool</li>
+      <li>You answer questions about your implementation of 17 practices</li>
+      <li>You submit the completed assessment to DOD when bidding on contracts</li>
+      <li>No third-party validation</li>
+    </ul>
+    <p><strong>Limitation:</strong> Self-assessment has no credibility. DOD is moving away from Level 1 contracts.</p>
+
+    <h3>Level 2: C3PAO Initial Assessment (3-Year Cycle)</h3>
+    <p><strong>Timeline:</strong> 2-3 months from start to certification</p>
+    
+    <p><strong>Phase 1: Preparation (Weeks 1-2)</strong></p>
+    <ul>
+      <li>Hire C3PAO (Certified CMMC Professional Organization)</li>
+      <li>Review your current state vs. 110 CMMC Level 2 practices</li>
+      <li>Develop implementation plan for gaps</li>
+      <li>Implement missing controls</li>
+    </ul>
+
+    <p><strong>Phase 2: On-Site Assessment (Weeks 3-6)</strong></p>
+    <ul>
+      <li>C3PAO team visits and conducts assessment</li>
+      <li>Reviews policies and procedures</li>
+      <li>Interviews staff</li>
+      <li>Tests systems (limited penetration testing)</li>
+      <li>Reviews logs and monitoring</li>
+    </ul>
+
+    <p><strong>Phase 3: Report and Remediation (Weeks 7-10)</strong></p>
+    <ul>
+      <li>Assessor identifies gaps</li>
+      <li>You remediate findings</li>
+      <li>Assessor validates remediation</li>
+      <li>Certification issued</li>
+    </ul>
+
+    <h3>Level 3: C3PAO Annual Assessment</h3>
+    <p>Similar to Level 2 but more intensive, occurring annually instead of every 3 years. More thorough penetration testing and advanced control validation required.</p>
+  </section>
+
+  <section>
+    <h2>Penetration Testing in CMMC Assessments</h2>
+    <p>Penetration testing is a key part of C3PAO assessments:</p>
+    
+    <h3>Level 2 Testing</h3>
+    <p>Limited scope, targeting critical systems:</p>
+    <ul>
+      <li><strong>Scope:</strong> External network, critical systems, authentication mechanisms</li>
+      <li><strong>Methods:</strong> Manual testing of vulnerabilities, configuration review, access control testing</li>
+      <li><strong>Depth:</strong> Medium (not as thorough as a standalone penetration test)</li>
+      <li><strong>Time:</strong> Usually 2-3 days on-site</li>
+    </ul>
+
+    <h3>Level 3 Testing</h3>
+    <p>Comprehensive testing more similar to professional penetration tests:</p>
+    <ul>
+      <li><strong>Scope:</strong> External, internal, web applications, physical security</li>
+      <li><strong>Methods:</strong> Full penetration testing including advanced attack scenarios</li>
+      <li><strong>Depth:</strong> Deep (similar to commercial penetration testing)</li>
+      <li><strong>Time:</strong> Usually 1-2 weeks on-site</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common CMMC Gaps and How to Address Them</h2>
+    
+    <h3>Multi-Factor Authentication (MFA)</h3>
+    <p><strong>Requirement:</strong> MFA on all remote access and privileged accounts</p>
+    <p><strong>Common gap:</strong> MFA is optional or not used consistently</p>
+    <p><strong>Fix:</strong> Mandate MFA for all remote access (VPN, RDP), email, and administrative accounts. Use hardware tokens (FIDO2) for highest security.</p>
+
+    <h3>Patch Management</h3>
+    <p><strong>Requirement:</strong> Formal process with documented timeline for patching</p>
+    <p><strong>Common gap:</strong> Ad-hoc patching, no process documentation</p>
+    <p><strong>Fix:</strong> Establish formal patch management: inventory systems, track vulnerabilities, test patches, deploy on schedule (30-60-90 days by severity).</p>
+
+    <h3>System Monitoring and Logging</h3>
+    <p><strong>Requirement:</strong> Comprehensive logging of all user activity, system changes, and security events</p>
+    <p><strong>Common gap:</strong> Limited logging, no centralized log management, logs not retained</p>
+    <p><strong>Fix:</strong> Implement centralized logging (SIEM), monitor for security events, set up alerting, retain logs for at least 1 year.</p>
+
+    <h3>Encryption</h3>
+    <p><strong>Requirement:</strong> Encryption of CUI in transit (HTTPS/TLS) and at rest</p>
+    <p><strong>Common gap:</strong> Encryption not applied to all CUI, weak encryption algorithms</p>
+    <p><strong>Fix:</strong> Identify all systems handling CUI, encrypt data in transit with TLS 1.2+, encrypt data at rest using AES-256 or better.</p>
+
+    <h3>Access Control</h3>
+    <p><strong>Requirement:</strong> Principle of least privilege—users have only the access they need</p>
+    <p><strong>Common gap:</strong> Users have excessive privileges, shared accounts, no regular access reviews</p>
+    <p><strong>Fix:</strong> Implement principle of least privilege, eliminate shared accounts, conduct quarterly access reviews.</p>
+
+    <h3>Incident Response</h3>
+    <p><strong>Requirement:</strong> Documented incident response procedure and capability</p>
+    <p><strong>Common gap:</strong> No written incident response plan, no incident response team designated</p>
+    <p><strong>Fix:</strong> Develop written incident response plan, designate response team, test with tabletop exercises at least annually.</p>
+
+    <h3>Vulnerability Management</h3>
+    <p><strong>Requirement:</strong> Regular vulnerability scanning and remediation</p>
+    <p><strong>Common gap:</strong> Infrequent scanning, no vulnerability tracking or remediation timeline</p>
+    <p><strong>Fix:</strong> Implement quarterly vulnerability scanning, track vulnerabilities, prioritize by severity, remediate on documented timelines.</p>
+  </section>
+
+  <section>
+    <h2>Cost of CMMC Compliance</h2>
+    <p>CMMC has real costs:</p>
+    
+    <h3>Level 1</h3>
+    <ul>
+      <li><strong>Initial:</strong> $2,000-$10,000 (self-assessment preparation)</li>
+      <li><strong>Ongoing:</strong> Minimal (maintain controls internally)</li>
+    </ul>
+
+    <h3>Level 2</h3>
+    <ul>
+      <li><strong>Initial Implementation:</strong> $20,000-$100,000+ (tools, consulting, staff time to implement controls)</li>
+      <li><strong>Assessment:</strong> $15,000-$50,000 (C3PAO assessment cost)</li>
+      <li><strong>Every 3 years:</strong> Reassessment cost ($15,000-$50,000)</li>
+      <li><strong>Annual maintenance:</strong> $5,000-$20,000+ (tools, staff, monitoring)</li>
+    </ul>
+
+    <h3>Level 3</h3>
+    <ul>
+      <li><strong>Initial Implementation:</strong> $50,000-$250,000+ (comprehensive controls, advanced tools)</li>
+      <li><strong>Annual Assessment:</strong> $30,000-$100,000+ (C3PAO assessment)</li>
+      <li><strong>Annual maintenance:</strong> $20,000-$50,000+ (comprehensive monitoring, advanced tools)</li>
+    </ul>
+
+    <p><strong>But:</strong> Without CMMC certification, you can't bid on DOD contracts. The cost of compliance is far less than the lost revenue from ineligibility.</p>
+  </section>
+
+  <section>
+    <h2>Timeline for CMMC Compliance</h2>
+    <p>DOD has extended CMMC deadlines multiple times. Current timeline:</p>
+    <ul>
+      <li><strong>2024-2025:</strong> Contracts being awarded with CMMC requirements</li>
+      <li><strong>2025-2026:</strong> Most new contracts require CMMC Level 2</li>
+      <li><strong>2026+:</strong> CMMC becomes standard across all DOD contracts</li>
+    </ul>
+    <p>If you're a government contractor without CMMC certification, you should start now. The assessment process takes 2-3 months minimum. Don't wait until your contract renewal requires it.</p>
+  </section>
+
+  <section>
+    <h2>Roadmap: How to Get CMMC Certified</h2>
+    
+    <h3>Step 1: Assess Your Current State (Weeks 1-2)</h3>
+    <p>Conduct a gap analysis against CMMC Level 2 (or 3 if you handle classified info):</p>
+    <ul>
+      <li>Which of the 110 practices do you already have in place?</li>
+      <li>Which practices need to be implemented or improved?</li>
+      <li>What tools and resources are needed?</li>
+    </ul>
+
+    <h3>Step 2: Develop Implementation Plan (Weeks 3-4)</h3>
+    <p>Create a roadmap to close gaps:</p>
+    <ul>
+      <li>Prioritize critical controls (access control, encryption, monitoring)</li>
+      <li>Identify quick wins (MFA, patch management process)</li>
+      <li>Plan for longer implementations (system redesign, tool deployment)</li>
+    </ul>
+
+    <h3>Step 3: Implement Controls (Weeks 5-12+)</h3>
+    <p>Execute your plan. Typical timeline is 2-4 months depending on gaps.</p>
+
+    <h3>Step 4: Select C3PAO and Schedule Assessment (Weeks 8-10)</h3>
+    <p>Don't wait until implementation is 100% complete. Work with your C3PAO to schedule assessment once you're close. They can provide guidance on final gaps.</p>
+
+    <h3>Step 5: Conduct C3PAO Assessment (Weeks 11-14)</h3>
+    <p>The assessment typically takes 2-3 weeks on-site, plus reporting time.</p>
+
+    <h3>Step 6: Remediate Findings (Weeks 15-16+)</h3>
+    <p>Address any findings the assessor identifies. This usually takes 2-4 weeks.</p>
+
+    <h3>Step 7: Receive Certification</h3>
+    <p>Once all findings are remediated, you're certified for 3 years (Level 2) or 1 year (Level 3).</p>
+  </section>
+
+  <section>
+    <h2>Working With External Penetration Testers</h2>
+    <p>You don't need to hire a C3PAO to prepare for CMMC. Before your C3PAO assessment, consider hiring an external penetration tester to validate your controls:</p>
+    <ul>
+      <li>More thorough than C3PAO testing (C3PAO focus is on compliance, not depth)</li>
+      <li>Identify vulnerabilities before C3PAO assessment</li>
+      <li>Demonstrate to C3PAO that you've validated controls</li>
+      <li>Cost-effective preparation for your assessment</li>
+    </ul>
+    <p><a href="/services/external-penetration-testing/">External penetration testing</a> is a smart investment before your CMMC assessment.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Start Your CMMC Compliance Journey</h2>
+    <p>Sheepdog Cyber Defense helps government contractors prepare for CMMC with gap assessments, penetration testing, and remediation support.</p>
+    <a href="/contact" class="btn">Schedule Your CMMC Assessment</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

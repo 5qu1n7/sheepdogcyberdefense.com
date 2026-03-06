@@ -1,0 +1,338 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Cyber Insurance Requirements: Security Testing | Sheepdog Cyber Defense" description="Learn what cyber insurance policies require for coverage. Penetration testing is often required to maintain insurance eligibility." showMatrix={true}>
+  <section>
+    <h1>Cyber Insurance Requirements: Security Testing & Penetration Testing</h1>
+    <p class="lead">Cyber insurance is becoming a critical part of risk management. But most policies have strict requirements—including regular penetration testing. Here's what insurers actually require and why.</p>
+  </section>
+
+  <section>
+    <h2>Why Cyber Insurance Matters</h2>
+    <p>A major breach is catastrophic. The average cost is $4.4 million. Most companies can't absorb that loss. Cyber insurance covers:</p>
+    <ul>
+      <li>Incident response and forensics</li>
+      <li>Breach notification and credit monitoring</li>
+      <li>Regulatory fines and penalties</li>
+      <li>Business interruption losses</li>
+      <li>Extortion/ransom negotiation (though paying ransom may violate federal law)</li>
+      <li>Legal defense and settlements</li>
+    </ul>
+    <p>Without cyber insurance, a breach can mean bankruptcy. With insurance, it's a managed risk.</p>
+  </section>
+
+  <section>
+    <h2>The Problem: Cyber Insurance is Getting Expensive (And Hard to Get)</h2>
+    <p>Premiums have skyrocketed. A policy that cost $5,000 in 2020 might cost $25,000+ in 2026. Insurers are increasingly denying claims or refusing to renew policies.</p>
+    
+    <p>Why? Because breaches are happening more frequently and costing insurers more money. Insurers are getting selective about who they cover. If you want insurance—or if you want affordable insurance—you need to prove you're a low-risk client.</p>
+    
+    <p>Penetration testing is one of the primary ways you prove that.</p>
+  </section>
+
+  <section>
+    <h2>Common Cyber Insurance Requirements</h2>
+    
+    <h3>Multi-Factor Authentication (MFA)</h3>
+    <p>Nearly all insurers now require MFA on:</p>
+    <ul>
+      <li>All remote access (VPN, RDP, Citrix)</li>
+      <li>Email accounts, especially administrative accounts</li>
+      <li>Cloud services (Microsoft 365, AWS, Salesforce, etc.)</li>
+      <li>Administrative and privileged accounts</li>
+    </ul>
+    <p>Some insurers specify hardware tokens (FIDO2) for highest security. Others accept authenticator apps. Check your policy for specifics.</p>
+    
+    <h3>Patch Management</h3>
+    <p>You must have a documented process for:</p>
+    <ul>
+      <li>Tracking all systems and software</li>
+      <li>Identifying applicable security patches</li>
+      <li>Testing patches before deployment</li>
+      <li>Deploying critical patches within 30 days</li>
+      <li>Documenting the process</li>
+    </ul>
+    <p>Insurers will deny claims if a breach resulted from an unpatched vulnerability that had a patch available for 60+ days.</p>
+
+    <h3>Penetration Testing</h3>
+    <p>Many policies require penetration testing. Common requirements:</p>
+    <ul>
+      <li>Annual external penetration testing (some require more frequently)</li>
+      <li>Internal testing every 2-3 years</li>
+      <li>Web application testing if you have customer-facing apps</li>
+      <li>Must be conducted by qualified third-party (not internal team)</li>
+      <li>Must be documented with remediation plan for findings</li>
+    </ul>
+
+    <h3>Vulnerability Scanning</h3>
+    <p>Regular automated vulnerability scanning:</p>
+    <ul>
+      <li>Monthly or quarterly scanning</li>
+      <li>Documented tracking of results</li>
+      <li>Remediation plans for identified vulnerabilities</li>
+      <li>Some insurers require proof of remediation</li>
+    </ul>
+
+    <h3>Security Awareness Training</h3>
+    <p>Documented employee security training:</p>
+    <ul>
+      <li>Annual security awareness training for all staff</li>
+      <li>Additional training for high-risk roles</li>
+      <li>Some insurers require documented testing (simulated phishing)</li>
+      <li>Documentation of who completed training</li>
+    </ul>
+
+    <h3>Incident Response Plan</h3>
+    <p>Written, documented, and tested plan for:</p>
+    <ul>
+      <li>Detecting security incidents</li>
+      <li>Investigating and containing incidents</li>
+      <li>Notifying affected parties and regulators</li>
+      <li>Recovering systems</li>
+      <li>Roles and responsibilities</li>
+      <li>Communication procedures</li>
+    </ul>
+    <p>Some insurers require that you conduct tabletop exercises (simulations) at least annually.</p>
+
+    <h3>Data Management and Encryption</h3>
+    <p>Specific requirements for protecting sensitive data:</p>
+    <ul>
+      <li>Encryption of data in transit (HTTPS/TLS)</li>
+      <li>Encryption of sensitive data at rest</li>
+      <li>Access controls limiting who can access sensitive data</li>
+      <li>Regular access reviews to ensure proper privileges</li>
+    </ul>
+
+    <h3>Firewall and Network Security</h3>
+    <p>Network-level protections:</p>
+    <ul>
+      <li>Documented firewall policies</li>
+      <li>Regular firewall rule reviews</li>
+      <li>Network monitoring and logging</li>
+      <li>Intrusion detection or prevention systems</li>
+    </ul>
+
+    <h3>Backup and Recovery</h3>
+    <p>Critical for ransomware scenarios:</p>
+    <ul>
+      <li>Regular backups (daily minimum)</li>
+      <li>Offline/air-gapped backups that attackers cannot access</li>
+      <li>Tested recovery procedures (not just backup existence)</li>
+      <li>Documentation of backup strategy</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How Insurers Verify Compliance</h2>
+    
+    <h3>Pre-Policy Application</h3>
+    <p>Before issuing a policy, insurers will ask detailed questions about your security controls. They may require:</p>
+    <ul>
+      <li>Security questionnaire with detailed technical questions</li>
+      <li>Evidence of MFA implementation</li>
+      <li>Copies of security policies</li>
+      <li>Recent penetration test reports (usually within 12 months)</li>
+      <li>Evidence of incident response planning</li>
+    </ul>
+    <p>Honest answers matter. If you later discover you misrepresented your security controls and have a breach, insurers may deny your claim.</p>
+
+    <h3>Annual Renewal</h3>
+    <p>When renewing your policy, insurers often require updated evidence:</p>
+    <ul>
+      <li>New penetration test or summary of findings and remediation</li>
+      <li>Updated security questionnaire</li>
+      <li>Documentation of compliance with previous year's requirements</li>
+    </ul>
+
+    <h3>Post-Breach Investigations</h3>
+    <p>If you have a breach and make a claim:</p>
+    <ul>
+      <li>Insurers will conduct thorough investigations</li>
+      <li>They'll review whether you met policy requirements</li>
+      <li>If you failed to implement required controls and that enabled the breach, they may deny your claim or reduce coverage</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The Penetration Testing Requirement in Detail</h2>
+    <p>Penetration testing is a key requirement and a way to demonstrate security maturity. Insurers use pen tests to:</p>
+    <ul>
+      <li><strong>Validate that external defenses work:</strong> Testing targets internet-facing systems and the first line of defense</li>
+      <li><strong>Assess realistic attack scenarios:</strong> Tests simulate how actual attackers operate</li>
+      <li><strong>Demonstrate management commitment:</strong> Running pen tests shows you take security seriously</li>
+      <li><strong>Identify gaps before claims:</strong> Finding vulnerabilities via testing is cheaper than paying a claim</li>
+    </ul>
+    
+    <h3>What Insurers Look For in a Pen Test Report</h3>
+    <ul>
+      <li><strong>Reputable tester:</strong> Conducted by established security firm or qualified individual (OSCP, CEH, or similar certification)</li>
+      <li><strong>Clear methodology:</strong> Uses industry-standard methodologies (NIST, OWASP)</li>
+      <li><strong>Comprehensive scope:</strong> Tests external network, web applications, and ideally internal systems</li>
+      <li><strong>Detailed findings:</strong> Clear description of vulnerabilities, how they were exploited, and business impact</li>
+      <li><strong>Risk ratings:</strong> Appropriate severity ratings for findings</li>
+      <li><strong>Remediation plan:</strong> Organization's documented plan to address findings with timelines</li>
+      <li><strong>Follow-up:</strong> Evidence that critical findings were remediated</li>
+    </ul>
+
+    <h3>Cost Implications</h3>
+    <p>Annual external penetration testing costs $3,000-$10,000+, depending on scope. But this is far cheaper than:</p>
+    <ul>
+      <li>Higher insurance premiums for companies without testing (often 30-50% more)</li>
+      <li>Being denied coverage altogether</li>
+      <li>A breach that costs millions to respond to</li>
+    </ul>
+    <p>Penetration testing is essentially required if you want insurance at a reasonable price.</p>
+  </section>
+
+  <section>
+    <h2>Insurance Requirements Vary By Policy</h2>
+    <p>There's no single standard. Different insurers have different requirements:</p>
+    
+    <h3>Small Business Policies</h3>
+    <p>Entry-level policies may have minimal requirements (basic MFA, password policy, employee training). They're cheaper but cover less.</p>
+
+    <h3>Mid-Market Policies</h3>
+    <p>Typically require:</p>
+    <ul>
+      <li>Annual external penetration testing</li>
+      <li>MFA on all critical systems</li>
+      <li>Incident response plan</li>
+      <li>Regular patch management</li>
+    </ul>
+
+    <h3>Enterprise Policies</h3>
+    <p>Most stringent requirements:</p>
+    <ul>
+      <li>Annual external + internal penetration testing</li>
+      <li>Quarterly vulnerability scanning</li>
+      <li>Security operations center (SOC) or 24/7 monitoring</li>
+      <li>Formal security governance and board oversight</li>
+      <li>Regular risk assessments</li>
+    </ul>
+
+    <h3>Industry-Specific Policies</h3>
+    <p>Healthcare, financial services, and critical infrastructure have additional requirements based on regulatory requirements (HIPAA, PCI-DSS, NIST, etc.).</p>
+  </section>
+
+  <section>
+    <h2>Getting Insurance: A Roadmap</h2>
+    
+    <h3>Step 1: Assess Your Current State</h3>
+    <p>Before applying for insurance, honestly assess your security:</p>
+    <ul>
+      <li>Do you have MFA implemented?</li>
+      <li>Are systems being patched regularly?</li>
+      <li>Do you have vulnerability scanning in place?</li>
+      <li>Have you had a penetration test in the last 12 months?</li>
+      <li>Do you have an incident response plan?</li>
+    </ul>
+
+    <h3>Step 2: Conduct a Penetration Test</h3>
+    <p>If you don't have a recent pen test, conduct one. This is often a requirement for initial coverage.</p>
+
+    <h3>Step 3: Fix Critical Findings</h3>
+    <p>Remediate findings, especially critical and high-risk items, before applying for insurance.</p>
+
+    <h3>Step 4: Document Everything</h3>
+    <p>Gather documentation of:</p>
+    <ul>
+      <li>Security policies and procedures</li>
+      <li>Evidence of MFA, patch management, training</li>
+      <li>Penetration test reports and remediation status</li>
+      <li>Incident response plan</li>
+    </ul>
+
+    <h3>Step 5: Work With an Insurance Broker</h3>
+    <p>An insurance broker familiar with cyber insurance can help you:</p>
+    <ul>
+      <li>Find insurers that match your risk profile</li>
+      <li>Understand specific requirements</li>
+      <li>Prepare accurate policy applications</li>
+      <li>Negotiate better rates based on your security posture</li>
+    </ul>
+
+    <h3>Step 6: Apply and Maintain Compliance</h3>
+    <p>Apply with honest, documented answers. Once covered, maintain compliance with policy requirements year-round.</p>
+  </section>
+
+  <section>
+    <h2>The Business Case: Why Invest in Security Now</h2>
+    <p>Investing in penetration testing and security improvements might seem expensive. But consider:</p>
+    <ul>
+      <li><strong>Insurance cost difference:</strong> A company with annual pen testing might pay $15,000/year for insurance. Without it, $25,000+/year or be denied coverage entirely</li>
+      <li><strong>Breach prevention:</strong> Penetration testing finds and helps fix vulnerabilities before attackers discover them</li>
+      <li><strong>Competitive advantage:</strong> Strong security posture can be a selling point to customers and partners</li>
+      <li><strong>Risk reduction:</strong> If you do have a breach, meeting insurance requirements means your claim won't be denied</li>
+    </ul>
+    <p>Penetration testing and related security investments are no longer optional for businesses that want insurance—they're a cost of doing business.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Get Insurance-Ready Security</h2>
+    <p>Sheepdog Cyber Defense can help you prepare for cyber insurance with penetration testing and security assessments that meet insurer requirements.</p>
+    <a href="/contact" class="btn">Schedule Your Assessment</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>
