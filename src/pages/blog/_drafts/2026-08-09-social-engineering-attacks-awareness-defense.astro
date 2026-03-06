@@ -1,0 +1,292 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Social Engineering Attacks: Awareness & Defense | Sheepdog" description="Understand social engineering attacks and defend your organization. Learn common tactics and build awareness programs that work." showMatrix={true}>
+  <section>
+    <h1>Social Engineering Attacks: Awareness & Defense</h1>
+    <p class="lead">Technical security controls can be bypassed by convincing someone to give up their password. Social engineering is the most effective attack method because it exploits human psychology, not software vulnerabilities. Here's how to defend.</p>
+  </section>
+
+  <section>
+    <h2>Why Social Engineering Works</h2>
+    <p>Social engineering succeeds because humans are predictable:</p>
+    <ul>
+      <li>People want to be helpful and comply with authority</li>
+      <li>People are in a hurry and don't question requests carefully</li>
+      <li>People trust people who seem legitimate</li>
+      <li>People fear consequences of non-compliance</li>
+      <li>Technical training doesn't change human nature</li>
+    </ul>
+    <p>A well-executed social engineering attack succeeds even against security-conscious people.</p>
+  </section>
+
+  <section>
+    <h2>Common Social Engineering Tactics</h2>
+    
+    <h3>Phishing</h3>
+    <p>Fraudulent emails designed to trick users into revealing credentials or clicking malicious links.</p>
+    <ul>
+      <li><strong>Generic phishing:</strong> Send thousands of emails hoping some work</li>
+      <li><strong>Spear phishing:</strong> Targeted at specific individuals with personalized information</li>
+      <li><strong>Whaling:</strong> Targeted at executives and high-value targets</li>
+      <li><strong>Clone phishing:</strong> Create fake version of legitimate email</li>
+      <li><strong>Business Email Compromise (BEC):</strong> Compromise legitimate email account to send requests</li>
+    </ul>
+
+    <h3>Pretexting</h3>
+    <p>Creating a false scenario to trick someone into divulging information or granting access.</p>
+    <ul>
+      <li>Pose as IT support requesting credentials</li>
+      <li>Pose as vendor requesting payment</li>
+      <li>Pose as executive requesting urgent wire transfer</li>
+      <li>Create urgency or fear to bypass normal verification</li>
+    </ul>
+
+    <h3>Baiting</h3>
+    <p>Leave infected USB drives or devices for people to pick up and connect.</p>
+    <ul>
+      <li>USB drive labeled "Confidential Salary Information"</li>
+      <li>USB drive left in parking lot</li>
+      <li>Person automatically trusts and connects the device</li>
+      <li>Malware installs when device is connected</li>
+    </ul>
+
+    <h3>Tailgating / Piggybacking</h3>
+    <p>Gain physical access by following authorized personnel.</p>
+    <ul>
+      <li>Wait by secured door for authorized person</li>
+      <li>Follow them through door with pretext ("I forgot my badge")</li>
+      <li>Once inside, access systems or steal information</li>
+    </ul>
+
+    <h3>Watering Hole Attacks</h3>
+    <p>Compromise a website commonly visited by target employees.</p>
+    <ul>
+      <li>Identify websites employees visit (industry sites, technical forums)</li>
+      <li>Compromise the website and inject malware</li>
+      <li>Employees visit site, get infected</li>
+    </ul>
+
+    <h3>Quid Pro Quo</h3>
+    <p>Offer something of value in exchange for information or access.</p>
+    <ul>
+      <li>"I'll help with your problem if you give me access"</li>
+      <li>Lottery winnings in exchange for clicking link</li>
+      <li>Prize or reward for providing information</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Anatomy of a Social Engineering Attack</h2>
+    
+    <h3>Reconnaissance</h3>
+    <p>Attacker gathers information about target:</p>
+    <ul>
+      <li>Company structure and employee names (LinkedIn)</li>
+      <li>Employee information (email, phone, location)</li>
+      <li>Business relationships and vendors</li>
+      <li>Current events and news (mergers, security incidents)</li>
+    </ul>
+
+    <h3>Approach</h3>
+    <p>Attacker makes initial contact:</p>
+    <ul>
+      <li>Email that looks legitimate</li>
+      <li>Phone call from someone claiming authority</li>
+      <li>In-person visit to office</li>
+      <li>Contact via social media</li>
+    </ul>
+
+    <h3>Build Trust</h3>
+    <p>Attacker establishes credibility:</p>
+    <ul>
+      <li>Use real names and information to seem legitimate</li>
+      <li>Reference real projects or relationships</li>
+      <li>Offer help or valuable information</li>
+      <li>Build rapport over multiple interactions</li>
+    </ul>
+
+    <h3>Exploit</h3>
+    <p>Attacker makes the request:</p>
+    <ul>
+      <li>Request credentials or access information</li>
+      <li>Request to click link or open attachment</li>
+      <li>Request payment or wire transfer</li>
+      <li>Create urgency or fear to rush decision</li>
+    </ul>
+
+    <h3>Execute</h3>
+    <p>Attacker uses obtained information:</p>
+    <ul>
+      <li>Login with credentials to access systems</li>
+      <li>Deploy malware from compromised device</li>
+      <li>Complete financial transaction</li>
+      <li>Access sensitive data</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Defending Against Social Engineering</h2>
+    
+    <h3>Technical Controls</h3>
+    <ul>
+      <li><strong>Email filtering:</strong> Block known phishing sites and malicious attachments</li>
+      <li><strong>Multi-factor authentication:</strong> Even if credential is compromised, attacker can't login</li>
+      <li><strong>Link analysis:</strong> Detect phishing links before user clicks</li>
+      <li><strong>File analysis:</strong> Detect malicious attachments</li>
+      <li><strong>Endpoint protection:</strong> Detect malware if it does execute</li>
+      <li><strong>Browser isolation:</strong> Suspicious sites open in isolated environment</li>
+    </ul>
+
+    <h3>Administrative Controls</h3>
+    <ul>
+      <li><strong>Policies:</strong> Clear policy against sharing credentials or discussing security</li>
+      <li><strong>Verification procedures:</strong> Always verify identity before providing access or information</li>
+      <li><strong>Approval workflows:</strong> Require approval for large transfers or access changes</li>
+      <li><strong>Least privilege:</strong> Employees only have access to what they need</li>
+      <li><strong>Physical security:</strong> Badged access to facilities, no tailgating</li>
+    </ul>
+
+    <h3>User Awareness & Training</h3>
+    <ul>
+      <li><strong>Regular training:</strong> Annual security awareness training for all employees</li>
+      <li><strong>Phishing simulations:</strong> Send fake phishing emails and measure click rates</li>
+      <li><strong>Reporting mechanism:</strong> Easy way to report suspicious emails</li>
+      <li><strong>Real-world examples:</strong> Show employees examples of attacks</li>
+      <li><strong>Red team testing:</strong> Professional social engineers test your organization</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Effective Security Awareness Programs</h2>
+    
+    <h3>What Doesn't Work</h3>
+    <ul>
+      <li>One-time training that people forget</li>
+      <li>Generic, boring content</li>
+      <li>Punishment for clicking phishing emails</li>
+      <li>Training that's disconnected from real threats</li>
+    </ul>
+
+    <h3>What Does Work</h3>
+    <ul>
+      <li><strong>Continuous reinforcement:</strong> Monthly tips, newsletters, posters</li>
+      <li><strong>Practical examples:</strong> Show real attacks relevant to your industry</li>
+      <li><strong>Accountability without shame:</strong> Report metrics but don't publicly shame clickers</li>
+      <li><strong>Help people succeed:</strong> Make it easy to report suspicious emails, reward good behavior</li>
+      <li><strong>Leadership participation:</strong> Leadership must take training and model good behavior</li>
+      <li><strong>Regular phishing simulations:</strong> Quarterly or monthly fake emails with training</li>
+    </ul>
+
+    <h3>Building a Security Culture</h3>
+    <ul>
+      <li>Make security everyone's responsibility, not just IT</li>
+      <li>Reward good security behavior</li>
+      <li>Make reporting safe (no punishment for reporting mistakes)</li>
+      <li>Show that leadership cares about security</li>
+      <li>Connect security to business impact</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Responding to Social Engineering Incidents</h2>
+    
+    <h3>If Someone Clicks a Malicious Link</h3>
+    <ul>
+      <li>Isolate the device from the network immediately</li>
+      <li>Check for malware installation</li>
+      <li>Monitor for lateral movement</li>
+      <li>Provide training, don't punish</li>
+    </ul>
+
+    <h3>If Credentials Are Compromised</h3>
+    <ul>
+      <li>Force password reset</li>
+      <li>Review activity on compromised account</li>
+      <li>Check for lateral movement</li>
+      <li>Notify user and provide security training</li>
+    </ul>
+
+    <h3>If Information Is Disclosed</h3>
+    <ul>
+      <li>Assess what information was disclosed</li>
+      <li>Determine if notification is required</li>
+      <li>Notify affected parties</li>
+      <li>Document lessons learned</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Professional Social Engineering Testing</h2>
+    <p>Our <a href="/services/red-teaming/">red team engagements</a> include phishing simulations and social engineering testing. We test your people, not just your technology, and provide training recommendations.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Build Your Defense Against Social Engineering</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations implement awareness programs and conduct social engineering testing to validate defenses.</p>
+    <a href="/contact" class="btn">Test Your Defenses</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

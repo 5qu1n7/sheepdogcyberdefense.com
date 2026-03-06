@@ -1,0 +1,285 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Secure Development Lifecycle: Building Security In | Sheepdog" description="Learn how to integrate security throughout the development lifecycle. Build secure code from day one instead of bolting it on later." showMatrix={true}>
+  <section>
+    <h1>Secure Development Lifecycle: Building Security In</h1>
+    <p class="lead">Most organizations treat security as something to add after development is complete. That's backwards. Security must be built in from the first line of code. Here's how.</p>
+  </section>
+
+  <section>
+    <h2>The Cost of Bolting On Security</h2>
+    <p>When security is an afterthought, you pay an enormous price:</p>
+    <ul>
+      <li>Vulnerabilities discovered late cost 5-20x more to fix</li>
+      <li>Security patches require re-testing and re-deployment</li>
+      <li>Code rewrites are necessary if the architecture is fundamentally insecure</li>
+      <li>Production incidents from security flaws damage reputation</li>
+      <li>Compliance failures result in fines and lost business</li>
+    </ul>
+    <p>Organizations that build security in from the beginning spend less on fixes and ship more secure products faster.</p>
+  </section>
+
+  <section>
+    <h2>Secure Development Lifecycle Phases</h2>
+    
+    <h3>Phase 1: Planning & Requirements</h3>
+    <p>Security starts before a single line of code:</p>
+    <ul>
+      <li><strong>Identify assets:</strong> What data and systems does this application handle?</li>
+      <li><strong>Define threats:</strong> Who would want to attack this? What would they try to do?</li>
+      <li><strong>Security requirements:</strong> What security controls are necessary?</li>
+      <li><strong>Compliance mapping:</strong> What regulations apply (HIPAA, PCI, GDPR)?</li>
+      <li><strong>Threat modeling:</strong> Document potential attack vectors</li>
+    </ul>
+    <p>Tools: Microsoft Threat Modeling, OWASP Threat Dragon, attack trees</p>
+
+    <h3>Phase 2: Design</h3>
+    <p>Security architecture decisions prevent vulnerabilities before implementation:</p>
+    <ul>
+      <li><strong>Authentication design:</strong> How will users prove their identity?</li>
+      <li><strong>Authorization model:</strong> Who can access what data?</li>
+      <li><strong>Encryption strategy:</strong> What data needs encryption at rest and in transit?</li>
+      <li><strong>Network architecture:</strong> How will systems communicate?</li>
+      <li><strong>Data classification:</strong> How should different data types be protected?</li>
+    </ul>
+    <p>Security review at design time prevents the need to redesign later.</p>
+
+    <h3>Phase 3: Development</h3>
+    <p>Developers must know secure coding practices:</p>
+    <ul>
+      <li><strong>Security training:</strong> OWASP Top 10, secure coding guidelines specific to your tech stack</li>
+      <li><strong>Secure code templates:</strong> Provide examples of how to properly implement authentication, input validation, error handling</li>
+      <li><strong>Security libraries:</strong> Use vetted libraries for cryptography, hashing, authentication instead of rolling your own</li>
+      <li><strong>Code review:</strong> Security-focused peer review before code is merged</li>
+      <li><strong>SAST scanning:</strong> Automated static code analysis to catch common vulnerabilities</li>
+    </ul>
+
+    <h3>Phase 4: Testing</h3>
+    <p>Security testing should be as thorough as functional testing:</p>
+    <ul>
+      <li><strong>Security unit tests:</strong> Verify authentication, authorization, encryption work correctly</li>
+      <li><strong>Integration testing:</strong> Verify security controls work across system components</li>
+      <li><strong>Dynamic analysis:</strong> Test running application for OWASP Top 10 vulnerabilities</li>
+      <li><strong>Penetration testing:</strong> Manual testing by security professionals</li>
+      <li><strong>Dependency scanning:</strong> Verify third-party libraries don't have known vulnerabilities</li>
+    </ul>
+
+    <h3>Phase 5: Deployment</h3>
+    <p>Secure deployment prevents configuration vulnerabilities:</p>
+    <ul>
+      <li><strong>Infrastructure as code:</strong> Define secure configurations as code, not manual setup</li>
+      <li><strong>Default hardening:</strong> Disable unnecessary services, apply security baselines</li>
+      <li><strong>Secrets management:</strong> Store API keys, passwords, certificates securely</li>
+      <li><strong>Network segmentation:</strong> Isolate application from critical systems</li>
+      <li><strong>Monitoring:</strong> Enable security logging and alerting before go-live</li>
+    </ul>
+
+    <h3>Phase 6: Maintenance</h3>
+    <p>Security doesn't end at launch:</p>
+    <ul>
+      <li><strong>Patch management:</strong> Keep framework and libraries up-to-date</li>
+      <li><strong>Security monitoring:</strong> Detect attacks in progress</li>
+      <li><strong>Incident response:</strong> Quickly address security issues</li>
+      <li><strong>Vulnerability management:</strong> Regular security assessments find new issues</li>
+      <li><strong>Security updates:</strong> Push patches and fixes promptly</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Building a Security Culture in Development</h2>
+    
+    <h3>Education & Training</h3>
+    <ul>
+      <li>All developers should understand OWASP Top 10</li>
+      <li>Language/framework-specific secure coding training</li>
+      <li>Regular security awareness reminders</li>
+      <li>Lunch-and-learn sessions on current threats</li>
+    </ul>
+
+    <h3>Security as a Feature</h3>
+    <ul>
+      <li>Include security in user stories ("As a user, I want my data to be encrypted")</li>
+      <li>Estimate security work like any other feature</li>
+      <li>Include security testing in Definition of Done</li>
+      <li>Track security debt like technical debt</li>
+    </ul>
+
+    <h3>Developer Tools & Infrastructure</h3>
+    <ul>
+      <li>Provide secure code templates and libraries</li>
+      <li>Integrate security scanning into IDE</li>
+      <li>Automated security testing in CI/CD pipeline</li>
+      <li>Easy way to report and fix security issues</li>
+    </ul>
+
+    <h3>Security Champions</h3>
+    <ul>
+      <li>Identify experienced developers as security champions</li>
+      <li>Train them deeply in security practices</li>
+      <li>They mentor other developers</li>
+      <li>They review security-critical code</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools for Secure Development</h2>
+    
+    <h3>Static Analysis (SAST)</h3>
+    <p>Find vulnerabilities in source code before deployment:</p>
+    <ul>
+      <li>Sonarqube - code quality and security</li>
+      <li>Checkmarx - comprehensive SAST</li>
+      <li>Fortify - enterprise SAST</li>
+      <li>Semgrep - lightweight, language-specific scanning</li>
+      <li>GitHub/GitLab native scanning</li>
+    </ul>
+
+    <h3>Dynamic Analysis (DAST)</h3>
+    <p>Test running applications for vulnerabilities:</p>
+    <ul>
+      <li>OWASP ZAP - open source, free</li>
+      <li>Burp Suite - comprehensive web app testing</li>
+      <li>Acunetix - automatic scanning</li>
+      <li>Rapid7 AppSpider - cloud-based scanning</li>
+    </ul>
+
+    <h3>Dependency Scanning</h3>
+    <p>Find vulnerable libraries and components:</p>
+    <ul>
+      <li>Dependabot - GitHub native dependency updates</li>
+      <li>Snyk - comprehensive dependency scanning</li>
+      <li>Black Duck - open source auditing</li>
+      <li>Whitesource - supply chain security</li>
+    </ul>
+
+    <h3>Secrets Management</h3>
+    <p>Prevent credentials from being committed to code:</p>
+    <ul>
+      <li>Vault - HashiCorp secret management</li>
+      <li>AWS Secrets Manager - cloud-native secrets</li>
+      <li>Azure Key Vault - Microsoft's secret management</li>
+      <li>Git-secrets - prevent credential commits</li>
+    </ul>
+
+    <h3>Container Security</h3>
+    <p>Secure containerized applications:</p>
+    <ul>
+      <li>Twistlock - container vulnerability scanning</li>
+      <li>Aqua Security - container security platform</li>
+      <li>Harbor - container registry with security features</li>
+      <li>Synk Container - container image scanning</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Measuring Secure Development Success</h2>
+    <ul>
+      <li><strong>Vulnerabilities by development phase:</strong> Are fewer vulnerabilities found in testing vs production?</li>
+      <li><strong>Security defect density:</strong> How many security bugs per 1000 lines of code?</li>
+      <li><strong>Time to remediation:</strong> How fast are security issues fixed?</li>
+      <li><strong>Security training completion:</strong> Percentage of developers trained</li>
+      <li><strong>Code review compliance:</strong> Percentage of code reviewed before merging</li>
+      <li><strong>Automated testing coverage:</strong> Percentage of security requirements covered by automated tests</li>
+      <li><strong>Penetration test findings:</strong> Year-over-year improvement in security</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>For Texas Organizations</h2>
+    <p>Secure development is essential for meeting compliance requirements:</p>
+    <ul>
+      <li><strong>HIPAA:</strong> Requires security be built into development and systems</li>
+      <li><strong>PCI DSS:</strong> Requires secure development practices and code review</li>
+      <li><strong>CMMC:</strong> Requires security development practices for government contractors</li>
+      <li><strong>SOC 2:</strong> Requires security be part of the development process</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting Started</h2>
+    <ol>
+      <li><strong>Assess current state:</strong> What security practices are already in place?</li>
+      <li><strong>Identify gaps:</strong> What's missing (training, tools, processes)?</li>
+      <li><strong>Start with training:</strong> Educate developers on OWASP Top 10</li>
+      <li><strong>Implement SAST:</strong> Add static code analysis to your build process</li>
+      <li><strong>Establish code review:</strong> Security-focused peer review before merging</li>
+      <li><strong>Add security testing:</strong> Automated tests for security requirements</li>
+      <li><strong>Continuous improvement:</strong> Regular penetration testing validates maturity</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Professional Security Testing</h2>
+    <p>Our <a href="/services/web-application-penetration-testing/">web application penetration testing</a> services validate that your secure development practices are actually working. We test your application and provide feedback to improve your development process.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Build Security In from Day One</h2>
+    <p>Sheepdog Cyber Defense helps organizations implement secure development practices and validate their effectiveness through comprehensive security testing.</p>
+    <a href="/contact" class="btn">Improve Your Development Security</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

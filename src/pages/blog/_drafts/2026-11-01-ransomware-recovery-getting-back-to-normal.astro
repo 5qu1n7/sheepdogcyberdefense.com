@@ -1,0 +1,255 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Ransomware Recovery: Getting Back to Normal | Sheepdog" description="Recover from ransomware attacks. Learn recovery procedures, restoration steps, and rebuilding after ransomware." showMatrix={true}>
+  <section>
+    <h1>Ransomware Recovery: Getting Back to Normal</h1>
+    <p class="lead">Ransomware is everywhere and attacks are increasing. If you get hit, recovery is long, expensive, and complex. But with preparation and the right procedures, you can recover faster and minimize damage.</p>
+  </section>
+
+  <section>
+    <h2>Ransomware Impact</h2>
+    <ul>
+      <li>Average ransom paid: $570,000 (some in millions)</li>
+      <li>Average recovery cost: $2.2 million (including downtime)</li>
+      <li>Average recovery time: 287 days</li>
+      <li>Some organizations never fully recover</li>
+      <li>Data is often stolen AND encrypted (double extortion)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Immediate Response to Ransomware</h2>
+    
+    <h3>Step 1: Isolate Infected Systems (First Few Minutes)</h3>
+    <ul>
+      <li>Disconnect infected machines from network (unplug ethernet)</li>
+      <li>Disable WiFi on infected devices</li>
+      <li>Don't power down (may prevent recovery)</li>
+      <li>Prevent ransomware from spreading to other systems</li>
+    </ul>
+
+    <h3>Step 2: Declare an Incident (First Hour)</h3>
+    <ul>
+      <li>Activate incident response team</li>
+      <li>Notify incident commander</li>
+      <li>Begin communication protocol</li>
+      <li>Start documenting everything</li>
+    </ul>
+
+    <h3>Step 3: Assess the Scope (First Day)</h3>
+    <ul>
+      <li>Which systems are encrypted?</li>
+      <li>How many files are affected?</li>
+      <li>Is backup affected?</li>
+      <li>What data was potentially stolen?</li>
+      <li>Are backups offline and unencrypted?</li>
+    </ul>
+
+    <h3>Step 4: Preserve Evidence (First Day)</h3>
+    <ul>
+      <li>Don't delete ransom notes</li>
+      <li>Preserve system images of infected machines</li>
+      <li>Collect logs before data is overwritten</li>
+      <li>Take screenshots of ransom messages</li>
+      <li>Hire forensics firm if needed</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Do You Pay the Ransom?</h2>
+    
+    <h3>Arguments Against Paying</h3>
+    <ul>
+      <li>Funds criminal activity</li>
+      <li>No guarantee files will be decrypted</li>
+      <li>Possible legal/sanctions issues (payments to criminals)</li>
+      <li>Delays recovery</li>
+      <li>Doesn't recover stolen data</li>
+    </ul>
+
+    <h3>Arguments For Paying</h3>
+    <ul>
+      <li>May be fastest way to restore operations</li>
+      <li>Insurance may cover costs</li>
+      <li>Decryption key may be legitimate</li>
+      <li>Business continuity pressure</li>
+    </ul>
+
+    <h3>Reality</h3>
+    <ul>
+      <li>FBI/CISA recommend against paying</li>
+      <li>Most organizations try recovery from backups first</li>
+      <li>If recovery is too slow, ransom becomes attractive</li>
+      <li>Cyber insurance covers ransom costs</li>
+      <li>Negotiation is common (initial demand is highest)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Recovery Process</h2>
+    
+    <h3>Phase 1: Validate Backups (Days 1-3)</h3>
+    <ul>
+      <li>Check if backups were encrypted</li>
+      <li>Verify backup integrity</li>
+      <li>Ensure backups are clean (no malware)</li>
+      <li>Test restoration of critical systems</li>
+    </ul>
+
+    <h3>Phase 2: Identify Clean Backups (Days 1-3)</h3>
+    <ul>
+      <li>Determine date of infection</li>
+      <li>Use backups from before infection date</li>
+      <li>Verify backups are offline (not connected to network)</li>
+    </ul>
+
+    <h3>Phase 3: Eradication (Days 2-7)</h3>
+    <ul>
+      <li>Remove ransomware from all infected systems</li>
+      <li>Check for backdoors and persistence mechanisms</li>
+      <li>Verify all malware is removed</li>
+      <li>May require full rebuild of critical systems</li>
+    </ul>
+
+    <h3>Phase 4: Restoration (Days 3-30)</h3>
+    <ul>
+      <li>Restore systems from clean backups in prioritized order</li>
+      <li>Restore critical business systems first</li>
+      <li>Verify data integrity during restore</li>
+      <li>Test functionality before bringing into production</li>
+    </ul>
+
+    <h3>Phase 5: Rebuild Non-Critical Systems (Days 7-90)</h3>
+    <ul>
+      <li>Restore remaining systems from backups</li>
+      <li>Rebuild systems without backups from scratch</li>
+      <li>Restore configuration and data</li>
+    </ul>
+
+    <h3>Phase 6: Post-Incident (Days 30-180)</h3>
+    <ul>
+      <li>Forensic investigation to understand attack</li>
+      <li>Notification of affected parties</li>
+      <li>Regulatory reporting if required</li>
+      <li>Long-term improvements to prevent future attacks</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Critical Success Factors</h2>
+    
+    <h3>Offline Backups</h3>
+    <p>Backups must be disconnected from network to avoid encryption:</p>
+    <ul>
+      <li>3-2-1 backup strategy (3 copies, 2 media types, 1 offsite)</li>
+      <li>Immutable backups (can't be modified)</li>
+      <li>Air-gapped from production network</li>
+    </ul>
+
+    <h3>Rapid Identification</h3>
+    <ul>
+      <li>Monitoring detects attack quickly</li>
+      <li>Fast response stops spread</li>
+      <li>Less systems encrypted = faster recovery</li>
+    </ul>
+
+    <h3>Documentation</h3>
+    <ul>
+      <li>Recovery procedures documented</li>
+      <li>System configurations known</li>
+      <li>Critical data identified and prioritized</li>
+      <li>Contacts and escalation procedures</li>
+    </ul>
+
+    <h3>Testing</h3>
+    <ul>
+      <li>Regular backup restore testing</li>
+      <li>Recovery procedure validation</li>
+      <li>Tabletop exercises</li>
+      <li>Staff training on procedures</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Prevention is Better Than Recovery</h2>
+    <ul>
+      <li>Email filtering to block phishing</li>
+      <li>MFA to prevent credential compromise</li>
+      <li>Endpoint protection to detect/block malware</li>
+      <li>Network segmentation to limit spread</li>
+      <li>EDR to detect suspicious behavior</li>
+      <li>Backup and recovery testing</li>
+      <li>Employee training on phishing</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Prepare for Ransomware</h2>
+    <p>Sheepdog Cyber Defense helps organizations prepare for ransomware through security assessment, backup testing, and incident response planning.</p>
+    <a href="/contact" class="btn">Prepare for Ransomware</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

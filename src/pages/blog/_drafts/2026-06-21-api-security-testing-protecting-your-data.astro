@@ -1,0 +1,345 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="API Security Testing: Protecting Your Data | Sheepdog" description="Learn why API security testing is critical and how to test for common vulnerabilities. Protect your data from API-based attacks." showMatrix={true}>
+  <section>
+    <h1>API Security Testing: Protecting Your Data</h1>
+    <p class="lead">APIs are the connective tissue of modern applications. Attackers exploit API vulnerabilities to steal data, manipulate transactions, and compromise systems. Here's how to test and secure your APIs.</p>
+  </section>
+
+  <section>
+    <h2>Why APIs Are a Huge Target</h2>
+    <p>APIs have become the primary attack surface for modern applications:</p>
+    <ul>
+      <li><strong>Direct data access:</strong> APIs often return raw data with minimal filtering</li>
+      <li><strong>Weak security:</strong> Many developers treat APIs as internal-only and skip security</li>
+      <li><strong>Authentication bypass:</strong> Token theft or manipulation can grant access</li>
+      <li><strong>Enumeration:</strong> Attackers can systematically probe APIs to find vulnerabilities</li>
+      <li><strong>Abuse:</strong> Once compromised, APIs can be used to automate attacks at scale</li>
+      <li><strong>Less scrutiny:</strong> APIs are often developed faster than web UIs with less security review</li>
+    </ul>
+    <p>OWASP lists API vulnerabilities in their top 10 because they're so commonly exploited. Every application with an API needs security testing.</p>
+  </section>
+
+  <section>
+    <h2>Common API Vulnerabilities</h2>
+    
+    <h3>Broken Object Level Authorization (BOLA)</h3>
+    <p>The most common API vulnerability. A user modifies a request to access objects they shouldn't:</p>
+    <ul>
+      <li>Attacker changes user ID in request: <code>GET /api/users/123/profile</code> to <code>GET /api/users/456/profile</code></li>
+      <li>API returns data for the requested user without checking authorization</li>
+      <li>Attacker systematically enumerates all user IDs to steal data</li>
+      <li>Example impact: stealing customer PII, financial records, or health data</li>
+    </ul>
+
+    <h3>Broken Function Level Authorization (BFLA)</h3>
+    <p>Users bypass authorization checks to access privileged operations:</p>
+    <ul>
+      <li>Admin endpoints accessible to regular users</li>
+      <li>API returns sensitive operations without verifying role</li>
+      <li>Users delete or modify data they shouldn't access</li>
+      <li>Example: regular user changing another user's permissions or transferring funds</li>
+    </ul>
+
+    <h3>Broken Authentication</h3>
+    <p>Weak or missing authentication allows unauthorized access:</p>
+    <ul>
+      <li>No authentication required for sensitive endpoints</li>
+      <li>Weak token formats (sequentially predictable)</li>
+      <li>Tokens that don't expire or take too long to expire</li>
+      <li>Credentials transmitted in URLs or unencrypted</li>
+      <li>No session invalidation on logout</li>
+    </ul>
+
+    <h3>Unrestricted Resource Consumption</h3>
+    <p>No limits on API usage allow attackers to abuse the service:</p>
+    <ul>
+      <li>No rate limiting allows brute force attacks or data scraping</li>
+      <li>Large file uploads cause server crashes</li>
+      <li>Complex queries consume excessive resources</li>
+      <li>Exponential API calls drain database or cloud resources</li>
+      <li>Result: denial of service for legitimate users and high cloud costs</li>
+    </ul>
+
+    <h3>Broken Data Validation</h3>
+    <p>Insufficient input validation allows injection attacks:</p>
+    <ul>
+      <li>SQL injection: modify database queries</li>
+      <li>NoSQL injection: manipulate document queries</li>
+      <li>Command injection: execute system commands</li>
+      <li>XML External Entity (XXE): access local files</li>
+      <li>Path traversal: access files outside intended directory</li>
+    </ul>
+
+    <h3>Excessive Data Exposure</h3>
+    <p>APIs return more data than necessary, exposing sensitive information:</p>
+    <ul>
+      <li>User profiles include password hashes or encrypted values</li>
+      <li>Transaction details include internal IDs or reference numbers</li>
+      <li>Error messages reveal system details or database structure</li>
+      <li>Historical data is returned when only current is needed</li>
+    </ul>
+
+    <h3>Lack of Encryption or Transport Security</h3>
+    <p>API traffic transmitted unencrypted or with weak TLS allows interception:</p>
+    <ul>
+      <li>HTTP instead of HTTPS for sensitive APIs</li>
+      <li>Outdated TLS versions with known vulnerabilities</li>
+      <li>Self-signed certificates accepted without validation</li>
+      <li>Attacker can read or modify requests and responses</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>API Security Testing Process</h2>
+    
+    <h3>Step 1: API Discovery and Mapping</h3>
+    <p>Before you can test, you need to know what APIs exist:</p>
+    <ul>
+      <li>Identify all API endpoints (internal documentation, code scanning, traffic analysis)</li>
+      <li>Document request/response formats</li>
+      <li>Identify authentication methods</li>
+      <li>Map which endpoints require which permissions</li>
+      <li>Note any undocumented or deprecated endpoints</li>
+    </ul>
+
+    <h3>Step 2: Authentication Testing</h3>
+    <p>Test whether authentication controls actually work:</p>
+    <ul>
+      <li>Attempt access without authentication or invalid credentials</li>
+      <li>Test token expiration (do old tokens still work?)</li>
+      <li>Test token format predictability (are they sequential or guessable?)</li>
+      <li>Test credential brute forcing (how many failed attempts allowed?)</li>
+      <li>Test token theft scenarios (XSS, CSRF, man-in-the-middle)</li>
+    </ul>
+
+    <h3>Step 3: Authorization Testing</h3>
+    <p>Test whether access controls properly enforce permissions:</p>
+    <ul>
+      <li><strong>BOLA testing:</strong> Modify object IDs in requests and verify authorization checks</li>
+      <li><strong>BFLA testing:</strong> Attempt to access admin operations with regular user accounts</li>
+      <li><strong>Privilege escalation:</strong> Can users increase their own permissions?</li>
+      <li><strong>Cross-tenant access:</strong> In multi-tenant systems, can users access other organizations' data?</li>
+    </ul>
+
+    <h3>Step 4: Input Validation Testing</h3>
+    <p>Test whether input is properly validated and sanitized:</p>
+    <ul>
+      <li><strong>SQL injection:</strong> Inject SQL commands in text fields</li>
+      <li><strong>NoSQL injection:</strong> Inject NoSQL operators</li>
+      <li><strong>Command injection:</strong> Inject shell commands</li>
+      <li><strong>Path traversal:</strong> Attempt to access files outside intended directory</li>
+      <li><strong>Type confusion:</strong> Send wrong data types to see how API handles it</li>
+    </ul>
+
+    <h3>Step 5: Rate Limiting and Resource Consumption</h3>
+    <p>Test whether APIs have appropriate limits:</p>
+    <ul>
+      <li>Make rapid requests and verify rate limiting kicks in</li>
+      <li>Test large file uploads (how much can be uploaded?)</li>
+      <li>Test complex queries (pagination limits, result set sizes)</li>
+      <li>Test concurrent connections (how many simultaneous users?)</li>
+    </ul>
+
+    <h3>Step 6: Data Exposure Testing</h3>
+    <p>Review API responses for unnecessary data:</p>
+    <ul>
+      <li>Check user profiles for sensitive fields</li>
+      <li>Review error messages for information disclosure</li>
+      <li>Check metadata returned in responses</li>
+      <li>Test whether historical data is unnecessarily exposed</li>
+    </ul>
+
+    <h3>Step 7: Business Logic Testing</h3>
+    <p>Test the actual business processes, not just technical controls:</p>
+    <ul>
+      <li>Can users complete transactions they shouldn't (transfer funds, refund orders)?</li>
+      <li>Can status be manipulated (order status, payment status)?</li>
+      <li>Are there race conditions (double-spend, overbooking)?</li>
+      <li>Can workflows be bypassed?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools for API Security Testing</h2>
+    
+    <h3>API Testing Platforms</h3>
+    <ul>
+      <li><strong>Postman:</strong> API design and testing (free and paid)</li>
+      <li><strong>Insomnia:</strong> REST and GraphQL testing</li>
+      <li><strong>Burp Suite Professional:</strong> Web application and API security testing</li>
+      <li><strong>OWASP ZAP:</strong> Open-source security scanning</li>
+    </ul>
+
+    <h3>Specialized API Security Tools</h3>
+    <ul>
+      <li><strong>API42:</strong> Dedicated API security testing</li>
+      <li><strong>42Crunch:</strong> API discovery and security testing</li>
+      <li><strong>Rapid7 AppSpider:</strong> Dynamic application security testing including APIs</li>
+      <li><strong>Qualys SKOPE:</strong> API vulnerability detection</li>
+    </ul>
+
+    <h3>Monitoring & Runtime Protection</h3>
+    <ul>
+      <li><strong>API gateways:</strong> Kong, AWS API Gateway, Azure API Management</li>
+      <li><strong>Runtime API protection:</strong> Imperva, Cloudflare</li>
+      <li><strong>WAF/API security:</strong> Akamai, F5, ModSecurity</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Fixing Common API Vulnerabilities</h2>
+    
+    <h3>Authorization Fixes</h3>
+    <ul>
+      <li>Always check user permissions before returning data</li>
+      <li>Use role-based access control (RBAC) consistently across all endpoints</li>
+      <li>Don't rely on client-side parameter validation alone</li>
+      <li>Log authorization decisions for audit trails</li>
+    </ul>
+
+    <h3>Authentication Fixes</h3>
+    <ul>
+      <li>Use industry-standard authentication (OAuth 2.0, OpenID Connect)</li>
+      <li>Implement token expiration and rotation</li>
+      <li>Use strong, random token generation</li>
+      <li>Require HTTPS for all API traffic</li>
+      <li>Implement rate limiting on authentication endpoints</li>
+    </ul>
+
+    <h3>Input Validation Fixes</h3>
+    <ul>
+      <li>Validate all input on the server side</li>
+      <li>Use parameterized queries to prevent injection</li>
+      <li>Whitelist acceptable input patterns</li>
+      <li>Reject unexpected input types</li>
+    </ul>
+
+    <h3>Rate Limiting Fixes</h3>
+    <ul>
+      <li>Implement per-user rate limits (requests per minute)</li>
+      <li>Implement global rate limits (total API requests)</li>
+      <li>Limit file upload sizes</li>
+      <li>Limit pagination size (prevent pulling massive datasets)</li>
+      <li>Implement query complexity limits for GraphQL</li>
+    </ul>
+
+    <h3>Data Exposure Fixes</h3>
+    <ul>
+      <li>Return only fields the user needs</li>
+      <li>Don't return sensitive fields (passwords, encryption keys, internal IDs)</li>
+      <li>Use error messages that don't reveal system details</li>
+      <li>Implement data masking for sensitive information</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>API Security as Part of Development</h2>
+    <p>API security shouldn't be an afterthought. Build it into your development process:</p>
+    
+    <h3>Secure API Design</h3>
+    <ul>
+      <li>Design authentication and authorization before implementation</li>
+      <li>Document API security requirements</li>
+      <li>Use API specifications (OpenAPI/Swagger) to define contracts</li>
+      <li>Security review during design phase, not after launch</li>
+    </ul>
+
+    <h3>Code Review & Testing</h3>
+    <ul>
+      <li>Peer review of authorization logic</li>
+      <li>Automated security testing in CI/CD pipeline</li>
+      <li>Manual security testing before production release</li>
+      <li>Regression testing when security fixes are made</li>
+    </ul>
+
+    <h3>Continuous Monitoring</h3>
+    <ul>
+      <li>Monitor API usage for anomalies</li>
+      <li>Alert on suspicious patterns (unusual user, geography, request patterns)</li>
+      <li>Log all API requests for audit trails</li>
+      <li>Regular API security assessments</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Professional API Security Testing</h2>
+    <p>Your internal team may miss vulnerabilities that attackers will find. Our <a href="/services/web-application-penetration-testing/">web application penetration testing services</a> include comprehensive API security testing. We test both documented and undocumented endpoints, identify authorization bypasses, and validate that your API controls actually work.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Secure Your APIs Today</h2>
+    <p>Sheepdog Cyber Defense conducts thorough API security testing to identify vulnerabilities before attackers do. We provide detailed remediation guidance and validate fixes.</p>
+    <a href="/contact" class="btn">Schedule API Security Testing</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+  code {
+    background: #f0f0f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+</style>

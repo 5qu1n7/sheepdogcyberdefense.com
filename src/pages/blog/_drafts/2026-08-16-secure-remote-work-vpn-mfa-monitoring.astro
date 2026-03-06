@@ -1,0 +1,293 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Secure Remote Work: VPN, MFA, Monitoring | Sheepdog" description="Secure remote work with VPN, multi-factor authentication, and monitoring. Protect your business when employees work from anywhere." showMatrix={true}>
+  <section>
+    <h1>Secure Remote Work: VPN, MFA, Monitoring</h1>
+    <p class="lead">Remote work is permanent now. Employees work from home, coffee shops, and everywhere. This expanded attack surface requires security controls specific to distributed work. Here's how to secure remote access.</p>
+  </section>
+
+  <section>
+    <h2>Remote Work Security Challenges</h2>
+    <ul>
+      <li>Employees connect from unmanaged networks (public WiFi, home networks)</li>
+      <li>Devices are less secure outside the corporate network</li>
+      <li>Communication tools create new attack surfaces</li>
+      <li>Shadow IT - employees using unapproved tools</li>
+      <li>Lack of physical security (screens visible, devices unattended)</li>
+      <li>Compliance challenges (data localization, data residency)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>VPN for Remote Access</h2>
+    
+    <h3>How VPN Works</h3>
+    <p>VPN encrypts all traffic between employee device and company network:</p>
+    <ul>
+      <li>Creates secure tunnel for all network traffic</li>
+      <li>Encrypts traffic so ISP/WiFi owner can't see it</li>
+      <li>Routes all traffic through company network</li>
+      <li>Allows access to internal systems and resources</li>
+    </ul>
+
+    <h3>VPN Limitations</h3>
+    <p>VPN alone isn't enough:</p>
+    <ul>
+      <li>Full network access - employees can access more than needed</li>
+      <li>Device compromise - doesn't protect if device is compromised</li>
+      <li>Lateral movement - attacker on VPN can move through network</li>
+      <li>No visibility - company doesn't see what's happening on device</li>
+    </ul>
+
+    <h3>VPN Best Practices</h3>
+    <ul>
+      <li>Use enterprise VPN with modern encryption (IPSec, WireGuard, OpenVPN)</li>
+      <li>Require MFA before allowing VPN connection</li>
+      <li>Implement least privilege routing (split tunneling restrictions)</li>
+      <li>Monitor VPN usage for anomalies</li>
+      <li>Require device health checks before allowing connection</li>
+      <li>Examples: Cisco AnyConnect, Fortinet FortiClient, Palo Alto GlobalProtect</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Multi-Factor Authentication (MFA)</h2>
+    
+    <h3>Why MFA is Critical for Remote Work</h3>
+    <p>Passwords alone are not enough:</p>
+    <ul>
+      <li>Employees reuse passwords across sites</li>
+      <li>Passwords are weak (123456, password, qwerty)</li>
+      <li>Passwords are phished or compromised</li>
+      <li>MFA ensures even compromised passwords can't be used</li>
+    </ul>
+
+    <h3>MFA Methods</h3>
+    
+    <h4>Time-Based One-Time Password (TOTP)</h4>
+    <ul>
+      <li>App generates code that changes every 30 seconds</li>
+      <li>User enters code after password</li>
+      <li>Works offline, but device-dependent</li>
+      <li>Examples: Google Authenticator, Microsoft Authenticator</li>
+    </ul>
+
+    <h4>Push Notifications</h4>
+    <ul>
+      <li>Notification sent to phone when login attempted</li>
+      <li>User approves or denies login</li>
+      <li>Better UX than TOTP</li>
+      <li>Examples: Okta, Azure AD, Duo Security</li>
+    </ul>
+
+    <h4>Hardware Security Keys</h4>
+    <ul>
+      <li>Physical key (USB or NFC)</li>
+      <li>Most secure MFA method (resistant to phishing)</li>
+      <li>Higher cost and complexity</li>
+      <li>Examples: YubiKey, Google Titan</li>
+    </ul>
+
+    <h4>SMS / Phone Call</h4>
+    <ul>
+      <li>Code sent via text or phone call</li>
+      <li>Vulnerable to SIM swapping attacks</li>
+      <li>Not recommended as sole MFA method</li>
+    </ul>
+
+    <h3>MFA Best Practices</h3>
+    <ul>
+      <li>Require MFA for all remote access (VPN, email, applications)</li>
+      <li>Require MFA for privileged accounts always</li>
+      <li>Enforce modern MFA methods (TOTP, push, hardware keys)</li>
+      <li>Use conditional MFA (require if accessing sensitive data)</li>
+      <li>Have backup MFA methods for when primary fails</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Endpoint Security for Remote Workers</h2>
+    
+    <h3>Device Management (MDM/EMM)</h3>
+    <p>Ensure devices meet security requirements:</p>
+    <ul>
+      <li>Require encryption of device storage</li>
+      <li>Enforce password requirements</li>
+      <li>Require automatic updates and patches</li>
+      <li>Block jailbroken/rooted devices</li>
+      <li>Require antivirus/anti-malware</li>
+      <li>Monitor device compliance</li>
+      <li>Remote wipe if device is lost or employee leaves</li>
+    </ul>
+
+    <h3>Endpoint Detection & Response (EDR)</h3>
+    <p>Detect malware and anomalous behavior:</p>
+    <ul>
+      <li>Real-time monitoring of device activity</li>
+      <li>Detect malware execution</li>
+      <li>Detect lateral movement attempts</li>
+      <li>Response capabilities (isolate device, kill process)</li>
+    </ul>
+
+    <h3>Data Loss Prevention (DLP) on Endpoints</h3>
+    <ul>
+      <li>Monitor file transfers and clipboard</li>
+      <li>Prevent copying to USB drives</li>
+      <li>Monitor screen sharing (for accidental exposure)</li>
+      <li>Alert on suspicious data movement</li>
+    </ul>
+
+    <h3>Device Requirements</h3>
+    <ul>
+      <li>Company-issued devices only (BYOD creates liability)</li>
+      <li>Approved operating systems (Windows, macOS, Linux)</li>
+      <li>Disk encryption enabled</li>
+      <li>Current antivirus/anti-malware</li>
+      <li>Firewall enabled</li>
+      <li>Auto-lock after inactivity</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Network Segmentation for Remote Access</h2>
+    <ul>
+      <li>Don't give remote users full network access</li>
+      <li>Segment network by department/function</li>
+      <li>Remote workers can only access what they need</li>
+      <li>Prevent lateral movement to critical systems</li>
+      <li>Use Zero Trust Network Access (ZTNA) instead of traditional VPN</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Monitoring Remote Worker Activity</h2>
+    
+    <h3>What to Monitor</h3>
+    <ul>
+      <li>VPN connection/disconnection logs</li>
+      <li>Failed authentication attempts</li>
+      <li>Access to sensitive systems and data</li>
+      <li>Large file transfers or downloads</li>
+      <li>Installation of unapproved software</li>
+      <li>USB device connections</li>
+    </ul>
+
+    <h3>Privacy Considerations</h3>
+    <ul>
+      <li>Monitor work activities, not personal activities</li>
+      <li>Clear policy on what is monitored</li>
+      <li>Don't monitor home cameras or microphones</li>
+      <li>Respect privacy outside of work</li>
+      <li>Legal review of monitoring practices</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Securing Communication Tools</h2>
+    <ul>
+      <li><strong>Email:</strong> Encryption for sensitive data, DLP for data loss prevention</li>
+      <li><strong>Chat (Slack, Teams):</strong> Restrict external sharing, monitor for credential disclosure</li>
+      <li><strong>Video conferencing:</strong> Require authentication, disable recording without consent, monitor for unauthorized access</li>
+      <li><strong>File sharing:</strong> Restrict access, require authentication, monitor file access</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Incident Response for Remote Workers</h2>
+    <ul>
+      <li>Compromised credentials - force password reset</li>
+      <li>Device compromised - remotely isolate or wipe</li>
+      <li>Unauthorized access - revoke VPN access</li>
+      <li>Data exfiltration - DLP should have prevented it, investigate access logs</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting Started with Remote Security</h2>
+    <ol>
+      <li>Inventory remote workers and access methods</li>
+      <li>Deploy VPN with modern encryption</li>
+      <li>Require MFA for all remote access</li>
+      <li>Deploy endpoint security (antivirus, EDR)</li>
+      <li>Implement device management</li>
+      <li>Enable logging and monitoring</li>
+      <li>Test security with penetration testing</li>
+    </ol>
+  </section>
+
+  <section class="cta">
+    <h2>Secure Your Remote Workforce</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations secure remote work environments with VPN, MFA, and comprehensive monitoring.</p>
+    <a href="/contact" class="btn">Secure Remote Access</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

@@ -1,0 +1,201 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Container Security: Docker & Kubernetes | Sheepdog" description="Secure containerized applications. Learn Docker and Kubernetes security best practices and vulnerability scanning." showMatrix={true}>
+  <section>
+    <h1>Container Security: Docker & Kubernetes</h1>
+    <p class="lead">Containers are everywhere now. Docker and Kubernetes power modern applications. But containers introduce new security challenges. Here's how to secure your containerized infrastructure.</p>
+  </section>
+
+  <section>
+    <h2>Container Security Challenges</h2>
+    <ul>
+      <li>Vulnerable libraries in container images</li>
+      <li>Insecure container registries exposing images</li>
+      <li>Container escape allowing access to host systems</li>
+      <li>Kubernetes misconfigurations exposing access</li>
+      <li>Insecure container runtimes and orchestration</li>
+      <li>Lack of visibility into container activity</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Docker Security</h2>
+    
+    <h3>Image Security</h3>
+    <ul>
+      <li><strong>Use minimal base images:</strong> Alpine, Distroless reduce attack surface</li>
+      <li><strong>Scan for vulnerabilities:</strong> Trivy, Anchore, Snyk scan images for known vulns</li>
+      <li><strong>Don't run as root:</strong> Create non-root user in Dockerfile</li>
+      <li><strong>Sign images:</strong> Docker Content Trust prevents tampering</li>
+      <li><strong>Remove secrets:</strong> Never hardcode passwords or API keys in images</li>
+    </ul>
+
+    <h3>Registry Security</h3>
+    <ul>
+      <li><strong>Private registry:</strong> Use private Docker registry, not public</li>
+      <li><strong>Access control:</strong> Restrict who can push/pull images</li>
+      <li><strong>Image scanning:</strong> Automatically scan on push</li>
+      <li><strong>Quarantine vulnerable images:</strong> Prevent deployment</li>
+      <li><strong>Registry encryption:</strong> TLS for all registry traffic</li>
+    </ul>
+
+    <h3>Container Runtime Security</h3>
+    <ul>
+      <li><strong>Resource limits:</strong> Prevent container from consuming all resources</li>
+      <li><strong>Read-only filesystems:</strong> Container can't modify itself</li>
+      <li><strong>Network policies:</strong> Restrict container-to-container communication</li>
+      <li><strong>Logging:</strong> Log all container activity</li>
+      <li><strong>Security scanning:</strong> Monitor running containers for malware</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Kubernetes Security</h2>
+    
+    <h3>Authentication & Authorization</h3>
+    <ul>
+      <li><strong>RBAC:</strong> Role-based access control for cluster access</li>
+      <li><strong>Service accounts:</strong> Don't use default service account</li>
+      <li><strong>API authentication:</strong> Require tokens or certificates</li>
+      <li><strong>Network policies:</strong> Control who can communicate</li>
+    </ul>
+
+    <h3>Pod Security</h3>
+    <ul>
+      <li><strong>Pod Security Policies:</strong> Enforce security standards for pods</li>
+      <li><strong>Don't run privileged containers:</strong> Reduces blast radius</li>
+      <li><strong>Don't mount host filesystem:</strong> Prevents escape to host</li>
+      <li><strong>Don't run as root:</strong> Use non-root user</li>
+      <li><strong>Resource limits:</strong> Memory and CPU limits</li>
+    </ul>
+
+    <h3>Secret Management</h3>
+    <ul>
+      <li><strong>Kubernetes secrets:</strong> For sensitive data like credentials</li>
+      <li><strong>Encryption at rest:</strong> Secrets encrypted in etcd</li>
+      <li><strong>RBAC for secrets:</strong> Restrict access to specific secrets</li>
+      <li><strong>External secret managers:</strong> HashiCorp Vault, AWS Secrets Manager</li>
+    </ul>
+
+    <h3>Cluster Security</h3>
+    <ul>
+      <li><strong>API server encryption:</strong> Encrypt all data in transit</li>
+      <li><strong>Etcd encryption:</strong> Encrypt Kubernetes state database</li>
+      <li><strong>Network policies:</strong> Restrict traffic between pods</li>
+      <li><strong>Logging & monitoring:</strong> Audit all API activity</li>
+      <li><strong>Regular updates:</strong> Keep Kubernetes current</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Container Vulnerability Scanning</h2>
+    <ul>
+      <li><strong>Scan base images:</strong> Before using in containers</li>
+      <li><strong>Scan during build:</strong> Part of CI/CD pipeline</li>
+      <li><strong>Scan registries:</strong> Ongoing scanning of stored images</li>
+      <li><strong>Scan running containers:</strong> Runtime vulnerability detection</li>
+      <li>Tools: Trivy, Anchore, Snyk, Qualys, Rapid7</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Container Security Tools</h2>
+    <ul>
+      <li><strong>Image scanning:</strong> Trivy, Anchore, Clair</li>
+      <li><strong>Runtime security:</strong> Falco, Sysdig, Aqua</li>
+      <li><strong>Network policies:</strong> Cilium, Calico</li>
+      <li><strong>Secret management:</strong> Sealed Secrets, External Secrets</li>
+      <li><strong>Compliance:</strong> Kubesec, Kube-bench</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Container Security Best Practices</h2>
+    <ol>
+      <li>Use minimal base images (Alpine, Distroless)</li>
+      <li>Scan all images for vulnerabilities</li>
+      <li>Never run containers as root</li>
+      <li>Use private container registries</li>
+      <li>Enforce Pod Security Policies</li>
+      <li>Implement network policies</li>
+      <li>Encrypt data in transit and at rest</li>
+      <li>Monitor container activity</li>
+      <li>Regular penetration testing of Kubernetes clusters</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Professional Container Security Assessment</h2>
+    <p>Our <a href="/services/external-penetration-testing/">penetration testing services</a> include Kubernetes and container security assessments. We test your cluster security, image security, and runtime protections.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Secure Your Container Infrastructure</h2>
+    <p>Sheepdog Cyber Defense helps organizations secure Docker and Kubernetes deployments through assessment and security hardening guidance.</p>
+    <a href="/contact" class="btn">Assess Your Container Security</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

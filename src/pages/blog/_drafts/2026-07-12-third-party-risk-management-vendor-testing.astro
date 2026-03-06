@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Third-Party Risk Management & Vendor Testing | Sheepdog" description="Manage risk from third-party vendors and service providers. Learn security assessment requirements for vendors and contractors." showMatrix={true}>
+  <section>
+    <h1>Third-Party Risk Management & Vendor Testing</h1>
+    <p class="lead">Your security is only as strong as your weakest vendor. Attackers routinely breach organizations through compromised vendors. You need a vendor risk management program and regular security assessments of critical vendors.</p>
+  </section>
+
+  <section>
+    <h2>The Vendor Risk Problem</h2>
+    <p>High-profile breaches often involve vendor compromise:</p>
+    <ul>
+      <li>SolarWinds supply chain attack compromised 18,000 organizations</li>
+      <li>Kaseya ransomware attack through managed services provider</li>
+      <li>3rd-party payment processor breaches expose customer data</li>
+      <li>Cloud infrastructure misconfiguration by shared vendor</li>
+      <li>Software supply chain attacks inject malware into popular tools</li>
+    </ul>
+    <p>The risk is real: attackers know organizations trust their vendors more than they trust the outside world.</p>
+  </section>
+
+  <section>
+    <h2>Types of Vendor Risk</h2>
+    
+    <h3>Technology Risk</h3>
+    <p>Vendors provide software, hardware, or cloud services that could be compromised:</p>
+    <ul>
+      <li>Vulnerable code in vendor software</li>
+      <li>Backdoors or malware in supplier code</li>
+      <li>Misconfigured cloud services exposing your data</li>
+      <li>Poor security practices at the vendor</li>
+    </ul>
+
+    <h3>Operational Risk</h3>
+    <p>Vendors' operations and processes could fail:</p>
+    <ul>
+      <li>Service outages affecting your business</li>
+      <li>Vendor goes out of business with no data transition plan</li>
+      <li>Poor incident response when vendor is breached</li>
+      <li>Vendor employees lack proper background checks</li>
+    </ul>
+
+    <h3>Compliance Risk</h3>
+    <p>Vendor practices could violate your compliance requirements:</p>
+    <ul>
+      <li>Vendor processes customer data in unauthorized countries</li>
+      <li>Vendor doesn't encrypt data as required</li>
+      <li>Vendor fails audit requirements (SOC 2, ISO 27001)</li>
+      <li>Vendor doesn't meet regulatory requirements (HIPAA, PCI, GDPR)</li>
+    </ul>
+
+    <h3>Financial Risk</h3>
+    <p>Vendor failures could result in financial loss:</p>
+    <ul>
+      <li>Breach costs due to vendor security failure</li>
+      <li>Ransom and recovery costs</li>
+      <li>Regulatory fines for non-compliance</li>
+      <li>Reputational damage and lost customers</li>
+    </ul>
+
+    <h3>Supply Chain Risk</h3>
+    <p>Vendor's vendors could be compromised:</p>
+    <ul>
+      <li>Vendor's cloud provider is breached</li>
+      <li>Vendor's software has vulnerable dependencies</li>
+      <li>Vendor's third-party integrations are compromised</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Building a Vendor Risk Management Program</h2>
+    
+    <h3>Step 1: Vendor Inventory & Classification</h3>
+    <p>You can't manage what you don't know about:</p>
+    <ul>
+      <li>Create a complete list of all vendors and service providers</li>
+      <li>Identify what data each vendor can access</li>
+      <li>Classify vendors by risk level (critical, important, standard)</li>
+      <li>Note where vendors process or store your data</li>
+      <li>Document access methods and security controls</li>
+    </ul>
+
+    <h3>Step 2: Security Requirements Definition</h3>
+    <p>What security standards must vendors meet?</p>
+    <ul>
+      <li><strong>Critical vendors:</strong> SOC 2 Type II, ISO 27001, regular penetration testing</li>
+      <li><strong>Important vendors:</strong> SOC 2 Type I, security questionnaire, annual assessment</li>
+      <li><strong>Standard vendors:</strong> Basic security requirements, periodic verification</li>
+    </ul>
+    <p>Requirements should be in your contracts and enforced continuously.</p>
+
+    <h3>Step 3: Pre-Engagement Assessment</h3>
+    <p>Before signing up with a new vendor:</p>
+    <ul>
+      <li>Review security questionnaire responses</li>
+      <li>Request SOC 2, ISO 27001, or equivalent certifications</li>
+      <li>Ask about security practices (encryption, access controls, incident response)</li>
+      <li>Verify breach history and insurance coverage</li>
+      <li>Conduct reference calls with existing customers</li>
+    </ul>
+
+    <h3>Step 4: Ongoing Monitoring</h3>
+    <p>Don't assume vendors stay secure after initial assessment:</p>
+    <ul>
+      <li>Annual security questionnaires</li>
+      <li>Monitor breach notifications and public incidents</li>
+      <li>Track vendor security certifications and expirations</li>
+      <li>Review vendor security updates and patches</li>
+      <li>Stay informed about vendor security changes</li>
+    </ul>
+
+    <h3>Step 5: Periodic Assessment</h3>
+    <p>For critical vendors, conduct deeper assessments:</p>
+    <ul>
+      <li><strong>Annual:</strong> Update security questionnaire and verify compliance</li>
+      <li><strong>Every 2-3 years:</strong> Request updated SOC 2 or conduct security assessment</li>
+      <li><strong>On demand:</strong> If vendor is breached or fails to meet requirements</li>
+    </ul>
+
+    <h3>Step 6: Incident Response Planning</h3>
+    <p>If a vendor is breached, you need a plan:</p>
+    <ul>
+      <li>How will the vendor notify you of a breach?</li>
+      <li>What's your timeline for detecting breach impact?</li>
+      <li>How will you assess whether your data was compromised?</li>
+      <li>What's the process for credential reset if vendor had access?</li>
+      <li>When will you consider switching to an alternative vendor?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Security Assessment Methods</h2>
+    
+    <h3>Security Questionnaires</h3>
+    <p>Ask detailed questions about vendor security practices.</p>
+    <ul>
+      <li><strong>Cost:</strong> Free to low cost</li>
+      <li><strong>Effectiveness:</strong> Moderate—vendors may not be honest</li>
+      <li><strong>Use for:</strong> Initial screening and ongoing monitoring</li>
+    </ul>
+    <p>Use a standardized questionnaire (example: <a href="https://www.securityscorecard.com/">SecurityScorecard</a>, VSA, or CAIQ).</p>
+
+    <h3>SOC 2 Type II Certification</h3>
+    <p>Third-party audit of vendor's security controls over time.</p>
+    <ul>
+      <li><strong>Cost:</strong> Vendor pays for audit ($5,000-$50,000+)</li>
+      <li><strong>Effectiveness:</strong> High—verified by independent auditor</li>
+      <li><strong>Use for:</strong> Critical vendors handling sensitive data</li>
+      <li><strong>Coverage:</strong> Security, availability, processing integrity, confidentiality, privacy</li>
+    </ul>
+
+    <h3>ISO 27001 Certification</h3>
+    <p>International standard for information security management systems.</p>
+    <ul>
+      <li><strong>Cost:</strong> Vendor pays for certification ($10,000-$100,000+)</li>
+      <li><strong>Effectiveness:</strong> High—comprehensive security standard</li>
+      <li><strong>Use for:</strong> Critical vendors, especially in regulated industries</li>
+    </ul>
+
+    <h3>Penetration Testing</h3>
+    <p>Conduct security testing of vendor systems and access methods.</p>
+    <ul>
+      <li><strong>Cost:</strong> $5,000-$50,000 depending on scope</li>
+      <li><strong>Effectiveness:</strong> Very high—finds real vulnerabilities</li>
+      <li><strong>Use for:</strong> Critical vendors, especially when renewing contracts</li>
+      <li><strong>Scope:</strong> Test how your data is protected, access controls, encryption</li>
+    </ul>
+
+    <h3>Shared Responsibility Assessments</h3>
+    <p>For cloud and infrastructure vendors, verify they understand and meet their security responsibilities.</p>
+    <ul>
+      <li>Identify which vendor is responsible for which security controls</li>
+      <li>Verify vendor's controls are in place</li>
+      <li>Ensure you understand what you must secure</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Red Flags That Require Action</h2>
+    <ul>
+      <li>Vendor refuses to provide security documentation</li>
+      <li>Vendor won't commit to SOC 2 or equivalent certification</li>
+      <li>Vendor has been publicly breached in the last 3 years</li>
+      <li>Vendor can't explain how they encrypt your data</li>
+      <li>Vendor won't sign a data processing agreement with security clauses</li>
+      <li>Vendor can't demonstrate incident response capability</li>
+      <li>Vendor's security certificates are expired</li>
+      <li>Vendor won't allow you to conduct security assessments</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Vendor Management in Contracts</h2>
+    <p>Protect yourself through strong contracts:</p>
+    
+    <h3>Security Requirements</h3>
+    <ul>
+      <li>Specific security controls that must be implemented</li>
+      <li>Data encryption requirements (at rest and in transit)</li>
+      <li>Access control requirements</li>
+      <li>Incident notification requirements and timeframes</li>
+    </ul>
+
+    <h3>Audit Rights</h3>
+    <ul>
+      <li>Right to conduct security assessments</li>
+      <li>Right to receive SOC 2 or ISO 27001 reports</li>
+      <li>Right to audit logs if vendor processes sensitive data</li>
+      <li>Right to conduct penetration testing with notice</li>
+    </ul>
+
+    <h3>Data Protection</h3>
+    <ul>
+      <li>Data Processing Agreement (DPA) aligned with GDPR requirements</li>
+      <li>Restrictions on where data can be stored</li>
+      <li>Restrictions on data sharing with third parties</li>
+      <li>Data deletion requirements at contract end</li>
+    </ul>
+
+    <h3>Incident Response</h3>
+    <ul>
+      <li>Breach notification within 24-48 hours</li>
+      <li>Root cause analysis and remediation plan</li>
+      <li>Right to conduct forensic investigation</li>
+      <li>Liability for breach costs</li>
+    </ul>
+
+    <h3>Business Continuity</h3>
+    <ul>
+      <li>Service level agreements (SLAs) with uptime guarantees</li>
+      <li>Disaster recovery and backup procedures</li>
+      <li>Data export capability if contract ends</li>
+      <li>Right to audit disaster recovery capabilities</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Third-Party Risk for Texas Organizations</h2>
+    <p>Texas organizations often work with multiple vendors across different industries:</p>
+    <ul>
+      <li><strong>Healthcare:</strong> HIPAA requires vendor risk management and Business Associate Agreements</li>
+      <li><strong>Financial services:</strong> Vendor risk management is required by regulators</li>
+      <li><strong>Government contractors:</strong> CMMC requires vendor risk management for supply chain</li>
+      <li><strong>Critical infrastructure:</strong> Supply chain risk is a regulatory focus</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting Started</h2>
+    <ol>
+      <li><strong>Inventory vendors:</strong> Create a complete list of all vendors and service providers</li>
+      <li><strong>Classify by risk:</strong> Which vendors have access to critical data?</li>
+      <li><strong>Assess critical vendors:</strong> Conduct security questionnaire and review certifications</li>
+      <li><strong>Update contracts:</strong> Add security requirements and audit rights clauses</li>
+      <li><strong>Establish process:</strong> Annual reviews and ongoing monitoring</li>
+      <li><strong>Conduct testing:</strong> Penetration test critical vendors every 2-3 years</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Professional Vendor Assessment Services</h2>
+    <p>Our <a href="/services/external-penetration-testing/">penetration testing services</a> include vendor security assessment. We can conduct security testing of your critical vendors' systems and provide recommendations.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Manage Your Vendor Risk</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations develop vendor risk management programs and conduct security assessments of critical vendors.</p>
+    <a href="/contact" class="btn">Build Your Vendor Program</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

@@ -1,0 +1,365 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Cloud Security: AWS, Azure, Google Cloud | Sheepdog" description="Secure your cloud infrastructure on AWS, Azure, and Google Cloud. Learn key security controls and common misconfigurations." showMatrix={true}>
+  <section>
+    <h1>Cloud Security: AWS, Azure, Google Cloud</h1>
+    <p class="lead">Cloud security is a shared responsibility. Your cloud provider handles infrastructure security, but you're responsible for everything you put in the cloud. Here's how to secure AWS, Azure, and Google Cloud deployments.</p>
+  </section>
+
+  <section>
+    <h2>Shared Responsibility Model</h2>
+    <p>Understanding who is responsible for what is critical:</p>
+    
+    <h3>Cloud Provider's Responsibility (Infrastructure)</h3>
+    <ul>
+      <li>Physical data center security</li>
+      <li>Network infrastructure and edge security</li>
+      <li>Hypervisor and virtualization layer</li>
+      <li>Storage device security</li>
+    </ul>
+
+    <h3>Your Responsibility (Configuration & Usage)</h3>
+    <ul>
+      <li>Identity and access management (IAM)</li>
+      <li>Network configuration (security groups, VPCs, firewalls)</li>
+      <li>Data encryption (at rest and in transit)</li>
+      <li>Application security</li>
+      <li>Operating system and patch management</li>
+      <li>Compliance and monitoring</li>
+    </ul>
+
+    <p>The shared model means cloud providers' security is excellent, but misconfiguration of your resources is the #1 cause of cloud breaches.</p>
+  </section>
+
+  <section>
+    <h2>Common Cloud Misconfigurations</h2>
+    
+    <h3>Open Storage Buckets</h3>
+    <p>S3 buckets, Azure Blob Storage, or Google Cloud Storage exposed to the internet.</p>
+    <ul>
+      <li>Misconfigured access control allows public access</li>
+      <li>Thousands of data breaches from exposed buckets</li>
+      <li>Data includes customer PII, source code, API keys, credentials</li>
+      <li>Fix: Restrict bucket access to only what's necessary, block public access</li>
+    </ul>
+
+    <h3>Overpermissive IAM Roles</h3>
+    <p>Users and services have more permissions than needed.</p>
+    <ul>
+      <li>Developers given administrative access for convenience</li>
+      <li>Service accounts with access to all resources</li>
+      <li>Overly broad permissions propagate from root credentials</li>
+      <li>Fix: Implement least privilege access, use role-based access control</li>
+    </ul>
+
+    <h3>Missing or Weak Encryption</h3>
+    <p>Data not encrypted at rest or in transit.</p>
+    <ul>
+      <li>Database systems without encryption at rest</li>
+      <li>Application-to-database traffic unencrypted</li>
+      <li>Backups stored unencrypted</li>
+      <li>Fix: Enable encryption by default for all storage and databases</li>
+    </ul>
+
+    <h3>Default Security Groups</h3>
+    <p>Overly permissive network rules allow unnecessary access.</p>
+    <ul>
+      <li>Database accessible from internet instead of just application tier</li>
+      <li>SSH/RDP exposed without access control</li>
+      <li>All traffic allowed between resources</li>
+      <li>Fix: Implement zero trust network rules, deny by default</li>
+    </ul>
+
+    <h3>Lack of Logging and Monitoring</h3>
+    <p>No visibility into who is accessing what.</p>
+    <ul>
+      <li>No audit logs of API calls and resource access</li>
+      <li>No monitoring of data exfiltration</li>
+      <li>No alerting on suspicious activity</li>
+      <li>Fix: Enable all logging, centralize logs, implement monitoring</li>
+    </ul>
+
+    <h3>Weak or Missing MFA</h3>
+    <p>Accounts protected only by passwords.</p>
+    <ul>
+      <li>Admin accounts without MFA</li>
+      <li>No enforcement of MFA across organization</li>
+      <li>Easily compromised credentials</li>
+      <li>Fix: Require MFA for all users, especially privileged accounts</li>
+    </ul>
+
+    <h3>Unpatched Systems</h3>
+    <p>Vulnerabilities in operating systems and software not remediated.</p>
+    <ul>
+      <li>EC2 instances with months-old patches missing</li>
+      <li>Container images with vulnerable libraries</li>
+      <li>Database software outdated</li>
+      <li>Fix: Automated patching, container vulnerability scanning, regular updates</li>
+    </ul>
+
+    <h3>Unencrypted or Leaked Credentials</h3>
+    <p>API keys, database passwords, and tokens exposed.</p>
+    <ul>
+      <li>Credentials hardcoded in application source code</li>
+      <li>Credentials in environment variables without encryption</li>
+      <li>Credentials in container images</li>
+      <li>Fix: Use secrets management (AWS Secrets Manager, Azure Key Vault, Google Secret Manager)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cloud Security Best Practices by Platform</h2>
+    
+    <h3>AWS Security Controls</h3>
+    
+    <h4>Identity & Access Management</h4>
+    <ul>
+      <li>Use AWS SSO or identity provider federation, not root account</li>
+      <li>Require MFA for all users, enforce MFA for privilege escalation</li>
+      <li>Use temporary, time-limited credentials instead of long-lived keys</li>
+      <li>Implement IAM policies for least privilege</li>
+      <li>Use AWS Security Token Service (STS) for cross-account access</li>
+    </ul>
+
+    <h4>Data Protection</h4>
+    <ul>
+      <li>Enable encryption by default for S3, EBS, RDS</li>
+      <li>Use AWS Key Management Service (KMS) for centralized key management</li>
+      <li>Enable versioning and MFA delete protection for S3</li>
+      <li>Use VPC endpoints to avoid internet exposure</li>
+      <li>Enable SSL/TLS for all API and application traffic</li>
+    </ul>
+
+    <h4>Monitoring & Logging</h4>
+    <ul>
+      <li>Enable CloudTrail for all API activity logging</li>
+      <li>Enable VPC Flow Logs for network traffic analysis</li>
+      <li>Use CloudWatch for monitoring and alerting</li>
+      <li>Enable AWS Config for compliance tracking</li>
+      <li>Centralize logs in CloudWatch Logs or S3</li>
+    </ul>
+
+    <h4>Network Security</h4>
+    <ul>
+      <li>Use VPC for network isolation</li>
+      <li>Implement security groups as stateful firewalls</li>
+      <li>Use Network ACLs for additional network control</li>
+      <li>Enable VPC Flow Logs to monitor traffic</li>
+      <li>Use AWS WAF for web application protection</li>
+    </ul>
+
+    <h3>Azure Security Controls</h3>
+    
+    <h4>Identity & Access Management</h4>
+    <ul>
+      <li>Use Azure AD for centralized identity management</li>
+      <li>Require MFA for all users and enforce conditional access</li>
+      <li>Use managed identities for applications instead of service principals</li>
+      <li>Implement Azure AD Privileged Identity Management (PIM)</li>
+      <li>Regular access reviews for least privilege validation</li>
+    </ul>
+
+    <h4>Data Protection</h4>
+    <ul>
+      <li>Enable encryption by default for storage accounts and databases</li>
+      <li>Use Azure Key Vault for secrets and encryption keys</li>
+      <li>Enable Transparent Data Encryption (TDE) for SQL databases</li>
+      <li>Use Azure Storage Service Encryption</li>
+      <li>Enable SSL/TLS for all communications</li>
+    </ul>
+
+    <h4>Monitoring & Logging</h4>
+    <ul>
+      <li>Enable Azure Activity Log for all subscription activity</li>
+      <li>Use Azure Monitor for metrics and alerts</li>
+      <li>Enable diagnostic logs for resources</li>
+      <li>Use Azure Security Center for threat detection</li>
+      <li>Centralize logs in Log Analytics workspace</li>
+    </ul>
+
+    <h4>Network Security</h4>
+    <ul>
+      <li>Use virtual networks (VNets) for isolation</li>
+      <li>Implement network security groups (NSGs) as firewalls</li>
+      <li>Use Azure Firewall for centralized filtering</li>
+      <li>Enable DDoS protection standard</li>
+      <li>Use Azure Web Application Firewall (WAF)</li>
+    </ul>
+
+    <h3>Google Cloud Security Controls</h3>
+    
+    <h4>Identity & Access Management</h4>
+    <ul>
+      <li>Use Google Cloud Identity for centralized authentication</li>
+      <li>Require MFA for all users</li>
+      <li>Use service accounts with minimal permissions</li>
+      <li>Implement Cloud Identity and Access Management (IAM)</li>
+      <li>Use Workload Identity Federation for cross-cloud access</li>
+    </ul>
+
+    <h4>Data Protection</h4>
+    <ul>
+      <li>Enable encryption by default for Cloud Storage and Firestore</li>
+      <li>Use Google Cloud Key Management Service (KMS) for key management</li>
+      <li>Enable encryption at rest and in transit</li>
+      <li>Use VPC Service Controls to prevent data exfiltration</li>
+      <li>Enable Customer-Supplied Encryption Keys (CSEK) for sensitive data</li>
+    </ul>
+
+    <h4>Monitoring & Logging</h4>
+    <ul>
+      <li>Enable Cloud Logging for all API and application logs</li>
+      <li>Enable Cloud Audit Logs for resource changes</li>
+      <li>Use Cloud Monitoring for metrics and alerting</li>
+      <li>Enable Security Command Center for vulnerability and misconfiguration detection</li>
+    </ul>
+
+    <h4>Network Security</h4>
+    <ul>
+      <li>Use Virtual Private Cloud (VPC) for network isolation</li>
+      <li>Implement firewall rules for ingress/egress control</li>
+      <li>Use Cloud Armor for DDoS protection and WAF</li>
+      <li>Enable VPC Flow Logs for traffic analysis</li>
+      <li>Use Private Google Access to avoid internet routing</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cloud Security Assessment Process</h2>
+    
+    <h3>Discovery</h3>
+    <ul>
+      <li>Identify all cloud resources and accounts</li>
+      <li>Document data flows and dependencies</li>
+      <li>Identify sensitive data and critical systems</li>
+    </ul>
+
+    <h3>Configuration Review</h3>
+    <ul>
+      <li>Review IAM policies for least privilege</li>
+      <li>Review network configuration for overly permissive rules</li>
+      <li>Verify encryption is enabled for all sensitive data</li>
+      <li>Check that logging is enabled and centralized</li>
+    </ul>
+
+    <h3>Automated Scanning</h3>
+    <ul>
+      <li>Use cloud provider native tools (AWS Config, Azure Policy, GCP Security Command Center)</li>
+      <li>Use third-party scanners (Cloudsploit, ScoutSuite, Prowler)</li>
+      <li>Identify misconfigurations and compliance violations</li>
+    </ul>
+
+    <h3>Penetration Testing</h3>
+    <ul>
+      <li>Test access controls and privilege escalation</li>
+      <li>Attempt to access sensitive data without authorization</li>
+      <li>Verify network isolation is effective</li>
+      <li>Test response to anomalous activity</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools for Cloud Security</h2>
+    <ul>
+      <li><strong>Cloud provider native tools:</strong> AWS Config, Azure Security Center, GCP Security Command Center</li>
+      <li><strong>Configuration scanning:</strong> Cloudsploit, ScoutSuite, Prowler, CloudMapper</li>
+      <li><strong>Container security:</strong> Aqua, Twistlock, Sysdig</li>
+      <li><strong>Runtime security:</strong> Wiz, Lacework, Dome9</li>
+      <li><strong>Secrets scanning:</strong> GitGuardian, Snyk, Checkmarx</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting Started with Cloud Security</h2>
+    <ol>
+      <li><strong>Inventory cloud resources:</strong> Create a complete list of all cloud accounts and services</li>
+      <li><strong>Enable logging:</strong> CloudTrail (AWS), Activity Logs (Azure), Cloud Audit Logs (GCP)</li>
+      <li><strong>Implement MFA:</strong> Require MFA for all user accounts</li>
+      <li><strong>Review IAM:</strong> Implement least privilege access policies</li>
+      <li><strong>Enable encryption:</strong> Encrypt sensitive data at rest and in transit</li>
+      <li><strong>Automated scanning:</strong> Deploy configuration scanning tools</li>
+      <li><strong>Penetration testing:</strong> Conduct security testing of cloud environment</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Professional Cloud Security Testing</h2>
+    <p>Our <a href="/services/external-penetration-testing/">cloud penetration testing services</a> assess your cloud security configuration and controls. We identify misconfigurations, test access controls, and validate your security architecture.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Secure Your Cloud Environment</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations secure AWS, Azure, and Google Cloud deployments. We assess configuration, identify risks, and recommend improvements.</p>
+    <a href="/contact" class="btn">Assess Your Cloud Security</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

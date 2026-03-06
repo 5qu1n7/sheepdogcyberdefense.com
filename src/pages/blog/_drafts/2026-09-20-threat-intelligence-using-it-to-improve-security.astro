@@ -1,0 +1,261 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Threat Intelligence: Using It To Improve Security | Sheepdog" description="Leverage threat intelligence to improve your security posture. Learn how to collect, analyze, and act on threat data." showMatrix={true}>
+  <section>
+    <h1>Threat Intelligence: Using It To Improve Security</h1>
+    <p class="lead">Threat intelligence tells you what attackers are doing, what techniques they use, and what indicators to look for. Using it effectively means making better security decisions and being prepared for attacks before they happen.</p>
+  </section>
+
+  <section>
+    <h2>Types of Threat Intelligence</h2>
+    
+    <h3>Strategic Intelligence</h3>
+    <p>Big-picture information for executives and boards:</p>
+    <ul>
+      <li>Threat landscape and emerging threats</li>
+      <li>Industry-specific threats and trends</li>
+      <li>Geopolitical threats affecting your business</li>
+      <li>Business risk implications</li>
+    </ul>
+
+    <h3>Tactical Intelligence</h3>
+    <p>Specific information for security teams:</p>
+    <ul>
+      <li>Attacker tactics, techniques, procedures (TTPs)</li>
+      <li>Threat actor profiles and capabilities</li>
+      <li>Campaign analysis and timelines</li>
+      <li>Kill chain analysis</li>
+    </ul>
+
+    <h3>Operational Intelligence</h3>
+    <p>Technical indicators for detection systems:</p>
+    <ul>
+      <li>IP addresses and domains of attackers</li>
+      <li>Malware hashes and signatures</li>
+      <li>Email phishing campaigns and URLs</li>
+      <li>Command and control (C2) infrastructure</li>
+      <li>Indicators of Compromise (IOCs)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sources of Threat Intelligence</h2>
+    
+    <h3>Open Source Intelligence (OSINT)</h3>
+    <ul>
+      <li>Publicly available information</li>
+      <li>Security blogs and research</li>
+      <li>Social media and forums</li>
+      <li>Government advisories and alerts</li>
+      <li>Free: CISA, Shodan, Censys, VirusTotal</li>
+    </ul>
+
+    <h3>Commercial Intelligence</h3>
+    <ul>
+      <li>Paid threat intelligence services</li>
+      <li>Comprehensive threat data</li>
+      <li>Real-time updates</li>
+      <li>Examples: CrowdStrike, FireEye, Mandiant, Recorded Future</li>
+    </ul>
+
+    <h3>Industry-Specific Sharing</h3>
+    <ul>
+      <li>Sector ISACs (Information Sharing and Analysis Centers)</li>
+      <li>Information Sharing Groups (ISGs)</li>
+      <li>Peer organization sharing</li>
+      <li>Confidential threat data from peers</li>
+    </ul>
+
+    <h3>Internal Sources</h3>
+    <ul>
+      <li>Your own security logs and alerts</li>
+      <li>Incidents you've experienced</li>
+      <li>Vulnerability assessments</li>
+      <li>Penetration testing results</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Using Threat Intelligence Operationally</h2>
+    
+    <h3>Identify Relevant Threats</h3>
+    <ul>
+      <li>Which threat actors target your industry?</li>
+      <li>Which threats are most relevant to your business?</li>
+      <li>What geographic threats apply?</li>
+      <li>Which attack techniques are most prevalent?</li>
+    </ul>
+
+    <h3>Feed Detection Systems</h3>
+    <ul>
+      <li>Add IOCs to SIEM (malicious IPs, domains, file hashes)</li>
+      <li>Block known malicious domains in firewall</li>
+      <li>Block known command & control (C2) servers</li>
+      <li>Update IDS/IPS signatures for known attacks</li>
+    </ul>
+
+    <h3>Prioritize Security Work</h3>
+    <ul>
+      <li>Focus on threats that are actually happening</li>
+      <li>Patch vulnerabilities being actively exploited</li>
+      <li>Implement controls against prevalent techniques</li>
+      <li>Test defenses against likely threats</li>
+    </ul>
+
+    <h3>Improve Detection</h3>
+    <ul>
+      <li>Create detection rules for known attack patterns</li>
+      <li>Monitor for TTP-specific behavior</li>
+      <li>Search logs for historical indicators</li>
+      <li>Train analysts to recognize threats</li>
+    </ul>
+
+    <h3>Incident Response</h3>
+    <ul>
+      <li>Quickly identify if your incident matches known threat</li>
+      <li>Determine expected IOCs to search for</li>
+      <li>Understand attacker likely next steps</li>
+      <li>Predict what data attackers are after</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Threat Intelligence Frameworks</h2>
+    
+    <h3>MITRE ATT&CK</h3>
+    <p>Comprehensive framework of known attacker techniques:</p>
+    <ul>
+      <li>Catalog of tactics and techniques</li>
+      <li>Map which groups use which techniques</li>
+      <li>Assess your defenses against techniques</li>
+      <li>Align security investments</li>
+    </ul>
+
+    <h3>Cyber Kill Chain</h3>
+    <p>Phases of attack:</p>
+    <ul>
+      <li>Reconnaissance, Weaponization, Delivery, Exploitation, Installation, Command & Control, Actions on Objectives</li>
+      <li>Help detect attacks at each phase</li>
+    </ul>
+
+    <h3>Diamond Model</h3>
+    <p>Four elements of intrusion:</p>
+    <ul>
+      <li>Adversary, Capability, Infrastructure, Victim</li>
+      <li>Analyze relationships between elements</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Building a Threat Intelligence Program</h2>
+    
+    <h3>Collection</h3>
+    <ul>
+      <li>Identify relevant intelligence sources</li>
+      <li>Automate collection where possible</li>
+      <li>Verify source reliability</li>
+    </ul>
+
+    <h3>Analysis</h3>
+    <ul>
+      <li>Determine relevance to your organization</li>
+      <li>Assess confidence in the intelligence</li>
+      <li>Identify actionable indicators</li>
+    </ul>
+
+    <h3>Dissemination</h3>
+    <ul>
+      <li>Share with relevant teams</li>
+      <li>Provide context and recommended actions</li>
+      <li>Feed technical indicators to detection systems</li>
+    </ul>
+
+    <h3>Feedback</h3>
+    <ul>
+      <li>Track what intelligence was actually useful</li>
+      <li>Refine collection based on effectiveness</li>
+      <li>Improve relevance over time</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Measuring Threat Intelligence Effectiveness</h2>
+    <ul>
+      <li>Number of threats detected using intelligence</li>
+      <li>Time from threat publication to detection</li>
+      <li>False positive rate</li>
+      <li>Cost savings from preventing attacks</li>
+      <li>Improved incident response time</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Use Intelligence to Defend</h2>
+    <p>Sheepdog Cyber Defense helps organizations build threat intelligence programs and improve detection of relevant threats.</p>
+    <a href="/contact" class="btn">Implement Threat Intelligence</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

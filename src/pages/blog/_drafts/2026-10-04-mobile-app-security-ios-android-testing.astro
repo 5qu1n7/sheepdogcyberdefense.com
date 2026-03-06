@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Mobile App Security: iOS & Android Testing | Sheepdog" description="Secure mobile applications. Learn iOS and Android security testing best practices and common vulnerabilities." showMatrix={true}>
+  <section>
+    <h1>Mobile App Security: iOS & Android Testing</h1>
+    <p class="lead">Mobile apps handle sensitive data and bypass many traditional security controls. iOS and Android security testing is critical to prevent data theft, account compromise, and malware. Here's how to test mobile apps securely.</p>
+  </section>
+
+  <section>
+    <h2>Mobile Security Challenges</h2>
+    <ul>
+      <li>Less security oversight than web/desktop apps</li>
+      <li>Users install unvetted third-party apps</li>
+      <li>Device compromise exposes all app data</li>
+      <li>Network traffic on public WiFi is intercepted</li>
+      <li>Insecure APIs accessed by mobile apps</li>
+      <li>Storage of credentials on devices</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common Mobile Vulnerabilities</h2>
+    
+    <h3>Insecure Data Storage</h3>
+    <ul>
+      <li>Credentials stored in plain text or SharedPreferences</li>
+      <li>Sensitive data cached in logs</li>
+      <li>Data not encrypted on device</li>
+      <li>Fix: Encrypt sensitive data, use secure storage APIs</li>
+    </ul>
+
+    <h3>Weak API Security</h3>
+    <ul>
+      <li>No authentication required for API requests</li>
+      <li>API credentials hardcoded in app</li>
+      <li>Unencrypted API traffic</li>
+      <li>Fix: Require authentication, use HTTPS, rotate credentials</li>
+    </ul>
+
+    <h3>Insecure Communications</h3>
+    <ul>
+      <li>HTTP instead of HTTPS for API calls</li>
+      <li>Certificate pinning not implemented</li>
+      <li>Man-in-the-middle attack exposure</li>
+      <li>Fix: Enforce HTTPS, implement certificate pinning</li>
+    </ul>
+
+    <h3>Poor Input Validation</h3>
+    <ul>
+      <li>SQL injection in local databases</li>
+      <li>Command injection in system calls</li>
+      <li>Cross-site scripting (XSS) in WebViews</li>
+      <li>Fix: Validate all input, use parameterized queries</li>
+    </ul>
+
+    <h3>Code Tampering</h3>
+    <ul>
+      <li>App can be decompiled to view source code</li>
+      <li>Logic can be modified and re-signed</li>
+      <li>App can be patched to bypass security</li>
+      <li>Fix: Obfuscation, anti-tampering checks, code signing verification</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>iOS Security Testing</h2>
+    
+    <h3>Tools</h3>
+    <ul>
+      <li>Xcode (development environment)</li>
+      <li>Frida (instrumentation framework)</li>
+      <li>Burp Suite (API testing)</li>
+      <li>MobSF (mobile security framework)</li>
+    </ul>
+
+    <h3>Testing Process</h3>
+    <ul>
+      <li>Static analysis of code</li>
+      <li>Dynamic testing on device</li>
+      <li>Network traffic interception</li>
+      <li>Data storage examination</li>
+      <li>Authentication bypass attempts</li>
+      <li>Jailbreak detection testing</li>
+    </ul>
+
+    <h3>iOS Specific Controls</h3>
+    <ul>
+      <li>Keychain for credential storage</li>
+      <li>Data Protection APIs for encryption</li>
+      <li>Code signing and provisioning profiles</li>
+      <li>Jailbreak detection</li>
+      <li>App Transport Security (ATS)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Android Security Testing</h2>
+    
+    <h3>Tools</h3>
+    <ul>
+      <li>Android Studio (development)</li>
+      <li>APKTool (decompile APK)</li>
+      <li>Burp Suite (API testing)</li>
+      <li>MobSF (mobile security framework)</li>
+      <li>Frida (instrumentation)</li>
+    </ul>
+
+    <h3>Testing Process</h3>
+    <ul>
+      <li>Decompile APK and review code</li>
+      <li>Test on rooted device/emulator</li>
+      <li>Examine SharedPreferences and databases</li>
+      <li>Intercept network traffic</li>
+      <li>Test authentication mechanisms</li>
+      <li>Test Intent handling</li>
+    </ul>
+
+    <h3>Android Specific Controls</h3>
+    <ul>
+      <li>Keystore for key management</li>
+      <li>Encrypted SharedPreferences</li>
+      <li>Android Keychain</li>
+      <li>Permission-based access control</li>
+      <li>AndroidManifest.xml security settings</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Secure Mobile Development</h2>
+    
+    <h3>Authentication</h3>
+    <ul>
+      <li>Require strong authentication (not just password)</li>
+      <li>Implement MFA where applicable</li>
+      <li>Secure session management</li>
+      <li>Automatic logout after inactivity</li>
+    </ul>
+
+    <h3>Data Protection</h3>
+    <ul>
+      <li>Encrypt sensitive data at rest</li>
+      <li>Encrypt all network traffic (HTTPS)</li>
+      <li>Implement certificate pinning</li>
+      <li>Minimize data stored on device</li>
+    </ul>
+
+    <h3>Code Security</h3>
+    <ul>
+      <li>Input validation on all fields</li>
+      <li>Secure coding practices</li>
+      <li>Code obfuscation for sensitive logic</li>
+      <li>Remove debug info in production</li>
+    </ul>
+
+    <h3>Device Security</h3>
+    <ul>
+      <li>Detect rooted/jailbroken devices</li>
+      <li>Require device encryption</li>
+      <li>Verify device health before allowing access</li>
+      <li>Anti-tampering checks</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>App Store Security</h2>
+    <ul>
+      <li>Apple App Store: Requires code review, strong app review guidelines</li>
+      <li>Google Play: Automated scanning, required security practices</li>
+      <li>Submit apps to stores for distribution</li>
+      <li>Don't bypass app stores with side-loading</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Professional Mobile App Testing</h2>
+    <p>Our <a href="/services/web-application-penetration-testing/">mobile application security testing</a> includes both iOS and Android assessment. We test for common vulnerabilities and validate security controls.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Secure Your Mobile Apps</h2>
+    <p>Sheepdog Cyber Defense provides comprehensive mobile app security testing for iOS and Android applications.</p>
+    <a href="/contact" class="btn">Test Your Mobile Apps</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

@@ -1,0 +1,248 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="State Privacy Laws: CCPA, TDPSA & Compliance | Sheepdog" description="Understand California CCPA, Texas TDPSA, and other state privacy laws. Learn compliance requirements and implementation steps." showMatrix={true}>
+  <section>
+    <h1>State Privacy Laws: CCPA, TDPSA & Compliance</h1>
+    <p class="lead">State privacy laws are proliferating. California CCPA, Texas TDPSA, and similar laws require companies to protect personal data and honor consumer privacy rights. Non-compliance carries hefty fines. Here's what you need to know.</p>
+  </section>
+
+  <section>
+    <h2>The Privacy Law Landscape</h2>
+    <p>State privacy laws are fragmenting the regulatory landscape:</p>
+    <ul>
+      <li>California Consumer Privacy Act (CCPA) - 2018</li>
+      <li>California Privacy Rights Act (CPRA) - 2020</li>
+      <li>Texas Data Privacy and Security Act (TDPSA) - 2023</li>
+      <li>Virginia VCDPA, Colorado CPA, Connecticut CTDPA, and more</li>
+      <li>More states considering similar laws</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>CCPA & CPRA (California)</h2>
+    
+    <h3>Key Rights</h3>
+    <ul>
+      <li><strong>Right to know:</strong> What data is collected</li>
+      <li><strong>Right to access:</strong> Get a copy of your data</li>
+      <li><strong>Right to delete:</strong> Request data deletion</li>
+      <li><strong>Right to opt-out:</strong> Stop selling/sharing data</li>
+      <li><strong>Right to correct:</strong> Fix inaccurate data (CPRA only)</li>
+      <li><strong>Right to non-discrimination:</strong> No punishment for exercising rights</li>
+    </ul>
+
+    <h3>Who is Covered?</h3>
+    <ul>
+      <li>California residents (regardless of company location)</li>
+      <li>Companies with $25M+ revenue, OR</li>
+      <li>Buy/sell data of 100,000+ Californians, OR</li>
+      <li>Derive 50%+ revenue from selling consumer data</li>
+    </ul>
+
+    <h3>Penalties</h3>
+    <ul>
+      <li>$2,500 per violation</li>
+      <li>$7,500 per intentional violation</li>
+      <li>Attorney general enforcement and private right of action</li>
+    </ul>
+
+    <h3>CPRA Additions (2023 onward)</h3>
+    <ul>
+      <li>Expanded definitions of personal information</li>
+      <li>New "sensitive personal information" category</li>
+      <li>Right to correct inaccurate data</li>
+      <li>Right to opt-out of profiling</li>
+      <li>Authoritative agents for data requests</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>TDPSA (Texas Data Privacy and Security Act)</h2>
+    
+    <h3>Key Requirements</h3>
+    <ul>
+      <li><strong>Privacy notice:</strong> Inform consumers about data practices</li>
+      <li><strong>Data collection limits:</strong> Only collect necessary data</li>
+      <li><strong>Purpose limitation:</strong> Only use data for stated purposes</li>
+      <li><strong>Security controls:</strong> Implement reasonable security</li>
+      <li><strong>Retention limits:</strong> Delete data when no longer needed</li>
+    </ul>
+
+    <h3>Consumer Rights</h3>
+    <ul>
+      <li>Access: Get copy of collected data</li>
+      <li>Correction: Fix inaccurate data</li>
+      <li>Deletion: Request data deletion</li>
+      <li>Portability: Get data in portable format</li>
+      <li>Opt-out: Stop targeted advertising</li>
+    </ul>
+
+    <h3>Who is Covered?</h3>
+    <ul>
+      <li>Applies to Texas residents' personal data</li>
+      <li>All businesses (no revenue threshold)</li>
+      <li>B2B data excluded</li>
+      <li>Effective July 1, 2024</li>
+    </ul>
+
+    <h3>Penalties</h3>
+    <ul>
+      <li>Enforcement by Texas Attorney General</li>
+      <li>Up to $7,500 per violation</li>
+      <li>30-day cure period before enforcement</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Other State Laws</h2>
+    <ul>
+      <li><strong>Colorado CPA:</strong> Similar to CCPA, effective July 2023</li>
+      <li><strong>Connecticut CTDPA:</strong> Similar requirements, effective July 2023</li>
+      <li><strong>Utah UCPA:</strong> Effective March 2024</li>
+      <li><strong>Virginia VCDPA:</strong> Effective Jan 2023</li>
+      <li>More states considering: NY, NJ, PA, MI, OH, IL</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Implementation Steps</h2>
+    
+    <h3>Assess Current Practices</h3>
+    <ul>
+      <li>Inventory data collection practices</li>
+      <li>Identify all customer data types</li>
+      <li>Map data flow and retention</li>
+      <li>Review consent mechanisms</li>
+    </ul>
+
+    <h3>Develop Privacy Program</h3>
+    <ul>
+      <li>Privacy policy aligned with laws</li>
+      <li>Data retention schedule</li>
+      <li>Data security procedures</li>
+      <li>Consumer request processes</li>
+    </ul>
+
+    <h3>Implement Technical Controls</h3>
+    <ul>
+      <li>Data classification (which data is regulated?)</li>
+      <li>Encryption for personal data</li>
+      <li>Access controls (who can access what?)</li>
+      <li>Deletion mechanisms (secure deletion)</li>
+    </ul>
+
+    <h3>Build Request Fulfillment</h3>
+    <ul>
+      <li>Process for receiving data access requests</li>
+      <li>Process for deletion requests</li>
+      <li>Timeline for responses (typically 45 days)</li>
+      <li>Identity verification procedures</li>
+    </ul>
+
+    <h3>Train Organization</h3>
+    <ul>
+      <li>Privacy requirements training</li>
+      <li>Data handling procedures</li>
+      <li>Request fulfillment processes</li>
+      <li>Breach notification procedures</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Challenges for Texas Businesses</h2>
+    
+    <h3>Multi-State Compliance</h3>
+    <p>Texas businesses serving multiple states must comply with all applicable laws (CCPA, TDPSA, etc.).</p>
+
+    <h3>Data Residency</h3>
+    <p>Some laws restrict where data can be stored (impacts cloud strategy).</p>
+
+    <h3>Resource Intensive</h3>
+    <p>Compliance requires changes to data systems, processes, and staff training.</p>
+
+    <h3>Third-Party Vendors</h3>
+    <p>Responsibility for vendor compliance on sensitive data handling.</p>
+  </section>
+
+  <section>
+    <h2>Privacy-by-Design</h2>
+    <p>Build privacy into systems from the start:</p>
+    <ul>
+      <li>Collect minimum necessary data</li>
+      <li>Encrypt sensitive data</li>
+      <li>Default to privacy-protective settings</li>
+      <li>Easy opt-out mechanisms</li>
+      <li>Secure data deletion</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Ensure Compliance</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations assess privacy compliance and implement required controls.</p>
+    <a href="/contact" class="btn">Assess Privacy Compliance</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

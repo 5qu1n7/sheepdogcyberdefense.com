@@ -1,0 +1,303 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Security Incident Response: Building Your Team | Sheepdog" description="Build an effective incident response team. Learn roles, responsibilities, and procedures for handling security breaches." showMatrix={true}>
+  <section>
+    <h1>Security Incident Response: Building Your Team</h1>
+    <p class="lead">A data breach is inevitable. Your incident response team's effectiveness determines the difference between a contained incident and a catastrophe. Here's how to build one.</p>
+  </section>
+
+  <section>
+    <h2>Why You Need a Dedicated Response Team</h2>
+    <p>When a security incident occurs, you have hours—not days—to respond. If you don't have a plan and designated people, chaos ensues:</p>
+    <ul>
+      <li>No one knows who's in charge</li>
+      <li>People are making decisions on the fly with no strategy</li>
+      <li>Logs are being deleted instead of preserved</li>
+      <li>Systems are being shut down without containing the attacker</li>
+      <li>Legal and regulatory notifications are missed</li>
+      <li>Critical systems are restored from compromised backups</li>
+    </ul>
+    <p>An organized incident response team prevents these failures. It means you know exactly what to do and who does it.</p>
+  </section>
+
+  <section>
+    <h2>Core Incident Response Team Roles</h2>
+    
+    <h3>Incident Commander (IC)</h3>
+    <p><strong>Responsibility:</strong> Overall decision-making authority during incident</p>
+    <p>The IC coordinates all response activities, communicates with leadership and external parties, and makes critical decisions about containment and recovery. This should be someone with authority to mobilize resources immediately.</p>
+    <p><strong>Typical roles:</strong> CISO, VP of IT, Chief Information Officer</p>
+
+    <h3>Technical Lead</h3>
+    <p><strong>Responsibility:</strong> Technical investigation and containment</p>
+    <p>Leads the technical response: gathering evidence, analyzing logs, identifying compromised systems, implementing containment measures.</p>
+    <p><strong>Typical roles:</strong> Senior IT Security person, network engineer, system administrator</p>
+
+    <h3>Communications Lead</h3>
+    <p><strong>Responsibility:</strong> Internal and external communications</p>
+    <p>Manages communications with employees, customers, regulators, law enforcement, and media. Coordinates the messaging to avoid conflicting statements.</p>
+    <p><strong>Typical roles:</strong> Communications director, General Counsel, PR professional</p>
+
+    <h3>Legal Lead</h3>
+    <p><strong>Responsibility:</strong> Legal and regulatory compliance</p>
+    <p>Ensures compliance with breach notification laws, manages communications with legal counsel, and addresses regulatory reporting requirements. Coordinates with insurance carrier.</p>
+    <p><strong>Typical roles:</strong> General Counsel, outside counsel, compliance officer</p>
+
+    <h3>Forensics/Investigation Lead</h3>
+    <p><strong>Responsibility:</strong> Evidence preservation and investigation</p>
+    <p>Preserves evidence, conducts forensic analysis, documents the incident timeline, and prepares for potential legal proceedings.</p>
+    <p><strong>Typical roles:</strong> Forensics expert (may be external consultant), security engineer</p>
+
+    <h3>Support Team</h3>
+    <p>System administrators, network engineers, and other technical staff who execute containment and recovery under direction of the technical lead.</p>
+  </section>
+
+  <section>
+    <h2>Essential Incident Response Procedures</h2>
+    
+    <h3>Detection</h3>
+    <p>How do you know you have an incident?</p>
+    <ul>
+      <li>Monitoring alerts (intrusion detection, malware alerts)</li>
+      <li>User reports (unusual activity, system behavior)</li>
+      <li>Threat intelligence (notification from external party)</li>
+      <li>System anomalies (unexpected outages, performance degradation)</li>
+    </ul>
+    <p><strong>Key point:</strong> Have clear escalation paths. If someone suspects a breach, they know immediately who to contact.</p>
+
+    <h3>Initiation</h3>
+    <p>Once an incident is suspected:</p>
+    <ul>
+      <li>Incident Commander is notified immediately</li>
+      <li>Response team is assembled (within hours)</li>
+      <li>Incident is classified by severity (critical, high, medium, low)</li>
+      <li>Response procedures are initiated based on severity</li>
+    </ul>
+
+    <h3>Investigation</h3>
+    <p>Determine the scope and nature of the compromise:</p>
+    <ul>
+      <li>What systems were compromised?</li>
+      <li>When did the compromise begin?</li>
+      <li>How did attackers gain access?</li>
+      <li>What data was accessed or exfiltrated?</li>
+      <li>Is the attacker still inside your network?</li>
+    </ul>
+    <p><strong>Critical:</strong> Preserve evidence. Don't overwrite logs or delete suspicious files.</p>
+
+    <h3>Containment</h3>
+    <p>Stop the bleeding:</p>
+    <ul>
+      <li>Isolate compromised systems (remove from network)</li>
+      <li>Change credentials for affected accounts</li>
+      <li>Block known attacker IPs and domains</li>
+      <li>Patch vulnerable systems to prevent reinfection</li>
+      <li>Update endpoint protection and monitor for lateral movement</li>
+    </ul>
+
+    <h3>Eradication</h3>
+    <p>Remove the attacker from your network:</p>
+    <ul>
+      <li>Remove malware and attacker tools</li>
+      <li>Close all entry points and backdoors</li>
+      <li>Verify all compromised systems are cleaned</li>
+      <li>Change all credentials (attackers may have access)</li>
+    </ul>
+
+    <h3>Recovery</h3>
+    <p>Restore systems to normal operation:</p>
+    <ul>
+      <li>Restore systems from known-clean backups (before compromise)</li>
+      <li>Rebuild compromised systems from scratch if necessary</li>
+      <li>Restore data and applications</li>
+      <li>Test systems before returning to production</li>
+      <li>Monitor closely for signs of re-compromise</li>
+    </ul>
+
+    <h3>Notification</h3>
+    <p>Notify required parties (timing varies by regulation):</p>
+    <ul>
+      <li>Law enforcement (FBI, local police)</li>
+      <li>Affected individuals (if personal data was exposed)</li>
+      <li>Regulatory bodies (if required)</li>
+      <li>Media (if newsworthy or legally required)</li>
+      <li>Customers and partners</li>
+    </ul>
+
+    <h3>Post-Incident</h3>
+    <p>Learn and improve:</p>
+    <ul>
+      <li>Conduct blameless post-mortem</li>
+      <li>Document lessons learned</li>
+      <li>Implement preventive measures</li>
+      <li>Update incident response plan based on experience</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Incident Response Plan Components</h2>
+    <p>Your incident response plan should document:</p>
+    
+    <h3>Contacts and Escalation</h3>
+    <ul>
+      <li>Response team members (names, roles, contact info)</li>
+      <li>External resources (incident response firm, legal counsel, law enforcement)</li>
+      <li>Escalation paths for different types of incidents</li>
+    </ul>
+
+    <h3>Communication Procedures</h3>
+    <ul>
+      <li>How to communicate during an active incident</li>
+      <li>Who communicates with whom</li>
+      <li>Secure communication methods (encrypted, out-of-band)</li>
+      <li>Message templates for notifications</li>
+    </ul>
+
+    <h3>Technical Procedures</h3>
+    <ul>
+      <li>How to preserve evidence</li>
+      <li>How to isolate systems safely</li>
+      <li>Recovery procedures for different system types</li>
+      <li>Monitoring and detection procedures</li>
+    </ul>
+
+    <h3>Legal and Regulatory</h3>
+    <ul>
+      <li>Notification requirements by jurisdiction</li>
+      <li>Regulatory reporting timelines</li>
+      <li>Lawyer-client privilege considerations</li>
+      <li>Insurance notification procedures</li>
+    </ul>
+
+    <h3>Approved Roles and Decision Authority</h3>
+    <ul>
+      <li>Who can declare an incident?</li>
+      <li>Who can authorize system shutdown?</li>
+      <li>Who can commit to ransom negotiations?</li>
+      <li>Who can notify regulators or media?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Testing Your Incident Response Capability</h2>
+    <p>A plan on paper doesn't mean your team can execute it. Test regularly:</p>
+    
+    <h3>Tabletop Exercises</h3>
+    <p>Bring the team together and walk through a simulated incident scenario. No systems are involved—just discussion of what you'd do.</p>
+    <p><strong>Frequency:</strong> Minimum annually, ideally quarterly</p>
+
+    <h3>Red Team Testing</h3>
+    <p>Have a professional penetration testing firm conduct a simulated attack and evaluate your response capability.</p>
+    <p><strong>What it tests:</strong> Detection, notification, containment, evidence preservation</p>
+
+    <h3>Backup Recovery Testing</h3>
+    <p>Regularly test your ability to recover from backups. This is critical for ransomware scenarios.</p>
+    <p><strong>Frequency:</strong> Monthly minimum</p>
+
+    <h3>Monitoring and Detection Testing</h3>
+    <p>Verify that your monitoring systems actually alert on suspicious activity.</p>
+    <p><strong>How:</strong> Simulate suspicious activity (failed logins, unusual data transfers) and verify alerts fire</p>
+  </section>
+
+  <section>
+    <h2>When to Hire External Help</h2>
+    <p>For serious incidents, you'll likely need external resources:</p>
+    
+    <h3>Incident Response Firms</h3>
+    <p>Professional responders who handle the technical investigation, containment, and recovery.</p>
+    <p><strong>When to hire:</strong> Any breach affecting sensitive data or involving ransomware</p>
+
+    <h3>Legal Counsel</h3>
+    <p>Specialized in data breach and cybersecurity law. Manages breach notifications and regulatory compliance.</p>
+    <p><strong>When to hire:</strong> Any incident requiring legal compliance or notification</p>
+
+    <h3>Forensics Experts</h3>
+    <p>Specialized in evidence preservation and digital forensics for potential legal proceedings.</p>
+    <p><strong>When to hire:</strong> Any incident involving potential criminal activity</p>
+
+    <h3>Cyber Insurance Advocate</h3>
+    <p>Your cyber insurance policy may cover incident response costs. An advocate helps you navigate claims.</p>
+    <p><strong>When to use:</strong> Any incident covered by your policy</p>
+  </section>
+
+  <section>
+    <h2>Building an Incident Response Culture</h2>
+    <p>Good incident response goes beyond procedures. It requires culture:</p>
+    <ul>
+      <li><strong>Blameless approach:</strong> Focus on learning, not punishment. If people fear blame, they hide problems.</li>
+      <li><strong>Speed over perfection:</strong> In incidents, fast containment beats perfect response. Be okay with "good enough" decisions made quickly.</li>
+      <li><strong>Regular testing:</strong> Make incident response practice routine, not something that only happens in crisis</li>
+      <li><strong>Post-mortems:</strong> After every incident, document what happened and what you'll improve</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Build Your Response Capability?</h2>
+    <p>Sheepdog Cyber Defense helps organizations develop incident response plans and conducts testing to validate capability.</p>
+    <a href="/contact" class="btn">Develop Your Response Plan</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

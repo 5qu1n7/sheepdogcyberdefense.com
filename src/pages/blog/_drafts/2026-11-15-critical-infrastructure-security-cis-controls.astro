@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Critical Infrastructure Security & CIS Controls | Sheepdog" description="Secure critical infrastructure. Learn CIS Controls and security requirements for energy, utilities, water, and communications." showMatrix={true}>
+  <section>
+    <h1>Critical Infrastructure Security & CIS Controls</h1>
+    <p class="lead">Critical infrastructure—energy, water, communications, transportation—is under constant attack. CIS Controls provide a framework for securing these essential systems. Here's what you need to know.</p>
+  </section>
+
+  <section>
+    <h2>Critical Infrastructure Threats</h2>
+    <ul>
+      <li>Nation-state attacks on energy and utilities</li>
+      <li>Ransomware targeting hospitals and water systems</li>
+      <li>Supply chain attacks on critical suppliers</li>
+      <li>Zero-day exploits in SCADA/ICS systems</li>
+      <li>Insider threats in operational technology</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What is CIS Controls?</h2>
+    <p>Center for Internet Security (CIS) Controls are 18 actionable, prioritized security controls:</p>
+    <ul>
+      <li>Developed by cybersecurity experts and government</li>
+      <li>Based on lessons from real attacks</li>
+      <li>Focused on prevention and detection</li>
+      <li>Widely adopted across industries</li>
+      <li>Often mandatory for government contractors</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The 18 CIS Controls</h2>
+    
+    <h3>Basic (Controls 1-6)</h3>
+    <ul>
+      <li><strong>1. Inventory of Assets:</strong> Know what you have</li>
+      <li><strong>2. Inventory of Software:</strong> Track all applications</li>
+      <li><strong>3. Data Protection:</strong> Encrypt sensitive data</li>
+      <li><strong>4. Secure Configurations:</strong> Harden systems</li>
+      <li><strong>5. Access Control:</strong> Least privilege access</li>
+      <li><strong>6. Awareness Training:</strong> Educate users</li>
+    </ul>
+
+    <h3>Foundational (Controls 7-13)</h3>
+    <ul>
+      <li><strong>7. Email Security:</strong> Filter and protect email</li>
+      <li><strong>8. Malware Defenses:</strong> Endpoint protection</li>
+      <li><strong>9. Limitation & Control:</strong> Restrict software execution</li>
+      <li><strong>10. Data Recovery:</strong> Backups and disaster recovery</li>
+      <li><strong>11. Network Segmentation:</strong> Isolate critical systems</li>
+      <li><strong>12. Boundary Defense:</strong> Perimeter security</li>
+      <li><strong>13. Data Protection in Motion:</strong> Encrypt network traffic</li>
+    </ul>
+
+    <h3>Advanced (Controls 14-18)</h3>
+    <ul>
+      <li><strong>14. Penetration Testing:</strong> Test defenses</li>
+      <li><strong>15. Logging & Monitoring:</strong> Detect attacks</li>
+      <li><strong>16. Incident Response:</strong> Respond to breaches</li>
+      <li><strong>17. Security Architecture:</strong> Design for security</li>
+      <li><strong>18. Supply Chain Risk Management:</strong> Vendor security</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Implementation by Industry</h2>
+    
+    <h3>Energy & Utilities (NERC CIP)</h3>
+    <ul>
+      <li>NERC CIP is more stringent than CIS</li>
+      <li>Aligns with CIS Controls for many areas</li>
+      <li>Specific requirements for critical assets</li>
+      <li>Mandatory compliance for grid operators</li>
+    </ul>
+
+    <h3>Water Systems (AWWA)</h3>
+    <ul>
+      <li>Water Sector Security Framework aligned with NIST</li>
+      <li>CIS Controls provide supporting guidance</li>
+      <li>Focus on operational technology security</li>
+    </ul>
+
+    <h3>Communications (CISA)</h3>
+    <ul>
+      <li>CISA provides guidance aligned with CIS</li>
+      <li>Critical service providers must comply</li>
+      <li>Incident reporting requirements</li>
+    </ul>
+
+    <h3>Healthcare (HIPAA)</h3>
+    <ul>
+      <li>HIPAA requirements align with CIS Controls</li>
+      <li>CIS provides operational guidance</li>
+      <li>Patient safety is paramount</li>
+    </ul>
+
+    <h3>Government Contractors (CMMC)</h3>
+    <ul>
+      <li>CMMC includes CIS Control requirements</li>
+      <li>Required for DoD contracts</li>
+      <li>Certification-based compliance</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Implementing CIS Controls</h2>
+    
+    <h3>Step 1: Assessment</h3>
+    <ul>
+      <li>Assess current state against CIS Controls</li>
+      <li>Identify gaps and priorities</li>
+      <li>Understand dependencies</li>
+    </ul>
+
+    <h3>Step 2: Prioritization</h3>
+    <ul>
+      <li>Focus on Basic controls first</li>
+      <li>Build on Foundational controls</li>
+      <li>Advanced controls for mature programs</li>
+    </ul>
+
+    <h3>Step 3: Implementation</h3>
+    <ul>
+      <li>Assign ownership for each control</li>
+      <li>Develop detailed procedures</li>
+      <li>Allocate resources and budget</li>
+      <li>Track implementation progress</li>
+    </ul>
+
+    <h3>Step 4: Verification</h3>
+    <ul>
+      <li>Audit control effectiveness</li>
+      <li>Conduct penetration testing</li>
+      <li>Regular assessments</li>
+      <li>Continuous improvement</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Critical Infrastructure Specific Challenges</h2>
+    
+    <h3>Operational Technology (OT)</h3>
+    <ul>
+      <li>Different architecture than IT systems</li>
+      <li>Availability is critical (can't shut down for updates)</li>
+      <li>Legacy systems with no security updates</li>
+      <li>Air-gapped from corporate networks</li>
+    </ul>
+
+    <h3>Safety Considerations</h3>
+    <ul>
+      <li>Security improvements can't impact safety</li>
+      <li>Availability is more critical than confidentiality</li>
+      <li>System changes require rigorous testing</li>
+    </ul>
+
+    <h3>Resource Constraints</h3>
+    <ul>
+      <li>Limited IT/security budgets in some utilities</li>
+      <li>Skills shortage in OT security</li>
+      <li>Cost of implementing controls in legacy systems</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Professional Assessment Services</h2>
+    <p>Our <a href="/services/external-penetration-testing/">penetration testing services</a> include critical infrastructure security assessment. We test your controls against real-world attack techniques relevant to your industry.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Implement CIS Controls</h2>
+    <p>Sheepdog Cyber Defense helps critical infrastructure organizations implement CIS Controls and achieve security maturity.</p>
+    <a href="/contact" class="btn">Assess Your CIS Compliance</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

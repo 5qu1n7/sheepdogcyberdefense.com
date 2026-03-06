@@ -1,0 +1,345 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Data Classification & Protection Strategies | Sheepdog" description="Implement data classification to identify sensitive information and apply appropriate security controls. Protect your most valuable asset." showMatrix={true}>
+  <section>
+    <h1>Data Classification & Protection Strategies</h1>
+    <p class="lead">You can't protect all data the same way. Data classification identifies what information you have, how sensitive it is, and what protection it needs. It's the foundation of an effective security program.</p>
+  </section>
+
+  <section>
+    <h2>Why Data Classification Matters</h2>
+    <p>Without classification, you either over-protect everything (expensive and impractical) or under-protect sensitive data (risky):</p>
+    <ul>
+      <li>You don't know what sensitive data you have</li>
+      <li>Sensitive data gets the same protection as public data</li>
+      <li>You can't comply with regulations (HIPAA, PCI, GDPR)</li>
+      <li>You can't respond effectively to incidents</li>
+      <li>You spend resources protecting low-value data</li>
+    </ul>
+    <p>Data classification solves this by prioritizing protection based on actual sensitivity and business impact.</p>
+  </section>
+
+  <section>
+    <h2>Data Classification Levels</h2>
+    <p>Most organizations use 3-4 classification levels:</p>
+    
+    <h3>Public</h3>
+    <p><strong>Definition:</strong> Data intended for public consumption.</p>
+    <ul>
+      <li>Marketing materials and publications</li>
+      <li>Public website content</li>
+      <li>Published research or whitepapers</li>
+      <li>No impact if disclosed or modified</li>
+    </ul>
+    <p><strong>Protection:</strong> Basic (integrity and availability, not confidentiality)</p>
+
+    <h3>Internal/Confidential</h3>
+    <p><strong>Definition:</strong> Data for internal use only, not sensitive but not for public disclosure.</p>
+    <ul>
+      <li>Internal policies and procedures</li>
+      <li>Non-sensitive business information</li>
+      <li>Employee contact information</li>
+      <li>Moderate impact if disclosed</li>
+    </ul>
+    <p><strong>Protection:</strong> Standard (restricted access, basic encryption)</p>
+
+    <h3>Sensitive/Restricted</h3>
+    <p><strong>Definition:</strong> Data whose disclosure would cause significant harm.</p>
+    <ul>
+      <li>Customer personally identifiable information (PII)</li>
+      <li>Financial records and account information</li>
+      <li>Health information (HIPAA)</li>
+      <li>Trade secrets and proprietary information</li>
+      <li>Significant impact if disclosed or compromised</li>
+    </ul>
+    <p><strong>Protection:</strong> Strong (encryption, strict access control, monitoring)</p>
+
+    <h3>Highly Restricted/Secret</h3>
+    <p><strong>Definition:</strong> Data whose disclosure would cause catastrophic harm.</p>
+    <ul>
+      <li>Executive information and strategic plans</li>
+      <li>Payment card data (PCI DSS)</li>
+      <li>Classified or regulated data</li>
+      <li>Encryption keys and credentials</li>
+      <li>Severe impact if disclosed or compromised</li>
+    </ul>
+    <p><strong>Protection:</strong> Maximum (encryption, strict access control, detailed monitoring, multi-factor authentication)</p>
+  </section>
+
+  <section>
+    <h2>Identifying Sensitive Data</h2>
+    
+    <h3>Personal Information</h3>
+    <p>Any data about individuals that could identify them:</p>
+    <ul>
+      <li>Names combined with address, phone, email, SSN, driver's license</li>
+      <li>Biometric data (fingerprints, facial recognition)</li>
+      <li>Health and medical information</li>
+      <li>Financial accounts and payment information</li>
+      <li>Children's information (often has higher protection)</li>
+    </ul>
+
+    <h3>Business Information</h3>
+    <p>Proprietary information about your business:</p>
+    <ul>
+      <li>Financial statements and pricing information</li>
+      <li>Strategic plans and merger/acquisition targets</li>
+      <li>Product development and roadmap</li>
+      <li>Customer lists and relationships</li>
+      <li>Vendor contracts and relationships</li>
+    </ul>
+
+    <h3>System & Security Information</h3>
+    <p>Technical information that could compromise security:</p>
+    <ul>
+      <li>Passwords, API keys, and encryption keys</li>
+      <li>System architecture and network diagrams</li>
+      <li>Security controls and testing results</li>
+      <li>Vulnerability information and patch status</li>
+      <li>Source code and configuration</li>
+    </ul>
+
+    <h3>Regulated Data</h3>
+    <p>Information protected by laws and regulations:</p>
+    <ul>
+      <li>Health information (HIPAA, HITECH)</li>
+      <li>Payment card data (PCI DSS)</li>
+      <li>Student records (FERPA)</li>
+      <li>Personal data (GDPR, CCPA, CDPA)</li>
+      <li>Children's information (COPPA)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Implementing Data Classification</h2>
+    
+    <h3>Step 1: Define Classification Criteria</h3>
+    <p>Create clear definitions so everyone classifies data consistently:</p>
+    <ul>
+      <li>What makes data public vs. internal vs. sensitive?</li>
+      <li>Who decides the classification?</li>
+      <li>Can data change classification (e.g., becomes public after embargo)?</li>
+      <li>How long does data retain its classification?</li>
+    </ul>
+
+    <h3>Step 2: Discover Sensitive Data</h3>
+    <p>Find where sensitive data lives across your organization:</p>
+    <ul>
+      <li><strong>Automated discovery:</strong> Data Loss Prevention (DLP) tools scan for sensitive data</li>
+      <li><strong>Manual inventory:</strong> Departments identify sensitive data in their systems</li>
+      <li><strong>Database scanning:</strong> Tools scan databases for PII and payment card data</li>
+      <li><strong>Network monitoring:</strong> Monitor data movement to identify sensitive transfers</li>
+    </ul>
+
+    <h3>Step 3: Apply Classification</h3>
+    <p>Assign classification to data based on criteria:</p>
+    <ul>
+      <li>Manual classification by data owner</li>
+      <li>Automated classification using keyword/pattern matching</li>
+      <li>Metadata tagging (file properties, database fields)</li>
+      <li>Default to restrictive classification when uncertain</li>
+    </ul>
+
+    <h3>Step 4: Apply Controls Based on Classification</h3>
+    <p>Use classification to determine security controls:</p>
+    <ul>
+      <li><strong>Access control:</strong> Restrict who can access based on classification</li>
+      <li><strong>Encryption:</strong> Encrypt sensitive and restricted data</li>
+      <li><strong>Data Loss Prevention:</strong> Prevent exfiltration of sensitive data</li>
+      <li><strong>Monitoring:</strong> Monitor access to sensitive data</li>
+      <li><strong>Retention:</strong> Keep sensitive data only as long as needed</li>
+    </ul>
+
+    <h3>Step 5: Enforce and Monitor</h3>
+    <p>Make sure controls are actually enforced:</p>
+    <ul>
+      <li>Automated enforcement (DLP rules, access controls)</li>
+      <li>Regular audits of sensitive data access</li>
+      <li>Alerts for suspicious activity with sensitive data</li>
+      <li>Regular reviews of classification accuracy</li>
+    </ul>
+
+    <h3>Step 6: Regular Review and Update</h3>
+    <p>Data classification is not a one-time activity:</p>
+    <ul>
+      <li>Quarterly review of new sensitive data types</li>
+      <li>Annual reclassification review</li>
+      <li>Remove classification when data is no longer sensitive</li>
+      <li>Update classifications based on regulatory changes</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data Protection Strategies by Classification</h2>
+    
+    <h3>Public Data Protection</h3>
+    <ul>
+      <li>Ensure integrity (data hasn't been tampered with)</li>
+      <li>Ensure availability (data is accessible)</li>
+      <li>Version control for tracking changes</li>
+      <li>Backups for recovery</li>
+    </ul>
+
+    <h3>Internal Data Protection</h3>
+    <ul>
+      <li>Restrict access to authorized employees</li>
+      <li>Basic encryption at rest (if stored on portable devices)</li>
+      <li>Encryption in transit (HTTPS/TLS)</li>
+      <li>Access logging and audit trails</li>
+      <li>Regular backups</li>
+    </ul>
+
+    <h3>Sensitive Data Protection</h3>
+    <ul>
+      <li>Strong encryption at rest and in transit</li>
+      <li>Strict access control (least privilege)</li>
+      <li>Multi-factor authentication for access</li>
+      <li>Detailed audit logging</li>
+      <li>Data Loss Prevention (DLP) to prevent exfiltration</li>
+      <li>Monitoring and alerting on access</li>
+      <li>Retention management (delete when no longer needed)</li>
+    </ul>
+
+    <h3>Highly Restricted Data Protection</h3>
+    <ul>
+      <li>Encryption with strong key management</li>
+      <li>Segregated storage and systems</li>
+      <li>Multi-factor authentication required</li>
+      <li>Detailed audit logging and real-time monitoring</li>
+      <li>Data Loss Prevention with strict rules</li>
+      <li>Regular security assessments and penetration testing</li>
+      <li>Incident response plan specific to this data</li>
+      <li>Minimal retention (delete as soon as possible)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Tools for Data Classification and Protection</h2>
+    
+    <h3>Discovery & Classification</h3>
+    <ul>
+      <li><strong>Microsoft Purview Information Protection:</strong> Classification and DLP for Office 365</li>
+      <li><strong>AWS Macie:</strong> Automatic discovery and classification of sensitive data</li>
+      <li><strong>Azure Information Protection:</strong> Classification and labeling for Azure resources</li>
+      <li><strong>Varonis:</strong> Data discovery and classification across enterprise systems</li>
+      <li><strong>Imperva DataSecure:</strong> Data discovery and protection</li>
+    </ul>
+
+    <h3>Data Loss Prevention (DLP)</h3>
+    <ul>
+      <li><strong>Symantec DLP:</strong> Enterprise DLP platform</li>
+      <li><strong>Forrester Forrester:</strong> Email and web DLP</li>
+      <li><strong>Microsoft 365 DLP:</strong> Native DLP for Microsoft 365</li>
+      <li><strong>Proofpoint:</strong> Email and cloud DLP</li>
+    </ul>
+
+    <h3>Encryption</h3>
+    <ul>
+      <li><strong>BitLocker:</strong> Windows disk encryption</li>
+      <li><strong>FileVault:</strong> macOS disk encryption</li>
+      <li><strong>LUKS:</strong> Linux disk encryption</li>
+      <li><strong>Transparent Data Encryption (TDE):</strong> Database encryption</li>
+      <li><strong>Cloud-native encryption:</strong> AWS KMS, Azure Key Vault, GCP KMS</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Data Classification for Texas Organizations</h2>
+    <p>Texas organizations often handle regulated data:</p>
+    
+    <h3>Healthcare (HIPAA)</h3>
+    <p>Health information is sensitive/restricted and requires strong protection.</p>
+
+    <h3>Financial Services</h3>
+    <p>Payment card data (PCI DSS) and financial records are highly restricted.</p>
+
+    <h3>Government Contractors</h3>
+    <p>Controlled Unclassified Information (CUI) and CMMC requires data classification.</p>
+
+    <h3>Education</h3>
+    <p>Student records (FERPA) are sensitive and require classification.</p>
+  </section>
+
+  <section>
+    <h2>Getting Started</h2>
+    <ol>
+      <li><strong>Define classifications:</strong> Create 3-4 classification levels with clear definitions</li>
+      <li><strong>Identify sensitive data types:</strong> List what sensitive data your organization has</li>
+      <li><strong>Discover data:</strong> Use automated tools to find sensitive data</li>
+      <li><strong>Classify data:</strong> Apply classifications to discovered data</li>
+      <li><strong>Design controls:</strong> For each classification level, define security controls</li>
+      <li><strong>Implement controls:</strong> Deploy encryption, access control, DLP, monitoring</li>
+      <li><strong>Monitor compliance:</strong> Regular audits of classification and control effectiveness</li>
+    </ol>
+  </section>
+
+  <section class="cta">
+    <h2>Protect Your Most Valuable Asset</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations implement data classification and protection strategies aligned with their regulatory requirements and business needs.</p>
+    <a href="/contact" class="btn">Start Your Data Protection Program</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

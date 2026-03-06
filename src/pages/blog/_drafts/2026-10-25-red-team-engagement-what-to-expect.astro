@@ -1,0 +1,282 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Red Team Engagement: What to Expect | Sheepdog" description="Understand what happens during a red team engagement. Learn how red teams operate and what to expect from the process." showMatrix={true}>
+  <section>
+    <h1>Red Team Engagement: What to Expect</h1>
+    <p class="lead">Red team engagements are different from penetration testing. Red teams simulate sophisticated, prolonged attacks to test your overall security and response capability. Here's what to expect.</p>
+  </section>
+
+  <section>
+    <h2>Red Team vs Penetration Testing</h2>
+    
+    <h3>Penetration Testing</h3>
+    <ul>
+      <li>Defined scope (systems, network)</li>
+      <li>Known timing</li>
+      <li>Limited duration (1-2 weeks)</li>
+      <li>Goal: Find vulnerabilities</li>
+      <li>Technical focus</li>
+    </ul>
+
+    <h3>Red Team</h3>
+    <ul>
+      <li>Broader scope (organization-wide)</li>
+      <li>Surprise timing</li>
+      <li>Extended duration (weeks or months)</li>
+      <li>Goal: Achieve business objectives</li>
+      <li>Operational and technical focus</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Red Team Engagement Phases</h2>
+    
+    <h3>Phase 1: Scoping & Planning</h3>
+    <p>Define objectives with leadership:</p>
+    <ul>
+      <li>What are the red team objectives (steal data, compromise CEO email, disable critical systems)?</li>
+      <li>What is in/out of scope?</li>
+      <li>Duration of engagement (typically 4-12 weeks)</li>
+      <li>Deconfliction process (if red team discovers real issue)</li>
+      <li>Rules of engagement (what's allowed, what's not)</li>
+    </ul>
+
+    <h3>Phase 2: Reconnaissance</h3>
+    <p>Red team gathers information about your organization:</p>
+    <ul>
+      <li>Public information about company (LinkedIn, websites, news)</li>
+      <li>Employee information (names, email addresses, titles)</li>
+      <li>Technology stack (web servers, email systems, networks)</li>
+      <li>Business relationships and vendors</li>
+      <li>Phishing targets identification</li>
+    </ul>
+
+    <h3>Phase 3: Initial Access</h3>
+    <p>Red team gains initial foothold:</p>
+    <ul>
+      <li>Phishing emails to get credentials or malware</li>
+      <li>Exploit public-facing vulnerabilities</li>
+      <li>Social engineering (phone calls, in-person)</li>
+      <li>Vendor compromises</li>
+      <li>Physical security bypass</li>
+    </ul>
+
+    <h3>Phase 4: Persistence & Escalation</h3>
+    <p>Red team maintains access and moves toward objectives:</p>
+    <ul>
+      <li>Install backdoors and remote access tools</li>
+      <li>Escalate privileges</li>
+      <li>Move laterally through network</li>
+      <li>Avoid detection</li>
+      <li>Establish multiple access points</li>
+    </ul>
+
+    <h3>Phase 5: Objective Achievement</h3>
+    <p>Red team completes defined objectives:</p>
+    <ul>
+      <li>Steal data (exfiltrate sensitive files)</li>
+      <li>Compromise high-value targets (CEO, CFO)</li>
+      <li>Disable systems</li>
+      <li>Modify data or communications</li>
+      <li>Document everything</li>
+    </ul>
+
+    <h3>Phase 6: Reporting & Debriefing</h3>
+    <p>Red team provides findings and lessons learned:</p>
+    <ul>
+      <li>Detailed report of attack chain</li>
+      <li>Timeline of events</li>
+      <li>Evidence of access and objectives</li>
+      <li>Recommendations for improvement</li>
+      <li>Live debrief with red team and blue team</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>What Red Teams Test</h2>
+    
+    <h3>Detection Capability</h3>
+    <ul>
+      <li>Can you detect reconnaissance activity?</li>
+      <li>Do you notice the phishing attempt?</li>
+      <li>Can you detect the initial compromise?</li>
+      <li>Can you spot lateral movement?</li>
+      <li>Can you catch the exfiltration?</li>
+    </ul>
+
+    <h3>Response Capability</h3>
+    <ul>
+      <li>How quickly do you respond to incidents?</li>
+      <li>Can you contain the attack?</li>
+      <li>Can you eradicate the threat?</li>
+      <li>Can you restore systems?</li>
+      <li>Do you follow your incident response plan?</li>
+    </ul>
+
+    <h3>Blue Team Coordination</h3>
+    <ul>
+      <li>Can teams work together effectively?</li>
+      <li>Is communication clear and timely?</li>
+      <li>Do decisions get made quickly?</li>
+      <li>Is there a clear chain of command?</li>
+    </ul>
+
+    <h3>Technical Controls</h3>
+    <ul>
+      <li>Do your technical controls actually work?</li>
+      <li>Are there misconfigurations?</li>
+      <li>Are there gaps in your defenses?</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Red Team Tactics & Techniques</h2>
+    
+    <h3>Social Engineering</h3>
+    <ul>
+      <li>Phishing emails with custom payloads</li>
+      <li>Phone calls impersonating IT or vendors</li>
+      <li>In-person visits to offices</li>
+      <li>Tailgating into secure areas</li>
+    </ul>
+
+    <h3>Technical Exploitation</h3>
+    <ul>
+      <li>Web application vulnerabilities</li>
+      <li>Network attacks (ARP spoofing, man-in-the-middle)</li>
+      <li>Malware deployment</li>
+      <li>Privilege escalation</li>
+      <li>Lateral movement techniques</li>
+    </ul>
+
+    <h3>Data Exfiltration</h3>
+    <ul>
+      <li>Steal documents and files</li>
+      <li>Capture communications</li>
+      <li>Document system configurations</li>
+      <li>Photograph sensitive information</li>
+    </ul>
+
+    <h3>Evasion Techniques</h3>
+    <ul>
+      <li>Avoid detection systems</li>
+      <li>Use legitimate tools (living off the land)</li>
+      <li>Encrypt communications</li>
+      <li>Cover tracks in logs</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Preparing for a Red Team</h2>
+    
+    <h3>Executive Preparation</h3>
+    <ul>
+      <li>Clear objectives and approval</li>
+      <li>Rules of engagement</li>
+      <li>Deconfliction process for real issues</li>
+      <li>Support for team during engagement</li>
+    </ul>
+
+    <h3>Operational Preparation</h3>
+    <ul>
+      <li>Brief blue team on engagement timing</li>
+      <li>Ensure monitoring is running</li>
+      <li>Establish incident response procedures</li>
+      <li>Have communication channels ready</li>
+    </ul>
+
+    <h3>Technical Preparation</h3>
+    <ul>
+      <li>Verify logging is enabled</li>
+      <li>Ensure backups are current</li>
+      <li>Have restore procedures ready</li>
+      <li>Document baseline configurations</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>After the Red Team</h2>
+    <ul>
+      <li>Debrief with red team and leadership</li>
+      <li>Understand what worked and what didn't</li>
+      <li>Develop improvement plan</li>
+      <li>Implement fixes to address findings</li>
+      <li>Conduct follow-up assessment to validate improvements</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Our Red Team Services</h2>
+    <p>Our <a href="/services/red-teaming/">red team engagements</a> simulate sophisticated, prolonged attacks against your organization. We test your detection, response, and overall security posture with real-world attack techniques.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Test Your Complete Security Program</h2>
+    <p>Sheepdog Cyber Defense conducts red team engagements that comprehensively test your ability to detect and respond to sophisticated attacks.</p>
+    <a href="/contact" class="btn">Schedule a Red Team</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

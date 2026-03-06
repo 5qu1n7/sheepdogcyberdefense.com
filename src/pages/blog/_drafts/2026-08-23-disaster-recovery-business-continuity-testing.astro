@@ -1,0 +1,266 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Disaster Recovery & Business Continuity Testing | Sheepdog" description="Test your ability to recover from disasters. Validate backup and recovery procedures before disaster strikes." showMatrix={true}>
+  <section>
+    <h1>Disaster Recovery & Business Continuity Testing</h1>
+    <p class="lead">A disaster recovery plan on paper is worthless. Testing validates that you can actually recover systems, restore data, and keep the business running. Most organizations discover their backups don't work when they need them.</p>
+  </section>
+
+  <section>
+    <h2>The Testing Problem</h2>
+    <ul>
+      <li>Most organizations don't test disaster recovery procedures</li>
+      <li>Many backups don't work when needed (corrupted, incomplete, encrypted)</li>
+      <li>Recovery procedures are outdated or missing critical steps</li>
+      <li>Staff changes mean nobody knows how to execute the plan</li>
+      <li>Ransomware has made backup testing critical</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Types of Disaster Recovery Testing</h2>
+    
+    <h3>Backup Verification Testing</h3>
+    <p>Confirm backups are actually working:</p>
+    <ul>
+      <li>Verify backup jobs complete successfully</li>
+      <li>Restore sample files and verify they're usable</li>
+      <li>Test restore of full systems</li>
+      <li>Verify backup encryption is working</li>
+      <li>Check backup storage location and access</li>
+    </ul>
+
+    <h3>Tabletop Exercises</h3>
+    <p>Walk through disaster scenarios without affecting systems:</p>
+    <ul>
+      <li>Assemble response team</li>
+      <li>Describe disaster scenario</li>
+      <li>Walk through response procedures step by step</li>
+      <li>Document what works and what's missing</li>
+      <li>Identify roles and responsibilities</li>
+    </ul>
+
+    <h3>Simulation/Dry Run</h3>
+    <p>Actually execute recovery procedures in non-production environment:</p>
+    <ul>
+      <li>Restore backups to test systems</li>
+      <li>Verify data integrity</li>
+      <li>Test application functionality</li>
+      <li>Measure recovery time</li>
+      <li>Test failover procedures</li>
+    </ul>
+
+    <h3>Full Disaster Recovery Test</h3>
+    <p>Full test of recovery capability with minimal impact:</p>
+    <ul>
+      <li>Fail over critical systems to backup location</li>
+      <li>Test operations from backup location</li>
+      <li>Verify data replication and recovery</li>
+      <li>Test recovery time and recovery point objectives (RTO/RPO)</li>
+      <li>Usually done during maintenance window</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Disaster Recovery Plan Components</h2>
+    
+    <h3>Critical Assets Inventory</h3>
+    <ul>
+      <li>List critical systems and applications</li>
+      <li>Identify dependencies between systems</li>
+      <li>Document data volumes and types</li>
+      <li>Identify recovery priorities</li>
+    </ul>
+
+    <h3>Recovery Time Objective (RTO)</h3>
+    <p>How long until systems are back online:</p>
+    <ul>
+      <li>Critical systems: 1 hour</li>
+      <li>Important systems: 4-8 hours</li>
+      <li>Standard systems: 24-48 hours</li>
+    </ul>
+
+    <h3>Recovery Point Objective (RPO)</h3>
+    <p>How much data loss is acceptable:</p>
+    <ul>
+      <li>Critical systems: 15-30 minutes (hourly backups)</li>
+      <li>Important systems: 4 hours (every 4 hours)</li>
+      <li>Standard systems: 24 hours (daily backups)</li>
+    </ul>
+
+    <h3>Recovery Procedures</h3>
+    <ul>
+      <li>Step-by-step recovery procedures for each system</li>
+      <li>Names and contact info of personnel responsible</li>
+      <li>Location of backup data and recovery systems</li>
+      <li>Credentials needed for recovery (stored securely)</li>
+      <li>Testing schedule and procedures</li>
+    </ul>
+
+    <h3>Communication Plan</h3>
+    <ul>
+      <li>How to notify employees of disaster</li>
+      <li>How to communicate with customers</li>
+      <li>How to notify regulators (if required)</li>
+      <li>How to manage media inquiries</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common Backup & Recovery Issues</h2>
+    
+    <h3>Backups Don't Exist</h3>
+    <p>No backup procedures in place or they weren't executed.</p>
+    <ul>
+      <li>Fix: Implement automated backup procedures</li>
+      <li>Verify backups complete daily</li>
+      <li>Alert if backup fails</li>
+    </ul>
+
+    <h3>Backups Are Encrypted by Ransomware</h3>
+    <p>Ransomware encrypts backup location as well as production systems.</p>
+    <ul>
+      <li>Fix: Isolate backup storage (immutable backups, offline backups)</li>
+      <li>Use 3-2-1 backup strategy (3 copies, 2 different media, 1 offsite)</li>
+      <li>Test restoration regularly</li>
+    </ul>
+
+    <h3>Backups Are Too Slow to Restore</h3>
+    <p>Backup size is so large that restore time exceeds RTO.</p>
+    <ul>
+      <li>Fix: Incremental backups (only backup changes)</li>
+      <li>Delta restore (restore only changed files)</li>
+      <li>Modernize backup technology</li>
+    </ul>
+
+    <h3>Backups Are Incomplete</h3>
+    <p>Not all critical data is backed up.</p>
+    <ul>
+      <li>Fix: Regular backup verification</li>
+      <li>Audit backup scope quarterly</li>
+      <li>Add missing systems to backup</li>
+    </ul>
+
+    <h3>Recovery Procedures Are Outdated</h3>
+    <p>System changes make documented procedures incorrect.</p>
+    <ul>
+      <li>Fix: Update recovery procedures after system changes</li>
+      <li>Test procedures regularly</li>
+      <li>Version control the recovery plan</li>
+    </ul>
+
+    <h3>Nobody Knows How to Execute Recovery</h3>
+    <p>Key personnel leave, knowledge is lost.</p>
+    <ul>
+      <li>Fix: Document everything clearly</li>
+      <li>Cross-train multiple people</li>
+      <li>Annual test with new team members</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Ransomware Specific Recovery</h2>
+    <p>Modern backup and recovery planning must address ransomware:</p>
+    <ul>
+      <li><strong>Immutable backups:</strong> Backups can't be modified or deleted</li>
+      <li><strong>Offline backups:</strong> Keep backup copies disconnected from network</li>
+      <li><strong>Air-gapped storage:</strong> Backups stored in isolated environment</li>
+      <li><strong>Encryption keys:</strong> Store backup encryption keys separately from backups</li>
+      <li><strong>Rapid restore:</strong> Practice restoring from ransomware scenario</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Testing Schedule</h2>
+    <ul>
+      <li><strong>Monthly:</strong> Backup verification and sample restore</li>
+      <li><strong>Quarterly:</strong> Tabletop exercises</li>
+      <li><strong>Semi-annually:</strong> Simulation/dry run test</li>
+      <li><strong>Annually:</strong> Full disaster recovery test (if possible)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Getting Started</h2>
+    <ol>
+      <li>Identify critical systems and RTO/RPO requirements</li>
+      <li>Implement backup procedures</li>
+      <li>Schedule monthly backup verification</li>
+      <li>Create recovery procedures documentation</li>
+      <li>Conduct tabletop exercise</li>
+      <li>Perform simulation test</li>
+      <li>Update plan based on test results</li>
+      <li>Continue regular testing schedule</li>
+    </ol>
+  </section>
+
+  <section class="cta">
+    <h2>Validate Your Recovery Capability</h2>
+    <p>Sheepdog Cyber Defense helps organizations develop and test disaster recovery and business continuity plans.</p>
+    <a href="/contact" class="btn">Test Your Disaster Recovery</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>

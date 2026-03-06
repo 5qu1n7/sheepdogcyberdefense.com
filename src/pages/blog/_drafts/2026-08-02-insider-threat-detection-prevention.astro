@@ -1,0 +1,334 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Insider Threat Detection & Prevention | Sheepdog" description="Detect and prevent insider threats from employees and contractors. Learn monitoring strategies and behavioral analytics." showMatrix={true}>
+  <section>
+    <h1>Insider Threat Detection & Prevention</h1>
+    <p class="lead">Most security programs focus on external attackers. But insider threats—employees and contractors with legitimate access—cause significant damage. They steal data, sabotage systems, and exploit their access. Here's how to detect and prevent them.</p>
+  </section>
+
+  <section>
+    <h2>The Insider Threat Problem</h2>
+    <p>Insider threats are common and costly:</p>
+    <ul>
+      <li>40% of data breaches involve insider threats</li>
+      <li>Average insider threat costs $15.4 million (financial impact, lost productivity, reputation)</li>
+      <li>Insider threats take longest to discover (average 307 days)</li>
+      <li>Employees have trusted access to critical systems and data</li>
+      <li>Insider motivation varies: financial gain, espionage, revenge, negligence</li>
+    </ul>
+    <p>The challenge is distinguishing normal behavior from malicious intent. A person accessing a lot of files could be doing legitimate work or exfiltrating data.</p>
+  </section>
+
+  <section>
+    <h2>Types of Insider Threats</h2>
+    
+    <h3>Malicious Insiders</h3>
+    <p>Employees intentionally harming the organization:</p>
+    <ul>
+      <li>Theft of intellectual property to competitors</li>
+      <li>Theft of customer data for financial gain</li>
+      <li>Sabotage of systems (infrastructure, applications)</li>
+      <li>Espionage (selling secrets to foreign governments)</li>
+    </ul>
+
+    <h3>Negligent Insiders</h3>
+    <p>Employees unintentionally causing security issues:</p>
+    <ul>
+      <li>Falling for phishing and giving up credentials</li>
+      <li>Sharing passwords with colleagues</li>
+      <li>Leaving systems unlocked or unattended</li>
+      <li>Misconfiguring cloud storage and exposing data publicly</li>
+      <li>Discussing confidential information publicly</li>
+    </ul>
+
+    <h3>Compromised Insiders</h3>
+    <p>Employees whose accounts are compromised by external attackers:</p>
+    <ul>
+      <li>Attacker uses stolen credentials to access systems</li>
+      <li>Attacker exfiltrates data using employee's account</li>
+      <li>Attacker performs lateral movement through the network</li>
+    </ul>
+
+    <h3>Contractors & Third Parties</h3>
+    <p>Non-employees with access to systems:</p>
+    <ul>
+      <li>Contractors from IT firms with excessive access</li>
+      <li>Vendors with administrative privileges</li>
+      <li>Consultants with temporary access</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Risk Indicators & Behavioral Patterns</h2>
+    
+    <h3>Technical Indicators</h3>
+    <p>Suspicious activity in logs and systems:</p>
+    <ul>
+      <li>Access to data outside normal responsibilities</li>
+      <li>Large data downloads or transfers</li>
+      <li>Access to systems from unusual locations or times</li>
+      <li>Multiple failed authentication attempts then success</li>
+      <li>Privilege escalation attempts</li>
+      <li>Access shortly before resignation or termination</li>
+    </ul>
+
+    <h3>Behavioral Indicators</h3>
+    <p>Non-technical warning signs:</p>
+    <ul>
+      <li>Financial distress or debt</li>
+      <li>Job dissatisfaction or conflict with management</li>
+      <li>Recent disciplinary action</li>
+      <li>Planning to leave organization</li>
+      <li>Unauthorized software installation</li>
+      <li>Excessive personal device use at work</li>
+      <li>Social engineering attempts against colleagues</li>
+    </ul>
+
+    <h3>Contextual Indicators</h3>
+    <p>Context that increases risk:</p>
+    <ul>
+      <li>Access to sensitive data (customer, financial, IP)</li>
+      <li>Recent promotion or access expansion</li>
+      <li>Management change or reorganization</li>
+      <li>System downtime or vulnerability windows</li>
+      <li>Public disclosure of security incidents</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Insider Threat Detection Methods</h2>
+    
+    <h3>User and Entity Behavior Analytics (UEBA)</h3>
+    <p>Machine learning identifies anomalies in user behavior:</p>
+    <ul>
+      <li>Baseline normal behavior for each user</li>
+      <li>Alert when behavior deviates significantly</li>
+      <li>Track file access patterns, login times, locations</li>
+      <li>Correlate behavior with risk indicators</li>
+      <li>Examples: Exabeam, Rapid7 InsightIDR, Varonis</li>
+    </ul>
+
+    <h3>Data Loss Prevention (DLP)</h3>
+    <p>Prevent sensitive data from leaving the organization:</p>
+    <ul>
+      <li>Monitor file transfers and downloads</li>
+      <li>Block exfiltration attempts (email, cloud, USB)</li>
+      <li>Alert on suspicious data movement</li>
+      <li>Examples: Symantec DLP, Microsoft 365 DLP, Proofpoint</li>
+    </ul>
+
+    <h3>Privileged Access Management (PAM)</h3>
+    <p>Control and monitor privileged user access:</p>
+    <ul>
+      <li>Require approval for privilege escalation</li>
+      <li>Time-limited elevated access</li>
+      <li>Record all privileged sessions (keystroke logging, screen recording)</li>
+      <li>Alert on unusual privileged activity</li>
+      <li>Examples: CyberArk, Delinea, BeyondTrust</li>
+    </ul>
+
+    <h3>Endpoint Detection & Response (EDR)</h3>
+    <p>Monitor endpoint activity for malicious behavior:</p>
+    <ul>
+      <li>Track file creation, modification, deletion</li>
+      <li>Monitor process execution and memory</li>
+      <li>Detect lateral movement attempts</li>
+      <li>Alert on suspicious activity</li>
+      <li>Examples: CrowdStrike, Microsoft Defender, Sentinel One</li>
+    </ul>
+
+    <h3>Network & Cloud Monitoring</h3>
+    <p>Track data movement across networks and cloud:</p>
+    <ul>
+      <li>Monitor uploads to personal cloud storage</li>
+      <li>Track file transfers and communications</li>
+      <li>Alert on unusual external connections</li>
+      <li>Monitor cloud application usage</li>
+    </ul>
+
+    <h3>Email & Communications Monitoring</h3>
+    <p>Monitor communications for sensitive information:</p>
+    <ul>
+      <li>Email encryption and DLP</li>
+      <li>Slack and Teams message monitoring</li>
+      <li>Detection of information sharing with external parties</li>
+      <li>Compliance with data classification policies</li>
+    </ul>
+
+    <h3>System & Application Logging</h3>
+    <p>Audit logs provide detailed activity tracking:</p>
+    <ul>
+      <li>Authentication logs (who logged in, from where, when)</li>
+      <li>Application logs (what data was accessed)</li>
+      <li>Database logs (who queried what records)</li>
+      <li>File access logs (who opened which files)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Insider Threat Prevention Strategies</h2>
+    
+    <h3>Access Control</h3>
+    <ul>
+      <li><strong>Least privilege:</strong> Give users only the access they need</li>
+      <li><strong>Segregation of duties:</strong> No single person can approve and execute transactions</li>
+      <li><strong>Access reviews:</strong> Quarterly verification that access is still appropriate</li>
+      <li><strong>Offboarding:</strong> Immediately revoke access when employee leaves</li>
+    </ul>
+
+    <h3>Monitoring & Detection</h3>
+    <ul>
+      <li><strong>Continuous monitoring:</strong> Log all access to sensitive data</li>
+      <li><strong>Behavioral analytics:</strong> Detect anomalies</li>
+      <li><strong>Alerts:</strong> Real-time alerts on suspicious activity</li>
+      <li><strong>Regular reviews:</strong> Manual review of logs and alerts</li>
+    </ul>
+
+    <h3>Technical Controls</h3>
+    <ul>
+      <li><strong>Encryption:</strong> Sensitive data encrypted so insiders can't read it</li>
+      <li><strong>DLP:</strong> Prevent exfiltration of sensitive data</li>
+      <li><strong>MFA:</strong> Multi-factor authentication for sensitive systems</li>
+      <li><strong>Endpoint protection:</strong> Malware and anomaly detection</li>
+    </ul>
+
+    <h3>Organizational Controls</h3>
+    <ul>
+      <li><strong>Background checks:</strong> Screen employees for risk factors</li>
+      <li><strong>Security awareness:</strong> Train employees on insider threat</li>
+      <li><strong>Clear policies:</strong> Employees understand what's expected</li>
+      <li><strong>Reporting mechanisms:</strong> Anonymous way to report concerns</li>
+    </ul>
+
+    <h3>Human Resources</h3>
+    <ul>
+      <li><strong>Exit interviews:</strong> Understand why employees are leaving</li>
+      <li><strong>Performance management:</strong> Address issues before they escalate</li>
+      <li><strong>Conflict resolution:</strong> Help resolve workplace conflicts</li>
+      <li><strong>Wellness programs:</strong> Address financial stress and personal issues</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Responding to Insider Threats</h2>
+    
+    <h3>Investigation</h3>
+    <ul>
+      <li>Preserve evidence without tipping off the insider</li>
+      <li>Gather logs and communications</li>
+      <li>Interview colleagues about suspicious activity</li>
+      <li>Determine scope of unauthorized access or data theft</li>
+    </ul>
+
+    <h3>Containment</h3>
+    <ul>
+      <li>Change passwords for compromised accounts</li>
+      <li>Revoke access if justified</li>
+      <li>If theft of credentials, reset passwords system-wide</li>
+      <li>Isolate systems if malware detected</li>
+    </ul>
+
+    <h3>Legal & HR</h3>
+    <ul>
+      <li>Coordinate with legal counsel early</li>
+      <li>Involve HR for employment law compliance</li>
+      <li>Follow company discipline procedures</li>
+      <li>Consider law enforcement notification for theft/sabotage</li>
+    </ul>
+
+    <h3>Communication</h3>
+    <ul>
+      <li>Assess notification obligations (customers, regulators)</li>
+      <li>Prepare communications about impact</li>
+      <li>Address employee concerns about program</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Building an Insider Threat Program</h2>
+    <ol>
+      <li><strong>Executive support:</strong> Insider threat program requires leadership commitment</li>
+      <li><strong>Cross-functional team:</strong> Security, HR, legal, management</li>
+      <li><strong>Policy:</strong> Clear insider threat policy and procedures</li>
+      <li><strong>Technology:</strong> Deploy UEBA, DLP, monitoring tools</li>
+      <li><strong>Training:</strong> Educate employees about the program</li>
+      <li><strong>Process:</strong> Defined process for investigation and response</li>
+      <li><strong>Metrics:</strong> Track incidents and program effectiveness</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Professional Red Team Testing</h2>
+    <p>Our <a href="/services/red-teaming/">red team engagements</a> can test your ability to detect insider threats. We simulate a malicious insider and validate that your monitoring and detection controls actually work.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Detect & Prevent Insider Threats</h2>
+    <p>Sheepdog Cyber Defense helps Texas organizations build insider threat programs and validate detection effectiveness through red team testing.</p>
+    <a href="/contact" class="btn">Build Your Insider Threat Program</a>
+  </section>
+</BaseLayout>
+
+<style>
+  section {
+    margin: 3rem 0;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+  }
+  h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  h3 {
+    font-size: 1.3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #444;
+  }
+  .lead {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 1.5rem;
+  }
+  ul {
+    margin: 1rem 0;
+    padding-left: 2rem;
+  }
+  li {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+  }
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .cta {
+    background: #f5f5f5;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+  .btn {
+    display: inline-block;
+    background: #0066cc;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  .btn:hover {
+    background: #0052a3;
+  }
+</style>
