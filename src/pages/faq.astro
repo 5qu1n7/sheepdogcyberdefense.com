@@ -1,0 +1,394 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Penetration Testing FAQs | Sheepdog Cyber Defense" description="Frequently asked questions about penetration testing, red teaming, and security assessments. Get answers to your cybersecurity questions." showMatrix={true}>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is penetration testing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Penetration testing (pentesting) is a security assessment where authorized security professionals simulate real-world attacks against your systems to identify vulnerabilities before malicious attackers find them. We use the same techniques and tools that actual attackers would use, providing you with realistic findings and remediation guidance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between penetration testing and red teaming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Penetration testing focuses on finding vulnerabilities in specific systems and applications. Red teaming simulates a complete adversary attack to test your organization's ability to detect and respond to breaches. Red teams work toward specific objectives and may use social engineering and physical security testing, while pentests focus primarily on technical vulnerabilities."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is penetration testing legal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, penetration testing is legal when conducted with explicit written authorization from the organization being tested. All Sheepdog Cyber Defense engagements require signed agreements that clearly define scope, objectives, and authorized testing boundaries. Without proper authorization, unauthorized testing would violate computer fraud and abuse laws."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should we do penetration testing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend annual penetration testing as a baseline. However, you should also test after major infrastructure changes, new application deployments, security incidents, or regulatory requirement changes. Many compliance frameworks (PCI-DSS, HIPAA, SOC 2) require annual testing. Your cyber liability insurance may also require regular penetration tests."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's included in a penetration testing report?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our penetration testing reports include: detailed findings with technical descriptions and proof of concept, step-by-step reproduction steps for each vulnerability, risk ratings (Critical, High, Medium, Low) with CVSS scores, specific remediation recommendations, screenshots and evidence, an executive summary for leadership, and recommendations for improvement."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Will penetration testing disrupt our business?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Penetration testing is designed to have minimal impact on production systems. We coordinate testing windows with your team, carefully scope our testing to avoid critical systems, and avoid destructive testing. We'll work within your operational constraints and can schedule testing during low-traffic periods if needed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does penetration testing cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Penetration testing costs vary based on scope and complexity. External testing typically starts at $2,500 for small organizations, internal testing from $3,500, web application testing from $2,500, and red teaming from $15,000. We provide detailed quotes after scoping your specific requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does a penetration test take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Timeline varies based on scope. External testing typically takes 1-2 weeks, internal testing 2-3 weeks, web application testing 1-2 weeks depending on complexity, and red teaming 2-4 weeks. Report preparation adds an additional 1 week. We provide a detailed timeline estimate before beginning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Sheepdog Cyber Defense different?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sheepdog is veteran-owned and operated by security professionals with practical experience. We combine automated tools with manual testing to find real vulnerabilities, not just scan results. We provide clear, actionable remediation guidance and prioritize findings based on business impact. We're focused on helping you improve security, not just generating a report."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you test for compliance requirements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, many compliance frameworks require penetration testing. We have experience with PCI-DSS, HIPAA, SOC 2, NIST, and other compliance requirements. Our testing can be tailored to meet specific compliance standards. We can help you understand what your regulations require and deliver testing that satisfies those requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should we do after receiving penetration testing results?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We recommend: (1) Prioritizing findings based on risk rating and business impact, (2) Assigning remediation tasks to your team, (3) Establishing timelines for fixes, (4) Testing fixes as they're deployed, (5) Scheduling a retest to verify remediation. We offer retest services to confirm that vulnerabilities have been properly addressed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are your testers certified?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our team holds industry-recognized certifications including CRTO (Certified Red Team Operator), PNPT (Practical Network Penetration Tester), GWAPT (GIAC Web Application Penetration Tester), eCPPTv2, PWPA, and CEH. We stay current with the latest security research and attack techniques."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <section>
+    <h1>Frequently Asked Questions</h1>
+    <p class="lead">Get answers to common questions about penetration testing, red teaming, and security assessments.</p>
+  </section>
+
+  <section class="faq-section">
+    <h2>General Questions</h2>
+    
+    <div class="faq-item">
+      <h3>What is penetration testing?</h3>
+      <p>Penetration testing (pentesting) is a security assessment where authorized security professionals simulate real-world attacks against your systems to identify vulnerabilities before malicious attackers find them. We use the same techniques and tools that actual attackers would use, providing you with realistic findings and remediation guidance.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is the difference between penetration testing and red teaming?</h3>
+      <p>Penetration testing focuses on finding vulnerabilities in specific systems and applications. Red teaming simulates a complete adversary attack to test your organization's ability to detect and respond to breaches. Red teams work toward specific objectives and may use social engineering and physical security testing, while pentests focus primarily on technical vulnerabilities.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is penetration testing legal?</h3>
+      <p>Yes, penetration testing is legal when conducted with explicit written authorization from the organization being tested. All Sheepdog Cyber Defense engagements require signed agreements that clearly define scope, objectives, and authorized testing boundaries. Without proper authorization, unauthorized testing would violate computer fraud and abuse laws.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why should we do penetration testing?</h3>
+      <p>Penetration testing helps you:</p>
+      <ul>
+        <li>Identify vulnerabilities before attackers do</li>
+        <li>Understand your actual security posture</li>
+        <li>Prioritize security investments based on real risks</li>
+        <li>Meet compliance and regulatory requirements</li>
+        <li>Satisfy cyber liability insurance requirements</li>
+        <li>Demonstrate due diligence to stakeholders and customers</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>What makes Sheepdog Cyber Defense different?</h3>
+      <p>Sheepdog is veteran-owned and operated by security professionals with practical experience. We combine automated tools with manual testing to find real vulnerabilities, not just scan results. We provide clear, actionable remediation guidance and prioritize findings based on business impact. We're focused on helping you improve security, not just generating a report.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Testing and Scope Questions</h2>
+
+    <div class="faq-item">
+      <h3>How long does a penetration test take?</h3>
+      <p>Timeline varies based on scope and complexity:</p>
+      <ul>
+        <li><strong>External testing:</strong> 1-2 weeks</li>
+        <li><strong>Internal testing:</strong> 2-3 weeks</li>
+        <li><strong>Web application testing:</strong> 1-2 weeks</li>
+        <li><strong>Red teaming:</strong> 2-4 weeks</li>
+        <li><strong>Report and debrief:</strong> 1 week after testing</li>
+      </ul>
+      <p>We provide a detailed timeline estimate before beginning.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How much does penetration testing cost?</h3>
+      <p>Penetration testing costs vary based on scope and complexity. External testing typically starts at $2,500 for small organizations, internal testing from $3,500, web application testing from $2,500, and red teaming from $15,000. We provide detailed quotes after scoping your specific requirements.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Will penetration testing disrupt our business?</h3>
+      <p>Penetration testing is designed to have minimal impact on production systems. We coordinate testing windows with your team, carefully scope our testing to avoid critical systems, and avoid destructive testing. We'll work within your operational constraints and can schedule testing during low-traffic periods if needed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What systems should we include in scope?</h3>
+      <p>For external testing, include all internet-facing systems (websites, email servers, VPNs, cloud services). For internal testing, include your internal network, servers, and applications. For web application testing, include all web apps and APIs. You define what's in scope and what's off-limits. We'll work with you to establish appropriate boundaries.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How often should we do penetration testing?</h3>
+      <p>We recommend annual penetration testing as a baseline. However, you should also test after major infrastructure changes, new application deployments, security incidents, or regulatory requirement changes. Many compliance frameworks (PCI-DSS, HIPAA, SOC 2) require annual testing. Your cyber liability insurance may also require regular penetration tests.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Results and Remediation</h2>
+
+    <div class="faq-item">
+      <h3>What's included in a penetration testing report?</h3>
+      <p>Our penetration testing reports include:</p>
+      <ul>
+        <li>Detailed findings with technical descriptions and proof of concept</li>
+        <li>Step-by-step reproduction steps for each vulnerability</li>
+        <li>Risk ratings (Critical, High, Medium, Low) with CVSS scores</li>
+        <li>Specific remediation recommendations</li>
+        <li>Screenshots and evidence of findings</li>
+        <li>Executive summary for leadership</li>
+        <li>Recommendations for security improvement</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>How are vulnerabilities prioritized?</h3>
+      <p>We prioritize vulnerabilities based on multiple factors: CVSS score, business impact, exploitability, and the organization's operational context. A vulnerability might be rated High because it's easily exploitable and affects critical systems, even if the technical CVSS score is slightly lower. We help you understand which findings require immediate attention.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What should we do after receiving penetration testing results?</h3>
+      <p>We recommend:</p>
+      <ul>
+        <li>Prioritizing findings based on risk rating and business impact</li>
+        <li>Assigning remediation tasks to your team</li>
+        <li>Establishing timelines for fixes</li>
+        <li>Testing fixes as they're deployed</li>
+        <li>Scheduling a retest to verify remediation</li>
+      </ul>
+      <p>We offer retest services to confirm that vulnerabilities have been properly addressed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you offer retesting after we fix vulnerabilities?</h3>
+      <p>Yes, we offer retest services to verify that vulnerabilities have been properly remediated. This typically takes 3-5 days depending on the number of findings. Retesting is a great way to confirm your fixes are effective before considering issues closed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do we know if our remediation is effective?</h3>
+      <p>The best way to verify remediation is through retesting. We can validate that your fixes address the original vulnerability and that new vulnerabilities haven't been introduced. We provide guidance on proper remediation during our debrief and can answer questions about whether your implemented fixes are sufficient.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Compliance and Security</h2>
+
+    <div class="faq-item">
+      <h3>Do you test for compliance requirements?</h3>
+      <p>Yes, many compliance frameworks require penetration testing. We have experience with PCI-DSS, HIPAA, SOC 2, NIST, and other compliance requirements. Our testing can be tailored to meet specific compliance standards. We can help you understand what your regulations require and deliver testing that satisfies those requirements.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Will penetration testing help us pass a security audit?</h3>
+      <p>Yes, penetration testing is often required for security audits and assessments. It demonstrates that you've conducted due diligence in testing your security posture. However, passing an audit requires addressing findings as well. We help you understand what auditors are looking for and provide findings that satisfy audit requirements.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you work with cyber insurance companies?</h3>
+      <p>Yes, many cyber liability insurance policies require annual penetration testing. We can work with your insurance requirements and provide reports in the format your insurer requires. We're familiar with common insurance requirements and can ensure our testing meets those standards.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is CVSS scoring?</h3>
+      <p>CVSS (Common Vulnerability Scoring System) is a standardized method for rating vulnerability severity. Scores range from 0-10, with higher scores indicating more critical vulnerabilities. We provide CVSS scores for each finding to help you understand severity and prioritize remediation. However, we also consider business context when prioritizing fixes.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Our Team</h2>
+
+    <div class="faq-item">
+      <h3>Are your testers certified?</h3>
+      <p>Yes, our team holds industry-recognized certifications including:</p>
+      <ul>
+        <li>CRTO (Certified Red Team Operator)</li>
+        <li>PNPT (Practical Network Penetration Tester)</li>
+        <li>GWAPT (GIAC Web Application Penetration Tester)</li>
+        <li>eCPPTv2</li>
+        <li>PWPA</li>
+        <li>CEH (Certified Ethical Hacker)</li>
+      </ul>
+      <p>We stay current with the latest security research and attack techniques.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How experienced is your team?</h3>
+      <p>Sheepdog Cyber Defense is founded by security professionals with years of experience in military, government, and private sector cybersecurity. Our team has conducted hundreds of penetration tests and red team engagements across various industries. We bring practical, real-world experience to every engagement.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What tools do you use?</h3>
+      <p>We use industry-standard tools including Nmap, Burp Suite, Metasploit, Cobalt Strike, and many others. However, tools are only part of the equation. Our expertise and manual testing skills are what find real vulnerabilities that automated tools miss.</p>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <h2>Getting Started</h2>
+
+    <div class="faq-item">
+      <h3>How do we get started?</h3>
+      <p>Contact us using our contact form or call us directly. We'll discuss your security concerns, understand your environment, and provide a detailed proposal. Once you're ready, we'll sign an engagement agreement and begin scoping the assessment.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What information do you need from us?</h3>
+      <p>For a basic assessment, we need:</p>
+      <ul>
+        <li>Scope definition (what systems to test)</li>
+        <li>Contact information for coordination</li>
+        <li>Preferred testing windows</li>
+        <li>Any constraints or sensitive systems to avoid</li>
+      </ul>
+      <p>We can provide more detailed requirements based on your specific testing needs.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How is the engagement structured?</h3>
+      <p>A typical engagement includes: (1) Scoping call to understand your needs, (2) Proposal with detailed timeline and cost, (3) Engagement agreement with rules of engagement, (4) Testing period, (5) Report generation, (6) Debrief call to discuss findings. We keep you informed throughout the process.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you provide a written contract?</h3>
+      <p>Yes, all engagements include a signed Master Service Agreement (MSA) and Statement of Work (SOW). These documents clearly define scope, timeline, pricing, confidentiality terms, and rules of engagement. We take legal and professional boundaries seriously.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What's your confidentiality policy?</h3>
+      <p>Your security information is completely confidential. All findings and reports are protected and shared only with authorized representatives of your organization. We never disclose client information or findings to third parties without explicit permission.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Test Your Security?</h2>
+    <p>Have more questions? Contact us directly. We're happy to discuss your security needs and answer any questions about penetration testing.</p>
+    <a href="/contact" class="btn">Get in Touch</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead {
+    font-size: 1.25rem;
+    max-width: 700px;
+    margin-bottom: 2rem;
+  }
+
+  .faq-section {
+    margin-bottom: 4rem;
+  }
+
+  .faq-section h2 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .faq-item {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  .faq-item h3 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .faq-item p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item ul {
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .faq-item li {
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  .faq-item strong {
+    color: var(--text);
+  }
+
+  .cta {
+    padding-top: 3rem;
+    border-top: 2px solid var(--border);
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta p {
+    margin-bottom: 1.5rem;
+  }
+</style>

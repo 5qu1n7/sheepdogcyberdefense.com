@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Client Testimonials & Case Studies | Sheepdog Cyber Defense" description="See how Sheepdog Cyber Defense helps Texas businesses identify vulnerabilities and strengthen their security posture." showMatrix={true}>
+  <section>
+    <h1>What Our Clients Say</h1>
+    <p class="lead">Sheepdog Cyber Defense works with Texas businesses of all sizes to identify vulnerabilities and build stronger security programs. Here's what our clients have to say about the impact we've made.</p>
+  </section>
+
+  <section class="testimonials">
+    <div class="testimonial">
+      <div class="quote">
+        <p>"We were planning to do penetration testing 'someday' but didn't know where to start. Sheepdog made the process straightforward and the report was actually understandable. Our team felt confident implementing their recommendations."</p>
+        <p class="attribution">— IT Director, San Antonio Tech Company</p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="quote">
+        <p>"The findings weren't just a list of vulnerabilities with technical jargon. They explained what each issue meant for our business and gave us clear steps to fix them. Worth every penny."</p>
+        <p class="attribution">— Operations Manager, Spring Branch Manufacturing</p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="quote">
+        <p>"Red teaming felt intimidating at first, but it was the validation we needed to show our board that our security investments were working. The team was professional and the debrief was incredibly valuable."</p>
+        <p class="attribution">— CISO, San Antonio Financial Services</p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="quote">
+        <p>"Working with a local firm made a huge difference. We could actually sit down and talk through the findings, not just get a PDF report and figure it out ourselves."</p>
+        <p class="attribution">— CEO, Bulverde Professional Services Firm</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-studies">
+    <h2>How We've Helped</h2>
+    
+    <div class="case-study">
+      <h3>External Testing Prevented Ransomware Attack</h3>
+      <div class="summary">
+        <p><strong>Client:</strong> Mid-sized San Antonio IT Services Company</p>
+        <p><strong>Challenge:</strong> Company had never undergone penetration testing and wasn't sure about their internet-facing security</p>
+      </div>
+      
+      <p><strong>What We Did:</strong> Conducted comprehensive external penetration testing of their entire attack surface. Found an exposed RDP service with weak credentials and an unpatched critical vulnerability in their public-facing web server.</p>
+      
+      <p><strong>Impact:</strong> Client patched the vulnerabilities immediately. Three months later, a ransomware variant that exploited that exact vulnerability affected competitors in the same industry. Because of the penetration test and remediation, this client was protected.</p>
+      
+      <p><strong>Key Takeaway:</strong> Penetration testing isn't about compliance—it's about prevention. Finding vulnerabilities before attackers do is the real value.</p>
+    </div>
+
+    <div class="case-study">
+      <h3>Red Teaming Exposed Incident Response Gaps</h3>
+      <div class="summary">
+        <p><strong>Client:</strong> Healthcare Organization in the Texas Hill Country</p>
+        <p><strong>Challenge:</strong> Had good security tools but wanted to test whether the team could actually detect and respond to an attack</p>
+      </div>
+      
+      <p><strong>What We Did:</strong> Conducted a four-week red teaming engagement simulating an attacker trying to access patient data. The red team gained access to the network, moved laterally, and attempted to reach the database.</p>
+      
+      <p><strong>Impact:</strong> Security team detected the attack after 11 days (better than the 2-week industry average). However, incident response procedures were unclear, and the team didn't know who to contact or what steps to take. Based on our findings, they completely rewrote their incident response playbooks and added specific detection triggers for common attack patterns.</p>
+      
+      <p><strong>Key Takeaway:</strong> Having security tools isn't enough—your team needs to know what to do when an attack happens. Red teaming validates your entire program, not just your systems.</p>
+    </div>
+
+    <div class="case-study">
+      <h3>Compliance-Driven Testing Led to Better Security</h3>
+      <div class="summary">
+        <p><strong>Client:</strong> Small E-Commerce Business in Spring Branch</p>
+        <p><strong>Challenge:</strong> Required to do penetration testing for PCI-DSS compliance but viewed it as a checkbox</p>
+      </div>
+      
+      <p><strong>What We Did:</strong> Beyond the required PCI testing, we also assessed their internal network and administrative access controls. Found that employees had excessive permissions and that the backup system lacked proper access restrictions.</p>
+      
+      <p><strong>Impact:</strong> After remediation, the client had stronger compliance evidence for audits, but more importantly, they reduced insider risk significantly. They also discovered their backups weren't being properly monitored for ransomware encryption.</p>
+      
+      <p><strong>Key Takeaway:</strong> Compliance testing can be the starting point for a better security program. The best organizations use compliance requirements as leverage to fund real security improvements.</p>
+    </div>
+
+    <div class="case-study">
+      <h3>Web Application Testing Prevented Data Exposure</h3>
+      <div class="summary">
+        <p><strong>Client:</strong> SaaS Company Based in San Antonio</p>
+        <p><strong>Challenge:</strong> Had just launched a new customer portal and wanted to ensure it was secure before going live</p>
+      </div>
+      
+      <p><strong>What We Did:</strong> Comprehensive web application penetration testing found three vulnerabilities: an insecure direct object reference (IDOR) vulnerability allowing customers to access other customers' data, improper input validation, and a SQL injection risk in the search function.</p>
+      
+      <p><strong>Impact:</strong> All three vulnerabilities were patched before launch. The company avoided a potential data exposure incident that could have cost them customers and regulatory fines. The portal launched on schedule and securely.</p>
+      
+      <p><strong>Key Takeaway:</strong> Testing before launch is significantly cheaper and easier than fixing issues after customers discover them. Pre-launch security testing is essential for any new application.</p>
+    </div>
+  </section>
+
+  <section class="why-choose">
+    <h2>What Makes Our Approach Different</h2>
+    
+    <div class="approach-points">
+      <div class="point">
+        <h4>No Jargon, Real Explanations</h4>
+        <p>We explain findings in plain English so your team understands what matters and why. No security theater, no unnecessary complexity.</p>
+      </div>
+      
+      <div class="point">
+        <h4>Local, Accessible Consultants</h4>
+        <p>Based in San Antonio with deep roots in the Texas business community. You can actually meet with and talk to the people who tested your systems.</p>
+      </div>
+      
+      <div class="point">
+        <h4>Combat-Tested Expertise</h4>
+        <p>Founded by veterans who bring military-grade security thinking to civilian business. We understand both how attackers think and how to build resilient defense.</p>
+      </div>
+      
+      <div class="point">
+        <h4>Focus on Business Impact</h4>
+        <p>We don't just list vulnerabilities—we help you prioritize based on real business risk. What matters is what attackers would actually exploit, not what a scanner found.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Learn What We Can Find?</h2>
+    <p>Schedule a free consultation with Sheepdog Cyber Defense. We'll discuss your security goals and recommend the right approach for your organization.</p>
+    <a href="/contact" class="btn">Get in Touch</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.25rem; max-width: 700px; margin-bottom: 2rem; }
+  
+  section { margin-bottom: 3rem; }
+  
+  .testimonials {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 900px) {
+    .testimonials {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .testimonial {
+    background: var(--bg-alt);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--accent);
+  }
+  
+  .quote {
+    margin: 0;
+  }
+  
+  .quote p {
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+  
+  .attribution {
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--text);
+    font-weight: 600;
+    margin: 0 !important;
+  }
+  
+  .case-studies {
+    margin-top: 4rem;
+  }
+  
+  .case-study {
+    background: var(--bg-alt);
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .case-study h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+  }
+  
+  .summary {
+    background: white;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    border-left: 3px solid var(--accent);
+  }
+  
+  .summary p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .case-study p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+  
+  .case-study strong {
+    color: var(--text);
+  }
+  
+  .why-choose {
+    padding: 3rem 0;
+  }
+  
+  .why-choose h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .approach-points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 768px) {
+    .approach-points {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+  }
+  
+  .point {
+    padding: 1.5rem;
+    background: var(--bg-alt);
+    border-radius: 8px;
+  }
+  
+  .point h4 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  
+  .point p {
+    color: var(--text-muted);
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  
+  .cta {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  
+  .cta p {
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
+  }
+</style>
