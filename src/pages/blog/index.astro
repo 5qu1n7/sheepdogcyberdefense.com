@@ -2,18 +2,18 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const posts = [
-  { slug: 'penetration-testing-costs-roi', title: 'Penetration Testing Costs & ROI: Why The Investment Pays Off', description: 'Understand penetration testing pricing, budget considerations, and the real ROI of security testing compared to the cost of a breach.' },
-  { slug: 'red-teaming-vs-pentesting', title: 'Red Teaming vs Penetration Testing: Complete Comparison Guide', description: 'Comprehensive guide comparing red teaming and penetration testing. Learn which approach is right for your organization.' },
-  { slug: 'how-often-should-you-pentest', title: 'How Often Should You Conduct Penetration Testing?', description: 'Complete guide to testing frequency based on industry, risk profile, and compliance requirements.' },
-  { slug: '5-signs-your-business-needs-pentest', title: '5 Signs Your Business Needs a Penetration Test', description: 'Not sure if your business needs penetration testing? Here are 5 clear signs that indicate it is time to test your security posture.' },
-  { slug: 'why-choose-local-security-consultant', title: 'Why Choose a Local Security Consultant?', description: 'Working with a local penetration testing company in Bulverde, Spring Branch, or San Antonio offers real advantages.' },
-  { slug: 'common-vulnerabilities-small-business', title: 'Common Vulnerabilities in Small Business Networks', description: 'Small businesses face real security threats. Learn about the most common vulnerabilities we find in Texas small business networks.' },
-  { slug: 'what-is-penetration-testing', title: 'What is Penetration Testing?', description: 'Learn what penetration testing is and why your Texas business needs it.' },
-  { slug: 'penetration-test-quality-checklist', title: 'Penetration Testing Report Quality Checklist', description: 'Not all penetration testing reports are created equal. Here is how to evaluate whether your PT findings are thorough, actionable, and worth the investment.' },
-  { slug: 'remediation-plan-after-penetration-testing', title: 'Remediation Plan After Penetration Testing', description: 'After a penetration test reveals vulnerabilities, a structured remediation plan is essential for addressing findings effectively.' },
-  { slug: 'supply-chain-security-vendor-assessment', title: 'Supply Chain Security & Vendor Assessment', description: 'Third-party vendor risks are a growing concern. Learn how to assess and secure your supply chain.' },
-  { slug: 'ransomware-trends-defenses-texas', title: 'Ransomware Trends & Defenses in Texas', description: 'Ransomware attacks are evolving. Stay informed about the latest trends and how to protect your Texas business.' },
-];
+  { slug: 'penetration-test-quality-checklist', title: 'Penetration Testing Report Quality Checklist', description: 'Not all penetration testing reports are created equal. Here is how to evaluate whether your PT findings are thorough, actionable, and worth the investment.', date: '2026-04-12' },
+  { slug: 'remediation-plan-after-penetration-testing', title: 'Remediation Plan After Penetration Testing', description: 'After a penetration test reveals vulnerabilities, a structured remediation plan is essential for addressing findings effectively.', date: '2026-03-22' },
+  { slug: 'supply-chain-security-vendor-assessment', title: 'Supply Chain Security & Vendor Assessment', description: 'Third-party vendor risks are a growing concern. Learn how to assess and secure your supply chain.', date: '2026-03-29' },
+  { slug: 'ransomware-trends-defenses-texas', title: 'Ransomware Trends & Defenses in Texas', description: 'Ransomware attacks are evolving. Stay informed about the latest trends and how to protect your Texas business.', date: '2026-04-05' },
+  { slug: 'penetration-testing-costs-roi', title: 'Penetration Testing Costs & ROI: Why The Investment Pays Off', description: 'Understand penetration testing pricing, budget considerations, and the real ROI of security testing compared to the cost of a breach.', date: '2025-12-15' },
+  { slug: 'red-teaming-vs-pentesting', title: 'Red Teaming vs Penetration Testing: Complete Comparison Guide', description: 'Comprehensive guide comparing red teaming and penetration testing. Learn which approach is right for your organization.', date: '2025-11-20' },
+  { slug: 'how-often-should-you-pentest', title: 'How Often Should You Conduct Penetration Testing?', description: 'Complete guide to testing frequency based on industry, risk profile, and compliance requirements.', date: '2025-10-10' },
+  { slug: '5-signs-your-business-needs-pentest', title: '5 Signs Your Business Needs a Penetration Test', description: 'Not sure if your business needs penetration testing? Here are 5 clear signs that indicate it is time to test your security posture.', date: '2025-09-05' },
+  { slug: 'why-choose-local-security-consultant', title: 'Why Choose a Local Security Consultant?', description: 'Working with a local penetration testing company in Bulverde, Spring Branch, or San Antonio offers real advantages.', date: '2025-08-01' },
+  { slug: 'common-vulnerabilities-small-business', title: 'Common Vulnerabilities in Small Business Networks', description: 'Small businesses face real security threats. Learn about the most common vulnerabilities we find in Texas small business networks.', date: '2025-07-15' },
+  { slug: 'what-is-penetration-testing', title: 'What is Penetration Testing?', description: 'Learn what penetration testing is and why your Texas business needs it.', date: '2025-06-01' },
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 
 <BaseLayout title="Security & Penetration Testing Blog | Sheepdog Cyber Defense" description="Expert insights on penetration testing, cybersecurity best practices, and how to protect your Texas business." showMatrix={true}>
@@ -25,6 +25,7 @@ const posts = [
   <section class="posts">
     {posts.map(post => (
       <article>
+        <span class="date">{post.date}</span>
         <h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
         <p>{post.description}</p>
         <a href={`/blog/${post.slug}`} class="read-more">Read more &rarr;</a>
@@ -68,8 +69,13 @@ const posts = [
     border-color: var(--accent);
   }
   
+  article .date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+  
   article h2 { 
-    margin-top: 0; 
+    margin-top: 0.5rem; 
     font-size: 1.25rem;
   }
   
