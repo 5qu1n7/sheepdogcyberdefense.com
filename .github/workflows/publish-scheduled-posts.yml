@@ -38,7 +38,7 @@ jobs:
             echo "found_posts=false" >> $GITHUB_OUTPUT
           fi
       
-      - name: Publish posts
+      - name: Publish posts and update index
         if: steps.check_posts.outputs.found_posts == 'true'
         run: |
           DRAFT_DIR="src/pages/blog/_drafts"
@@ -51,6 +51,27 @@ jobs:
             NEWNAME=$(echo "$FILENAME" | sed "s/[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//")
             mv "$post" "src/pages/blog/$NEWNAME"
             echo "Published: $NEWNAME"
+            
+            # Extract title from the published post (h1 tag)
+            TITLE=$(grep -m1 "<h1>" "src/pages/blog/$NEWNAME" | sed 's/.*<h1>\([^<]*\)<\/h1>.*/\1/' | tr -d '\n' | sed "s/\"/'/g")
+            DATE=$(echo "$FILENAME" | grep -oE "^[0-9]{4}-[0-9]{2}-[0-9]{2}")
+            
+            # Extract description from first paragraph
+            DESC=$(sed -n '/<p class="lead">/,/<\/p>/p' "src/pages/blog/$NEWNAME" 2>/dev/null | head -1 | sed 's/<[^>]*>//g' | xargs | head -c 150 | sed "s/\"/'/g")
+            
+            echo "TITLE=$TITLE"
+            echo "DATE=$DATE"
+            echo "DESC=$DESC"
+            
+            # Add to blog list in index.astro
+            INDEX_FILE="src/pages/blog/index.astro"
+            if [ -f "$INDEX_FILE" ]; then
+              if ! grep -q "$TITLE" "$INDEX_FILE"; then
+                # Add new post to the array (insert after first {)
+                sed -i "s/const posts = \[/const posts = [\n  { slug: '$NEWNAME', title: \"$TITLE\", description: \"$DESC\" },/" "$INDEX_FILE"
+                echo "Added $TITLE to blog index"
+              fi
+            fi
           done
       
       - name: Commit and push
@@ -61,4 +82,3 @@ jobs:
           git add src/pages/blog/
           git commit -m "Publish scheduled blog posts for $(date +%Y-%m-%d)"
           git push
-
