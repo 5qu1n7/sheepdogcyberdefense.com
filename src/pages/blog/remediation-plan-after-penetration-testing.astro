@@ -1,0 +1,222 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="30-60-90 Day Remediation Plan After Penetration Testing | Sheepdog Cyber Defense" description="Create an actionable 30-60-90 day plan to fix vulnerabilities from your penetration test. Learn how to prioritize and execute remediation." showMatrix={true}>
+  <section>
+    <h1>Your 30-60-90 Day Remediation Plan After Penetration Testing</h1>
+    <p class="lead">You've got your penetration test report. Now what? Here's how to create an actionable remediation plan that actually fixes vulnerabilities instead of letting them collect dust.</p>
+  </section>
+
+  <section>
+    <h2>Why a Structured Timeline Matters</h2>
+    <p>Without a clear plan, vulnerability remediation stalls. Teams get busy, priorities shift, and critical security gaps remain unfixed for months. A 30-60-90 day plan keeps remediation moving forward with clear milestones and accountability.</p>
+    <p>This approach also gives you time to:</p>
+    <ul>
+      <li>Prioritize fixes strategically (critical → high → medium)</li>
+      <li>Allocate resources without overwhelming your team</li>
+      <li>Test fixes before rolling them to production</li>
+      <li>Document changes for compliance and audits</li>
+      <li>Plan for retesting to verify fixes actually work</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The 30-60-90 Framework</h2>
+    <p>Here's how to structure your remediation timeline:</p>
+    
+    <h3>Days 1-30: Critical Issues & Quick Wins</h3>
+    <p><strong>Focus:</strong> Stop the bleeding. Fix critical vulnerabilities and easy wins that boost morale.</p>
+    <p><strong>Goals for Week 1 (Days 1-7):</strong></p>
+    <ul>
+      <li>Assign an owner to each finding (who's responsible?)</li>
+      <li>Categorize by type: technical fix vs. policy change vs. process improvement</li>
+      <li>Identify dependencies (which fixes depend on others?)</li>
+      <li>Allocate budget and resources</li>
+      <li>Create detailed fix procedures for each critical issue</li>
+      <li>Begin testing fixes in non-production environments</li>
+    </ul>
+
+    <p><strong>Goals for Weeks 2-4 (Days 8-30):</strong></p>
+    <ul>
+      <li>Deploy all critical fixes to production</li>
+      <li>Fix 50% of high-severity issues</li>
+      <li>Begin implementing policy changes</li>
+      <li>Document all changes for compliance</li>
+      <li>Test patches and rollback procedures</li>
+      <li>Verify fixes in production (did they actually work?)</li>
+      <li>Update your asset inventory based on findings</li>
+    </ul>
+
+    <p><strong>Day 30 Milestone:</strong> All critical vulnerabilities addressed, 50% of high-severity issues fixed, team educated on common mistakes found.</p>
+
+    <h3>Days 31-60: High-Risk & Systemic Issues</h3>
+    <p><strong>Focus:</strong> Address remaining high-priority items and identify systemic improvements.</p>
+    <p><strong>Goals for Weeks 5-8:</strong></p>
+    <ul>
+      <li>Complete remediation of all high-severity findings</li>
+      <li>Address 50% of medium-severity issues</li>
+      <li>Implement security awareness training based on findings</li>
+      <li>Update security policies and procedures</li>
+      <li>Implement compensating controls for items requiring major architectural changes</li>
+      <li>Schedule retesting for critical systems (optional at 30 days)</li>
+      <li>Document lessons learned and process improvements</li>
+      <li>Review metrics: how many vulnerabilities fixed? Cost saved?</li>
+    </ul>
+
+    <p><strong>Day 60 Milestone:</strong> All high-severity issues addressed, foundational security improvements implemented, team aligned on prevention strategies.</p>
+
+    <h3>Days 61-90: Medium Risk & Long-Term Solutions</h3>
+    <p><strong>Focus:</strong> Address remaining issues and plan for long-term security improvements.</p>
+    <p><strong>Goals for Weeks 9-12:</strong></p>
+    <ul>
+      <li>Complete all medium-severity remediation</li>
+      <li>Address low-priority findings (or defer to next cycle)</li>
+      <li>Conduct comprehensive retesting of all systems</li>
+      <li>Document remediation completion for compliance/audit</li>
+      <li>Implement larger architectural improvements</li>
+      <li>Plan next security testing cycle (usually 6-12 months out)</li>
+      <li>Create continuous monitoring for fixed vulnerabilities</li>
+      <li>Present results and improvements to leadership</li>
+    </ul>
+
+    <p><strong>Day 90 Milestone:</strong> Remediation largely complete, retesting confirms fixes, security program improvements documented, prevention plan in place.</p>
+  </section>
+
+  <section>
+    <h2>Detailed Remediation Template</h2>
+    <p>For each vulnerability, create a remediation record with these fields:</p>
+    
+    <h3>Issue Details</h3>
+    <ul>
+      <li><strong>Vulnerability ID:</strong> From PT report (e.g., Finding #5)</li>
+      <li><strong>Title:</strong> Brief description</li>
+      <li><strong>Risk Rating:</strong> Critical/High/Medium/Low</li>
+      <li><strong>Affected Systems:</strong> Which servers/apps?</li>
+      <li><strong>Root Cause:</strong> Why did this happen?</li>
+    </ul>
+
+    <h3>Remediation Plan</h3>
+    <ul>
+      <li><strong>Owner:</strong> Who's responsible for fixing this?</li>
+      <li><strong>Type:</strong> Technical fix / Policy / Process / Training</li>
+      <li><strong>Steps to Fix:</strong> Detailed procedure (step-by-step)</li>
+      <li><strong>Testing Plan:</strong> How will you verify the fix works?</li>
+      <li><strong>Rollback Plan:</strong> What if something goes wrong?</li>
+      <li><strong>Timeline:</strong> When will this be fixed? (30/60/90 days)</li>
+      <li><strong>Resources Needed:</strong> Tools, team members, budget?</li>
+      <li><strong>Risks:</strong> Any downtime, compatibility issues, conflicts?</li>
+    </ul>
+
+    <h3>Verification</h3>
+    <ul>
+      <li><strong>Completed Date:</strong> When was it actually fixed?</li>
+      <li><strong>Tested By:</strong> Who confirmed it works?</li>
+      <li><strong>Verification Method:</strong> How did you confirm?</li>
+      <li><strong>Retesting Result:</strong> Did PT firm confirm fix in follow-up test?</li>
+      <li><strong>Status:</strong> Fixed / In Progress / Deferred / Accepted Risk</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Sample Remediation Schedule</h2>
+    <p>Here's a realistic example for a mid-sized business:</p>
+
+    <h3>Days 1-30 (Critical Priority)</h3>
+    <ul>
+      <li><strong>Week 1:</strong> Planning and resource allocation</li>
+      <li><strong>Week 2:</strong> Patch unpatched server (Critical finding)</li>
+      <li><strong>Week 3:</strong> Implement firewall rule changes, reset weak passwords</li>
+      <li><strong>Week 4:</strong> Deploy fixes to production, verify functionality</li>
+    </ul>
+
+    <h3>Days 31-60 (High Priority)</h3>
+    <ul>
+      <li><strong>Week 5:</strong> Deploy API security fixes, implement authentication improvements</li>
+      <li><strong>Week 6:</strong> Update password policy, implement MFA</li>
+      <li><strong>Week 7:</strong> Security awareness training, document policy changes</li>
+      <li><strong>Week 8:</strong> Internal security audit to verify fixes</li>
+    </ul>
+
+    <h3>Days 61-90 (Medium Priority + Retesting)</h3>
+    <ul>
+      <li><strong>Week 9:</strong> Address configuration issues, update security documentation</li>
+      <li><strong>Week 10:</strong> Implement compensating controls for architectural issues</li>
+      <li><strong>Week 11:</strong> Conduct retesting of critical systems</li>
+      <li><strong>Week 12:</strong> Present results to leadership, plan next assessment</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Common Remediation Pitfalls to Avoid</h2>
+    
+    <h3>❌ Not Prioritizing Correctly</h3>
+    <p>Fixing low-priority issues first wastes time. Stick to the order: Critical → High → Medium → Low.</p>
+
+    <h3>❌ Fixing Without Testing</h3>
+    <p>Deploy patches to production without testing in a dev environment first? That's how you cause outages. Always test first.</p>
+
+    <h3>❌ Treating All "Fixes" the Same</h3>
+    <p>A quick patch takes days. An architectural change takes months. Plan accordingly and identify compensating controls for long-term fixes.</p>
+
+    <h3>❌ Skipping Verification</h3>
+    <p>Just because you "fixed" something doesn't mean it actually works. Verify each remediation with testing and retesting.</p>
+
+    <h3>❌ Losing Momentum After 30 Days</h3>
+    <p>Teams get busy. Priorities shift. Without accountability and regular check-ins, remediation stalls. Schedule weekly status meetings.</p>
+
+    <h3>❌ Not Communicating Progress</h3>
+    <p>Your CEO wants to know: "Are we more secure?" Show regular updates on vulnerabilities fixed, systems secured, and timelines on track.</p>
+
+    <h3>❌ Forgetting About Retesting</h3>
+    <p>Your fixes might not actually work. Include retesting in your 90-day plan to confirm vulnerabilities are actually resolved.</p>
+
+    <h3>❌ Not Updating Policies & Processes</h3>
+    <p>Technical fixes are temporary. Update your security policies and procedures so the same vulnerabilities don't reappear.</p>
+  </section>
+
+  <section>
+    <h2>Tracking Remediation Progress</h2>
+    <p>Create a simple tracking spreadsheet or dashboard with:</p>
+    <ul>
+      <li><strong>Vulnerability ID</strong> and title</li>
+      <li><strong>Risk Rating</strong> (Critical/High/Medium/Low)</li>
+      <li><strong>Owner</strong> (responsible party)</li>
+      <li><strong>Status</strong> (Not Started / In Progress / Fixed / Verified)</li>
+      <li><strong>Target Date</strong> (30/60/90 day milestone)</li>
+      <li><strong>Actual Completion Date</strong> (when actually done)</li>
+      <li><strong>Retested?</strong> (Yes/No)</li>
+      <li><strong>Notes</strong> (any blockers or dependencies)</li>
+    </ul>
+    <p>Share this dashboard in your weekly status meeting to keep teams accountable and leadership informed.</p>
+  </section>
+
+  <section>
+    <h2>Beyond 90 Days: Continuous Improvement</h2>
+    <p>After your 90-day remediation plan:</p>
+    <ul>
+      <li>Schedule retesting or follow-up penetration test (usually 6-12 months)</li>
+      <li>Implement continuous vulnerability scanning</li>
+      <li>Update security policies based on lessons learned</li>
+      <li>Conduct regular security awareness training</li>
+      <li>Plan for next security assessment cycle</li>
+      <li>Document security improvements for compliance audits</li>
+    </ul>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Remediate Your Vulnerabilities?</h2>
+    <p>Sheepdog Cyber Defense helps you develop realistic remediation plans and supports you through the entire process. Contact us for guidance on your penetration test findings.</p>
+    <a href="/contact" class="btn">Let's Talk Remediation</a>
+  </section>
+</BaseLayout>
+
+<style>
+  .lead { font-size: 1.25rem; max-width: 700px; margin-bottom: 2rem; }
+  section { margin-bottom: 3rem; }
+  h3 { margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent); }
+  ul { padding-left: 1.5rem; }
+  li { color: var(--text-muted); margin-bottom: 0.75rem; line-height: 1.6; }
+  strong { color: var(--text); }
+  .cta { padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; }
+  .cta p { margin-bottom: 1.5rem; }
+</style>
