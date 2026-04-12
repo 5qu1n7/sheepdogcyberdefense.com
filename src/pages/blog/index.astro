@@ -1,59 +1,40 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const posts = [
+  { slug: 'penetration-testing-costs-roi', title: 'Penetration Testing Costs & ROI: Why The Investment Pays Off', description: 'Understand penetration testing pricing, budget considerations, and the real ROI of security testing compared to the cost of a breach.' },
+  { slug: 'red-teaming-vs-pentesting', title: 'Red Teaming vs Penetration Testing: Complete Comparison Guide', description: 'Comprehensive guide comparing red teaming and penetration testing. Learn which approach is right for your organization.' },
+  { slug: 'how-often-should-you-pentest', title: 'How Often Should You Conduct Penetration Testing?', description: 'Complete guide to testing frequency based on industry, risk profile, and compliance requirements.' },
+  { slug: '5-signs-your-business-needs-pentest', title: '5 Signs Your Business Needs a Penetration Test', description: 'Not sure if your business needs penetration testing? Here are 5 clear signs that indicate it is time to test your security posture.' },
+  { slug: 'why-choose-local-security-consultant', title: 'Why Choose a Local Security Consultant?', description: 'Working with a local penetration testing company in Bulverde, Spring Branch, or San Antonio offers real advantages.' },
+  { slug: 'common-vulnerabilities-small-business', title: 'Common Vulnerabilities in Small Business Networks', description: 'Small businesses face real security threats. Learn about the most common vulnerabilities we find in Texas small business networks.' },
+  { slug: 'what-is-penetration-testing', title: 'What is Penetration Testing?', description: 'Learn what penetration testing is and why your Texas business needs it.' },
+  { slug: 'penetration-test-quality-checklist', title: 'Penetration Testing Report Quality Checklist', description: 'Not all penetration testing reports are created equal. Here is how to evaluate whether your PT findings are thorough, actionable, and worth the investment.' },
+  { slug: 'remediation-plan-after-penetration-testing', title: 'Remediation Plan After Penetration Testing', description: 'After a penetration test reveals vulnerabilities, a structured remediation plan is essential for addressing findings effectively.' },
+  { slug: 'supply-chain-security-vendor-assessment', title: 'Supply Chain Security & Vendor Assessment', description: 'Third-party vendor risks are a growing concern. Learn how to assess and secure your supply chain.' },
+  { slug: 'ransomware-trends-defenses-texas', title: 'Ransomware Trends & Defenses in Texas', description: 'Ransomware attacks are evolving. Stay informed about the latest trends and how to protect your Texas business.' },
+];
 ---
-<BaseLayout title="Security & Penetration Testing Blog | Sheepdog Cyber Defense" description="Expert insights on penetration testing, cybersecurity best practices, and how to protect your Texas business. Learn about costs, frequency, red teaming, and more." showMatrix={true}>
+
+<BaseLayout title="Security & Penetration Testing Blog | Sheepdog Cyber Defense" description="Expert insights on penetration testing, cybersecurity best practices, and how to protect your Texas business." showMatrix={true}>
   <section>
     <h1>Security Blog</h1>
     <p class="lead">Expert insights on penetration testing, cybersecurity best practices, and protecting your Texas business. Learn from our experienced team about security assessments, compliance, and building a stronger security program.</p>
   </section>
 
   <section class="posts">
-    <article>
-      <h2><a href="/blog/penetration-testing-costs-roi">Penetration Testing Costs & ROI: Why The Investment Pays Off</a></h2>
-      <p>Understand penetration testing pricing, budget considerations, and the real ROI of security testing compared to the cost of a breach.</p>
-      <a href="/blog/penetration-testing-costs-roi" class="read-more">Read more &rarr;</a>
-    </article>
-
-    <article>
-      <h2><a href="/blog/red-teaming-vs-pentesting">Red Teaming vs Penetration Testing: Complete Comparison Guide</a></h2>
-      <p>Comprehensive guide comparing red teaming and penetration testing. Learn which approach is right for your organization and understand the key differences.</p>
-      <a href="/blog/red-teaming-vs-pentesting" class="read-more">Read more &rarr;</a>
-    </article>
-
-    <article>
-      <h2><a href="/blog/how-often-should-you-pentest">How Often Should You Conduct Penetration Testing?</a></h2>
-      <p>Complete guide to testing frequency based on industry, risk profile, and compliance requirements. Learn when annual testing is enough and when you need more.</p>
-      <a href="/blog/how-often-should-you-pentest" class="read-more">Read more &rarr;</a>
-    </article>
-
-    <article>
-      <h2><a href="/blog/5-signs-your-business-needs-pentest">5 Signs Your Business Needs a Penetration Test</a></h2>
-      <p>Not sure if your business needs penetration testing? Here are 5 clear signs that indicate it's time to test your security posture.</p>
-      <a href="/blog/5-signs-your-business-needs-pentest" class="read-more">Read more &rarr;</a>
-    </article>
-
-    <article>
-      <h2><a href="/blog/why-choose-local-security-consultant">Why Choose a Local Security Consultant?</a></h2>
-      <p>Working with a local penetration testing company in Bulverde, Spring Branch, or San Antonio offers real advantages. Learn why local matters for your business security.</p>
-      <a href="/blog/why-choose-local-security-consultant" class="read-more">Read more &rarr;</a>
-    </article>
-
-    <article>
-      <h2><a href="/blog/common-vulnerabilities-small-business">Common Vulnerabilities in Small Business Networks</a></h2>
-      <p>Small businesses face real security threats. Learn about the most common vulnerabilities we find in Texas small business networks and how to address them.</p>
-      <a href="/blog/common-vulnerabilities-small-business" class="read-more">Read more &rarr;</a>
-    </article>
-
-    <article>
-      <h2><a href="/blog/what-is-penetration-testing">What is Penetration Testing?</a></h2>
-      <p>Learn what penetration testing is and why your Texas business needs it. Discover how ethical hackers identify vulnerabilities before cybercriminals do.</p>
-      <a href="/blog/what-is-penetration-testing" class="read-more">Read more &rarr;</a>
-    </article>
+    {posts.map(post => (
+      <article>
+        <h2><a href={`/blog/${post.slug}`}>{post.title}</a></h2>
+        <p>{post.description}</p>
+        <a href={`/blog/${post.slug}`} class="read-more">Read more &rarr;</a>
+      </article>
+    ))}
   </section>
 
   <section class="cta">
     <h2>Have a Security Question?</h2>
-    <p>Can't find what you're looking for? Contact us to discuss your penetration testing needs.</p>
+    <p>Can not find what you are looking for? Contact us to discuss your penetration testing needs.</p>
     <a href="/contact" class="btn">Get in Touch</a>
   </section>
 </BaseLayout>
