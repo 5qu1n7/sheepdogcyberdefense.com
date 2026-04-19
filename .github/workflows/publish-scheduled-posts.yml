@@ -65,8 +65,11 @@ jobs:
       - name: Publish posts and update index
         if: steps.check_posts.outputs.found_posts == 'true'
         run: |
+          set -x
           PUBLISH_DATE="${{ steps.get_date.outputs.publish_date }}"
           DRAFT_DIR="src/pages/blog/_drafts"
+          
+          echo "Looking for posts dated: $PUBLISH_DATE in $DRAFT_DIR"
           
           for post in $(find "$DRAFT_DIR" -name "*$PUBLISH_DATE-*.astro" 2>/dev/null || true); do
             FILENAME=$(basename "$post")
