@@ -26,9 +26,21 @@ jobs:
       - name: Build site
         run: npm run build
       
-      - name: Deploy to Cloudflare Pages
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=sheepdogcyberdefense.com
+      - name: Debug - Show dist contents
+        run: |
+          echo "=== Dist directory ==="
+          ls -lah dist/
+          echo "=== Blog directory ==="
+          ls -lah dist/blog/ 2>/dev/null | head -20
+      
+      - name: Deploy to Cloudflare Pages with verbose output
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          echo "Account ID: ${CLOUDFLARE_ACCOUNT_ID:0:10}..." 
+          echo "Token: ${CLOUDFLARE_API_TOKEN:0:10}..."
+          npx --yes wrangler pages deploy dist \
+            --project-name=sheepdogcyberdefense.com \
+            --account-id=${CLOUDFLARE_ACCOUNT_ID} \
+            --verbose
