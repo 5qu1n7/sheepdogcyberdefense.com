@@ -26,18 +26,9 @@ jobs:
       - name: Build site
         run: npm run build
       
-      - name: Display build output
-        run: |
-          echo "Build directory contents:"
-          ls -la dist/
-          echo "---"
-          echo "Blog directory contents:"
-          ls -la dist/blog/ | head -20
-      
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy dist --project-name=sheepdogcyberdefense
-          secrets: CLOUDFLARE_API_TOKEN,CLOUDFLARE_ACCOUNT_ID
+          command: pages deploy dist --project-name=sheepdogcyberdefense.com
